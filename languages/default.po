@@ -1,0 +1,756 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DW Timeline\n"
+"POT-Creation-Date: 2014-03-13 14:21+0700\n"
+"PO-Revision-Date: 2014-03-13 14:21+0700\n"
+"Last-Translator: \n"
+"Language-Team: DesignWall <webmaster@designwall.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:18
+#, php-format
+msgid "You have found a missing time plot. %1$s Back in %2$s Home %3$s"
+msgstr ""
+
+#: ../index.php:2
+msgid "Page 1"
+msgstr ""
+
+#: ../index.php:17
+msgid "Page"
+msgstr ""
+
+#: ../index.php:35 ../templates/content-none.php:11
+#: ../templates/home-stickiest.php:14
+msgid "The end"
+msgstr ""
+
+#: ../index.php:37 ../lib/scripts.php:59
+msgid "more"
+msgstr ""
+
+#: ../index.php:44
+msgid "&larr; Older posts"
+msgstr ""
+
+#: ../index.php:45
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: ../lib/ajaxs.php:8 ../lib/ajaxs.php:65 ../lib/ajaxs.php:71
+#: ../lib/ajaxs.php:160 ../lib/ajaxs.php:165
+msgid "Are you cheating huh?"
+msgstr ""
+
+#: ../lib/ajaxs.php:14
+msgid "Post content is empty."
+msgstr ""
+
+#: ../lib/ajaxs.php:77
+msgid "Invalid URL"
+msgstr ""
+
+#: ../lib/ajaxs.php:171
+msgid "Video URL is not valid"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:171
+#: ../lib/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:172
+#: ../lib/class-tgm-plugin-activation.php:1538
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1294
+msgid "Status"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1949
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1950
+#: ../lib/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1950
+#: ../lib/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1956
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../lib/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../lib/cleanup.php:193
+msgid "Continued"
+msgstr ""
+
+#: ../lib/custom.php:11
+msgid "Post Settings"
+msgstr ""
+
+#: ../lib/custom.php:20
+msgid "Page Settings"
+msgstr ""
+
+#: ../lib/custom.php:43 ../lib/custom.php:115 ../lib/widgets.php:123
+msgid "Helps"
+msgstr ""
+
+#: ../lib/custom.php:46
+msgid "Select Grid"
+msgstr ""
+
+#: ../lib/custom.php:51
+msgid "Normal"
+msgstr ""
+
+#: ../lib/custom.php:58
+msgid "Full"
+msgstr ""
+
+#: ../lib/custom.php:64
+msgid "Enable featured image ?"
+msgstr ""
+
+#: ../lib/custom.php:69 ../lib/customizer.php:132 ../lib/customizer.php:197
+#: ../lib/customizer.php:236 ../lib/customizer.php:458
+#: ../lib/customizer.php:474
+msgid "Yes"
+msgstr ""
+
+#: ../lib/custom.php:76 ../lib/customizer.php:131 ../lib/customizer.php:196
+#: ../lib/customizer.php:235 ../lib/customizer.php:459
+#: ../lib/customizer.php:475
+msgid "No"
+msgstr ""
+
+#: ../lib/custom.php:82 ../lib/custom.php:118
+msgid "Featured image size"
+msgstr ""
+
+#: ../lib/custom.php:88 ../lib/custom.php:124
+msgid "Featured image position"
+msgstr ""
+
+#: ../lib/custom.php:94 ../lib/custom.php:130
+msgid "Background color of featured mask"
+msgstr ""
+
+#: ../lib/custom.php:257
+msgid "read next"
+msgstr ""
+
+#: ../lib/custom.php:297
+msgid "min"
+msgstr ""
+
+#: ../lib/custom.php:298
+msgid "read"
+msgstr ""
+
+#: ../lib/customizer.php:10 ../lib/customizer.php:170
+msgid "Default"
+msgstr ""
+
+#: ../lib/customizer.php:81
+msgid "Background"
+msgstr ""
+
+#: ../lib/customizer.php:92
+msgid "Button Text"
+msgstr ""
+
+#: ../lib/customizer.php:105
+msgid "Favicon"
+msgstr ""
+
+#: ../lib/customizer.php:113
+msgid "Timeline"
+msgstr ""
+
+#: ../lib/customizer.php:127
+msgid "Use show more button ?"
+msgstr ""
+
+#: ../lib/customizer.php:139
+msgid "Style"
+msgstr ""
+
+#: ../lib/customizer.php:153
+msgid "Primary color"
+msgstr ""
+
+#: ../lib/customizer.php:166
+msgid "Style selector"
+msgstr ""
+
+#: ../lib/customizer.php:171
+msgid "Flat"
+msgstr ""
+
+#: ../lib/customizer.php:178
+msgid "Next Post"
+msgstr ""
+
+#: ../lib/customizer.php:192
+msgid "Disable next post featured ?"
+msgstr ""
+
+#: ../lib/customizer.php:212
+msgid "Excluded categories:"
+msgstr ""
+
+#: ../lib/customizer.php:220
+msgid "Gallery"
+msgstr ""
+
+#: ../lib/customizer.php:231
+msgid "Disable gallery lightbox ?"
+msgstr ""
+
+#: ../lib/customizer.php:243
+msgid "Custom Code"
+msgstr ""
+
+#: ../lib/customizer.php:253
+msgid "Header Code (Meta tags, CSS, etc ...)"
+msgstr ""
+
+#: ../lib/customizer.php:264
+msgid "Footer Code (Analytics, etc ...)"
+msgstr ""
+
+#: ../lib/customizer.php:276
+msgid "Cover"
+msgstr ""
+
+#: ../lib/customizer.php:287
+msgid "Header Image"
+msgstr ""
+
+#: ../lib/customizer.php:298
+msgid "Image Position"
+msgstr ""
+
+#: ../lib/customizer.php:309
+msgid "Image Size"
+msgstr ""
+
+#: ../lib/customizer.php:317
+msgid "Header Mask"
+msgstr ""
+
+#: ../lib/customizer.php:328
+msgid "Header Mask Display"
+msgstr ""
+
+#: ../lib/customizer.php:332
+msgid "Show"
+msgstr ""
+
+#: ../lib/customizer.php:333
+msgid "Hide"
+msgstr ""
+
+#: ../lib/customizer.php:344
+msgid "Header Mask orientation"
+msgstr ""
+
+#: ../lib/customizer.php:348
+msgid "horizontal"
+msgstr ""
+
+#: ../lib/customizer.php:349
+msgid "vertical"
+msgstr ""
+
+#: ../lib/customizer.php:350 ../lib/customizer.php:351
+msgid "diagonal"
+msgstr ""
+
+#: ../lib/customizer.php:361
+msgid "Header Mask Color Start"
+msgstr ""
+
+#: ../lib/customizer.php:372
+msgid "Header Mask Color End"
+msgstr ""
+
+#: ../lib/customizer.php:389
+msgid "Header background"
+msgstr ""
+
+#: ../lib/customizer.php:402
+msgid "Main background"
+msgstr ""
+
+#: ../lib/customizer.php:425
+msgid "Headding font"
+msgstr ""
+
+#: ../lib/customizer.php:438
+msgid "Content font"
+msgstr ""
+
+#: ../lib/customizer.php:454
+msgid "Enable Primary Navigation ?"
+msgstr ""
+
+#: ../lib/customizer.php:470
+msgid "Use Menu icon ?"
+msgstr ""
+
+#: ../lib/init.php:11
+msgid "Primary Navigation"
+msgstr ""
+
+#: ../lib/scripts.php:58
+msgid "page"
+msgstr ""
+
+#: ../lib/scripts.php:61
+msgid "the end"
+msgstr ""
+
+#: ../lib/titles.php:19
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../lib/titles.php:21
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../lib/titles.php:23
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../lib/titles.php:26
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: ../lib/titles.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: ../lib/titles.php:33
+msgid "Not Found"
+msgstr ""
+
+#: ../lib/widgets.php:8
+msgid "primary"
+msgstr ""
+
+#: ../lib/widgets.php:32
+msgid "DW Timline: About"
+msgstr ""
+
+#: ../lib/widgets.php:129
+msgid "Avatar:"
+msgstr ""
+
+#: ../lib/widgets.php:134
+msgid "Description:"
+msgstr ""
+
+#: ../lib/widgets.php:139
+msgid "Facebook:"
+msgstr ""
+
+#: ../lib/widgets.php:144
+msgid "Twitter:"
+msgstr ""
+
+#: ../lib/widgets.php:149
+msgid "Google plus:"
+msgstr ""
+
+#: ../lib/widgets.php:154
+msgid "Youtube:"
+msgstr ""
+
+#: ../lib/widgets.php:159
+msgid "Linkedin:"
+msgstr ""
+
+#: ../lib/widgets.php:164
+msgid "Instagram:"
+msgstr ""
+
+#: ../lib/widgets.php:169
+msgid "Tumblr:"
+msgstr ""
+
+#: ../lib/widgets.php:174
+msgid "Other links:"
+msgstr ""
+
+#: ../templates/comment.php:5
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../templates/comment.php:11
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../templates/comment.php:19
+#, php-format
+msgid "%s Reply"
+msgstr ""
+
+#: ../templates/comment.php:21
+#, php-format
+msgid "%s edit"
+msgstr ""
+
+#: ../templates/comments.php:10
+#, php-format
+msgid "One Response to &ldquo; %2$s &rdquo;"
+msgid_plural "%1$s Responses to &ldquo; %2$s &rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/comments.php:25
+msgid "&larr; Older comments"
+msgstr ""
+
+#: ../templates/comments.php:28
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: ../templates/comments.php:36 ../templates/comments.php:45
+msgid "Comments are closed."
+msgstr ""
+
+#: ../templates/comments.php:57 ../templates/comments.php:58
+msgid "Name"
+msgstr ""
+
+#: ../templates/comments.php:62 ../templates/comments.php:63
+msgid "Email"
+msgstr ""
+
+#: ../templates/comments.php:68 ../templates/comments.php:69
+msgid "Website"
+msgstr ""
+
+#: ../templates/comments.php:73
+msgid "Comment"
+msgstr ""
+
+#: ../templates/comments.php:73
+msgid "Write your comment"
+msgstr ""
+
+#: ../templates/content-none.php:4
+msgid "Nothing Found"
+msgstr ""
+
+#: ../templates/content-none.php:7
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+
+#: ../templates/content-single.php:9
+msgid "Pages:"
+msgstr ""
+
+#: ../templates/content-single.php:18
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: ../templates/content-single.php:51
+msgid "Leave a note"
+msgstr ""
+
+#: ../templates/content-single.php:52
+msgid "Save"
+msgstr ""
+
+#: ../templates/content-single.php:53 ../templates/post-form.php:86
+msgid "Cancel"
+msgstr ""
+
+#: ../templates/content.php:14
+msgid "Continue Reading &rarr;"
+msgstr ""
+
+#: ../templates/entry-meta.php:5
+msgid "By"
+msgstr ""
+
+#: ../templates/entry-meta.php:9
+msgid "On"
+msgstr ""
+
+#: ../templates/entry-meta.php:11
+msgid "In"
+msgstr ""
+
+#: ../templates/post-form.php:5
+msgid "What's on your mind"
+msgstr ""
+
+#: ../templates/post-form.php:9
+msgid "text"
+msgstr ""
+
+#: ../templates/post-form.php:13
+msgid "photo"
+msgstr ""
+
+#: ../templates/post-form.php:17
+msgid "Video"
+msgstr ""
+
+#: ../templates/post-form.php:21
+msgid "link"
+msgstr ""
+
+#: ../templates/post-form.php:34 ../templates/post-form.php:57
+#: ../templates/post-form.php:67
+msgid "Share what's new "
+msgstr ""
+
+#: ../templates/post-form.php:37
+msgid "Paste URL here"
+msgstr ""
+
+#: ../templates/post-form.php:50
+msgid "Add post thumbnail"
+msgstr ""
+
+#: ../templates/post-form.php:60
+msgid "Add Media"
+msgstr ""
+
+#: ../templates/post-form.php:60
+msgid "Upload from your comupter or  media library"
+msgstr ""
+
+#: ../templates/post-form.php:70
+msgid "Paste Video URL here"
+msgstr ""
+
+#: ../templates/post-form.php:76
+msgid "Post title"
+msgstr ""
+
+#: ../templates/post-form.php:77
+msgid "Enter title here"
+msgstr ""
+
+#: ../templates/post-form.php:81
+msgid "Post Tags"
+msgstr ""
+
+#: ../templates/post-form.php:87
+msgid "Publish"
+msgstr ""
+
+#: ../templates/searchform.php:3 ../templates/searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: ../templates/searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#: ../templates/sidebar.php:23
+msgid "Sidebar"
+msgstr ""
+
+#: ../templates/sidebar.php:41
+msgid "Menu"
+msgstr ""

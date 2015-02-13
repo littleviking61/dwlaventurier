@@ -1,0 +1,24 @@
+body.dwpb-push-page {
+  -webkit-transition: margin 0.5s !important;
+  transition: margin 0.5s !important;
+}
+body.dwpb-push-page.dwpb-open {
+  margin-top: 40px;
+  top: 0 !important;
+}
+.main-nav-open body.dwpb-push-page .wrap {
+  -webkit-transform: translate(-240px, 0);
+  -ms-transform: translate(-240px, 0);
+  transform: translate(-240px, 0);
+}
+@media (min-width: 1025px) {
+  body.dwpb-push-page.admin-bar .nav-main {
+    top: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  html body.dwpb-push-page.admin-bar #wpadminbar {
+    top: 0 !important;
+  } 
+}
