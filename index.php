@@ -1,10 +1,20 @@
 <div class="timeline two-col" data-perpage="<?= get_option('posts_per_page') ?>">
   <div data-page="1" class="timeline-pale dwtl full remove-time-anchor"><span><?php //_e('Page','dw-timeline') ?><?= date('Y') ?></span></div>
-  
+  <div class="timeline-scrubber">
+    <ul>
+      <?php
+         $years = wp_get_archives( [ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ] );
+         $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
+         echo $years;
+      ?>
+    </ul>
+  </div>
   <?php $the_query = new WP_Query(['date_query' => ['year' => date('Y') ] ]);
   if ( $the_query->have_posts() ): ?>
     
-    <?php 
+    <?php  
+      $page = get_query_var('paged'); 
+      $page = $page ? $page : 1;
       $post_form = dw_timeline_get_theme_option('dw_timeline_post_form');
       if( $page == 1 && is_user_logged_in() && current_user_can( 'publish_posts' ) && $post_form != 'no' ) : 
     ?>
