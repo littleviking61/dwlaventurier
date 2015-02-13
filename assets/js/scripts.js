@@ -10,6 +10,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 jQuery(function($) {
     var timeline = $('.timeline'),
+        perPage = timeline.data('perpage'),
         contentLoading = false,
         moveByScrubber = false,
         loadedPage = [1],
@@ -216,6 +217,17 @@ jQuery(function($) {
         });
     }
 
+    var ajaxArrayScrubber = $('.timeline-scrubber ul li a').map(function(index, el) {
+        $el = $(el);
+        link = $(el).attr('href');
+        count = ($el.next().text() / perPage).toFixed(0);
+        if(count > 0) {
+            console.log(count);
+        };
+        return el.href;
+        // return index;
+    });
+    
     $('.timeline-scrubber ul li').on('click', function(event) {
         event.preventDefault();
         var timelineInfinitescroll = $('.timeline').data('infinitescroll');
@@ -321,18 +333,22 @@ jQuery(function($) {
                     $('#infscr-loading').css({'cursor':'initial'});
                 },2000);
             }
+        },
+        path: function(index) { 
+            console.log(ajaxArrayScrubber);
+            return 2015-index; 
         }
     }, function(elems) {
         if (elems.length > 0) {
             var $t = $('.timeline').data('infinitescroll');
             var opts = $t.options;
-
             $t._debug('contentSelector', $(opts.contentSelector)[0]);
             var max = Math.max.apply(null, loadedPage);
-            var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + infinitescroll.page + ' ' + opts.state.currPage + ' </span></div>');
+            var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + pageText + ' </span></div>');
             var pageNum = opts.state.currPage;
+            var pageText = opts.path(opts.state.currPage);
             if (opts.state.currPage >= max) {
-                var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + infinitescroll.page + ' ' + opts.state.currPage + ' </span></div>');
+                var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + pageText + ' </span></div>');
                 $(opts.contentSelector).append(separate);
                 $(opts.contentSelector).append(elems);
             } else {
@@ -361,15 +377,15 @@ jQuery(function($) {
 
             if (moveByScrubber) {
                 $('html, body').animate({
-                        scrollTop: scrollPoint
-                    },
-                    1000, function() {
-                        moveByScrubber = false;
-                        $t._binding('bind');
-                        $('.timeline-scrubber ul li').removeClass('active');
-                        $('.timeline-scrubber ul li[data-page="' + pageNum + '"]').addClass('active');
-                        $('.timeline-scrubber ul li.active').parent().prev().addClass('active par');
-                    });
+                    scrollTop: scrollPoint
+                },
+                1000, function() {
+                    moveByScrubber = false;
+                    $t._binding('bind');
+                    $('.timeline-scrubber ul li').removeClass('active');
+                    $('.timeline-scrubber ul li[data-page="' + pageNum + '"]').addClass('active');
+                    $('.timeline-scrubber ul li.active').parent().prev().addClass('active par');
+                });
             }
 
         }

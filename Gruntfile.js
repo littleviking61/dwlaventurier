@@ -13,8 +13,8 @@ module.exports = function(grunt) {
 			},
 
 			js : {
-				files: ['js/**/*.js'],
-				tasks: ['jshint'],
+				files: ['assets/js/**/*.js'],
+				// tasks: ['jshint'],
 				options: {
 					livereload: true,
 					livereloadOnError: false,
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['js/**/*.js', '!js/foundation/**/*.js', '!js/vendor/**/*.js']
+			all: ['assets/js/**/*.js', '!assets/js/vendor/**/*.js']
 		},
 
 		less: {
@@ -49,10 +49,14 @@ module.exports = function(grunt) {
 				options: {
 					compress: true,
 					sourceMap: true,
-					sourceMapFilename: "dw-timeline-pro-flat.min.css.map", //Write the source map to a separate file with the given filename.
+					sourceMapFilename: "assets/css/dwlaventurier.min.css.map", //Write the source map to a separate file with the given filename.
+          sourceMapURL: 'dwlaventurier.min.css.map', // the complete url and filename put in the compiled css file
+          sourceMapBasepath: 'assets/css/', // Sets sourcemap base path, defaults to current working directory.
+          sourceMapRootpath: '', // adds this path onto the sourcemap filename and less file paths
+
 				},
 				files: {
-					"assets/css/dw-timeline-pro-flat.min.css": "assets/less/flat/flat.less"
+					"assets/css/dwlaventurier.min.css": "assets/less/flat/flat.less"
 				},
 			}
 		},
@@ -69,7 +73,7 @@ module.exports = function(grunt) {
 					// dest: "/var/www/html/laventurierviking/wp-content/themes/dw-timeline-pro/assets/css/",
 
 					src: "./assets/css",
-					dest: "/var/www/html/laventurierviking/wp-content/themes/dw-timeline-pro/assets",
+					dest: "/var/www/html/laventurierviking/wp-content/themes/dwlaventurier/assets",
 					host: "root@online",
 				}
 			}

@@ -5,11 +5,12 @@
 function dw_timeline_scripts() {
   $style_selector = dw_timeline_get_theme_option('style_selector');
   $template_directory_uri = get_template_directory_uri();
-  if ( $style_selector ==  'flat' ) {
-    wp_enqueue_style('dw_timeline_flat', $template_directory_uri . '/assets/css/dw-timeline-pro-flat.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
-  } else {
-    wp_enqueue_style('dw_timeline_main', $template_directory_uri . '/assets/css/dw-timeline-pro.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
-  }
+  // if ( $style_selector ==  'flat' ) {
+  //   wp_enqueue_style('dw_timeline_flat', $template_directory_uri . '/assets/css/dw-timeline-pro-flat.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
+  // } else {
+  //   wp_enqueue_style('dw_timeline_main', $template_directory_uri . '/assets/css/dw-timeline-pro.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
+  // }
+  wp_enqueue_style('dw_timeline_flat', $template_directory_uri . '/assets/css/dwlaventurier.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
 
   wp_enqueue_style( 'dw_timeline_style', get_stylesheet_uri(), false, 'c1a58eb4baaf24c3771085df3d54ff8d' );
 
@@ -32,7 +33,7 @@ function dw_timeline_scripts() {
   wp_register_script('prettify', $template_directory_uri . '/assets/js/vendor/prettify.js', false, '', false);
   wp_register_script('nivo_lightbox', $template_directory_uri . '/assets/js/vendor/nivo-lightbox.min.js', false, '', false);
   wp_register_script('dw_timeline_single_scripts', $template_directory_uri . '/assets/js/single-scripts.min.js', array( 'jquery' ), '', true);
-  wp_register_script('dw_timeline_scripts', $template_directory_uri . '/assets/js/scripts.min.js', array( 'jquery' ), '', true);
+  wp_register_script('dw_timeline_scripts', $template_directory_uri . '/assets/js/scripts.js', array( 'jquery' ), '', true);
   wp_register_script('dw_timeline_post_form', $template_directory_uri . '/assets/js/post-form.min.js' , array('jquery','dw_timeline_scripts'), '', true );
 
   $style_selector = dw_timeline_get_theme_option('style_selector');
