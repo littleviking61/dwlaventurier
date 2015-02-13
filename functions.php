@@ -15,4 +15,4 @@ require_once locate_template('/lib/social-share-count.php');      		// Custom fu
 require_once locate_template('/lib/customizer.php');      				// Customizer functions
 require_once locate_template('/lib/custom.php');          				// Custom functions
 require_once locate_template('/lib/ajaxs.php');       					// Ajaxs functions
-require_once locate_template('/dw-importer/dw-importer.php');      		// Import sample data
+// require_once locate_template('/dw-importer/dw-importer.php');      		// Import sample data
