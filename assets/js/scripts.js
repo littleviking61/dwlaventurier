@@ -73,7 +73,7 @@ jQuery(function($) {
 					right_Col = 0;
 				}
 			});
-			$('.dwtl').addClass('show');
+			// $('.dwtl').addClass('show');
 		} else {
 			dwtl.removeClass('two-col').addClass('one-col');
 			dwlt_half.each(function(index, el) {
