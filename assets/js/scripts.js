@@ -49,10 +49,11 @@ jQuery(function($) {
 	// Timeline layout
 	// -------------------------------------
 	var left_Col = 0, right_Col = 0;
-	function dwtl_layout(initIt) {
+	function dwtl_layout(initIt, elems) {
 		var dwtl = $('.timeline');
 		var dwtl_width = dwtl.outerWidth();
 		var dwlt_half = dwtl.find('.dwtl');
+		var elems = elems || dwtl.find('.post');
 		if (dwtl_width >= 800) {
 			dwtl.removeClass('one-col').addClass('two-col');
 
@@ -79,6 +80,7 @@ jQuery(function($) {
 				$(el).removeClass('dwtl-left dwtl-right');
 			});
 		}
+		elems.velocity("transition.slideUpBigIn", {stagger: 300});
 	}
 
 	// 
@@ -295,7 +297,7 @@ jQuery(function($) {
 		nextSelector: ".post-nav .previous a",
 		itemSelector: ".post",
 		maxPage: nextPages.length,
-		bufferPx: 500,
+		bufferPx: 400,
 		// animate: true,
 		loading: {
 			finished: function() {
@@ -386,10 +388,10 @@ jQuery(function($) {
 				$(opts.contentSelector).find('.post[data-page="' + currPage + '"]:last').after(separate);
 				opts.state.currPage = max;
 			}
-			
+
 			timeline.imagesLoaded( function() {
-				dwtl_layout(isNewYear);
-				elems.velocity("transition.slideUpBigIn", {stagger: 300});
+				dwtl_layout(isNewYear, elems);
+				// elems.velocity("transition.slideUpBigIn", {stagger: 300});
 			});
 
 			nivoLightbox();
