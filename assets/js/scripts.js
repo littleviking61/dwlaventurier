@@ -159,7 +159,9 @@ jQuery(function($) {
 		wrap_height();
 
 		// Timeline 
-		dwtl_layout();
+		$('body').imagesLoaded( function() {
+			dwtl_layout();
+		});
 		// $('html').scrollTop(1);
 
 		// responsive Iframe
@@ -221,7 +223,7 @@ jQuery(function($) {
 	var nextPagesIndex = 1;
 	var nextPages = $('.timeline-scrubber ul li a').map(function(index, el) {
 		$el = $(el);
-		year = $el.attr('href').split('/').join('');
+		year = $el.text();
 		link = $el.attr('href');
 		links = [{'url': link, 'year': year}];
 		count = parseInt(($el.next().text() / perPage).toFixed(0));
@@ -237,7 +239,8 @@ jQuery(function($) {
 		return links;
 	});
 	$('.timeline-scrubber').attr('data-count', nextPages.length);
-	
+	console.log(nextPages);
+
 	$('.timeline-scrubber ul li').on('click', function(event) {
 		event.preventDefault();
 		var timelineInfinitescroll = $('.timeline').data('infinitescroll');
@@ -292,6 +295,8 @@ jQuery(function($) {
 		nextSelector: ".post-nav .previous a",
 		itemSelector: ".post",
 		maxPage: nextPages.length,
+		bufferPx: 500,
+		// animate: true,
 		loading: {
 			finished: function() {
 				contentLoading = false;
@@ -360,7 +365,9 @@ jQuery(function($) {
 			// var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + pageText + ' </span></div>');
 			var pageNum = opts.state.currPage;
 			var pageText = nextPages[opts.state.currPage-1].year;
+			
 			isNewYear = pageText !== undefined;
+			
 			if (opts.state.currPage >= max) {
 				var hiddenSeparate = pageText !== undefined ? ' full' : ' hidden';
 				var separate = $('<div data-page="' + pageNum + '" class="timeline-pale dwtl remove-time-anchor'+hiddenSeparate+'"><span>' + pageText + '</span></div>');
@@ -379,10 +386,16 @@ jQuery(function($) {
 				$(opts.contentSelector).find('.post[data-page="' + currPage + '"]:last').after(separate);
 				opts.state.currPage = max;
 			}
+			
+			timeline.imagesLoaded( function() {
+				dwtl_layout(isNewYear);
+				elems.velocity("transition.slideUpBigIn", {stagger: 300});
+			});
 
-			dwtl_layout(isNewYear);
 			nivoLightbox();
 			responsiveIframe();
+
+			// $("img.lazy").lazyload();
 
 			scrollPoint = timeline.find('.timeline-pale[data-page="' + pageNum + '"]').offset().top;
 

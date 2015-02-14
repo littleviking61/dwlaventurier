@@ -2,7 +2,7 @@
   <div class="entry-inner">
     <?php if(has_post_thumbnail()) : ?>
       <div class="entry-thumbnail">
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', ['class'=> 'lazy']); ?></a>
       </div>
     <?php endif; ?>
     <div class="entry-format"><?php echo get_post_format_string(get_post_format()); ?></div>
