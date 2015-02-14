@@ -1,15 +1,27 @@
 <div class="timeline two-col" data-perpage="<?= get_option('posts_per_page') ?>">
   <div data-page="1" class="timeline-pale dwtl full remove-time-anchor"><span><?php //_e('Page','dw-timeline') ?><?= date('Y') ?></span></div>
+
   <div class="timeline-scrubber">
     <ul>
       <?php
-         $years = wp_get_archives( [ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ] );
-         $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
-         echo $years;
+        $cat = get_the_category();
+        $cat = is_home() ? [] : [ 'cat' => $cat[0]->cat_ID];
+        
+        $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $cat);
+
+        $years = wp_get_archives( $archiveArg );
+        $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
+        echo $years;
       ?>
     </ul>
   </div>
-  <?php $the_query = new WP_Query(['date_query' => ['year' => date('Y') ] ]);
+
+  <?php
+    $args = is_home() ? ['date_query' => ['year' => date('Y') ] ] : [];
+    $the_query = array_merge($wp_query->query_vars,  $args);
+
+    $the_query = new WP_Query($the_query);
+  
   if ( $the_query->have_posts() ): ?>
     
     <?php  

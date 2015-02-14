@@ -34,7 +34,7 @@ function dw_timeline_scripts() {
   wp_register_script('nivo_lightbox', $template_directory_uri . '/assets/js/vendor/nivo-lightbox.min.js', false, '', false);
   wp_register_script('dw_timeline_single_scripts', $template_directory_uri . '/assets/js/single-scripts.min.js', array( 'jquery' ), '', true);
   wp_register_script('dw_timeline_scripts', $template_directory_uri . '/assets/js/scripts.js', array( 'jquery' ), '', true);
-  wp_register_script('dw_timeline_post_form', $template_directory_uri . '/assets/js/post-form.min.js' , array('jquery','dw_timeline_scripts'), '', true );
+  if (is_user_logged_in() && is_home()) wp_register_script('dw_timeline_post_form', $template_directory_uri . '/assets/js/post-form.min.js' , array('jquery','dw_timeline_scripts'), '', true );
 
   $style_selector = dw_timeline_get_theme_option('style_selector');
   $loading_timline = $template_directory_uri . '/assets/img/loading-default.gif';

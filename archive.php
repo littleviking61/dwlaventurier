@@ -1,5 +1,19 @@
 <div class="timeline two-col">
+  <div class="timeline-scrubber">
+    <ul>
+      <?php
+         $years = wp_get_archives( [ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ] );
+         $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
+         echo $years;
+      ?>
+    </ul>
+  </div>
 
+  <?php
+ $queried_object = get_queried_object();
+ var_dump( $queried_object );
+ ?>
+ 
   <?php if ( have_posts() ): ?>
     
     <?php // get_template_part( 'templates/home', 'stickiest' ); //Sticky posts ?>
