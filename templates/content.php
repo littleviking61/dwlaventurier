@@ -1,4 +1,4 @@
-<article data-page="<?php $page = get_query_var('paged'); echo  $page ? $page : 1; ?>" <?php post_class(); ?>>
+<article <?php post_class(); ?>>
   <div class="entry-inner">
     <?php if(has_post_thumbnail()) : ?>
       <div class="entry-thumbnail">

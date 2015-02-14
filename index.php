@@ -28,10 +28,9 @@
       $page = get_query_var('paged'); 
       $page = $page ? $page : 1;
       $post_form = dw_timeline_get_theme_option('dw_timeline_post_form');
-      if( $page == 1 && is_user_logged_in() && current_user_can( 'publish_posts' ) && $post_form != 'no' ) : 
-    ?>
-      <?php get_template_part( 'templates/post-form' ); ?>
-    <?php endif; // Front-end post form for admin user ?>
+      if( $page == 1 && is_user_logged_in() && current_user_can( 'publish_posts' ) && $post_form != 'no' && is_home() ) : 
+          get_template_part( 'templates/post-form' );
+      endif; // Front-end post form for admin user ?>
     
     
     <?php // get_template_part( 'templates/home', 'stickiest' ); //Sticky posts ?>
