@@ -48,15 +48,16 @@ jQuery(function($) {
 
 	// Timeline layout
 	// -------------------------------------
-	function dwtl_layout() {
+	var left_Col = 0, right_Col = 0;
+	function dwtl_layout(initIt) {
 		var dwtl = $('.timeline');
 		var dwtl_width = dwtl.outerWidth();
 		var dwlt_half = dwtl.find('.dwtl');
 		if (dwtl_width >= 800) {
 			dwtl.removeClass('one-col').addClass('two-col');
 
-			var left_Col = 0,
-				right_Col = 0;
+			if(initIt)	left_Col = 0, right_Col = 0;
+
 			dwlt_half.each(function(index, el) {
 				if ($(el).hasClass('normal')) {
 					if (left_Col <= right_Col) {
@@ -217,25 +218,31 @@ jQuery(function($) {
 		});
 	}
 
+	var nextPagesIndex = 1;
 	var nextPages = $('.timeline-scrubber ul li a').map(function(index, el) {
 		$el = $(el);
 		year = $el.attr('href').split('/').join('');
 		link = $el.attr('href');
 		links = [{'url': link, 'year': year}];
-		count = ($el.next().text() / perPage).toFixed(0);
+		count = parseInt(($el.next().text() / perPage).toFixed(0));
+		$el.attr('data-numPage', nextPagesIndex);
 		if(count > 0) {
 			for (i = 1; i < count; i++) { 
 			  links.push({'url': link+'page/'+(i+1), 'year': undefined});
 			}
+			count--;
 		};
+		nextPagesIndex += count + 1;
+
 		return links;
 	});
+	$('.timeline-scrubber').attr('data-count', nextPages.length);
 	
 	$('.timeline-scrubber ul li').on('click', function(event) {
 		event.preventDefault();
 		var timelineInfinitescroll = $('.timeline').data('infinitescroll');
 		var t = $(this);
-		var pageNum = t.data('page');
+		var pageNum = parseInt($('a', t).data('numpage'));
 		var scrollPoint = 0;
 		if (loadedPage.indexOf(pageNum) > -1 && timeline.find('.timeline-pale[data-page="' + pageNum + '"]').length > 0) {
 			if (moveByScrubber == pageNum) {
@@ -259,12 +266,13 @@ jQuery(function($) {
 					moveByScrubber = false;
 				});
 		} else {
+			// todo load everything before avec loadedPage.length pour connaitre le dernier el chargé
 			if (!contentLoading && !moveByScrubber) {
 				moveByScrubber = pageNum;
 				timelineInfinitescroll._binding('unbind');
 				timelineInfinitescroll.options.state.currPage = parseInt(pageNum) - 1;
 				var currPage = timelineInfinitescroll.options.state.currPage;
-				if (timelineInfinitescroll.options.state.isDone && loadedPage.length < $('.timeline-scrubber ul li').length) {
+				if (timelineInfinitescroll.options.state.isDone && loadedPage.length < parseInt($('.timeline-scrubber').data('count')) ) {
 					timelineInfinitescroll.options.state.isDone = false;
 				}
 				timelineInfinitescroll.retrieve();
@@ -298,7 +306,7 @@ jQuery(function($) {
 				}
 				
 				// Timeline 
-				dwtl_layout();
+				// dwtl_layout();
 			},
 			finishedMsg: infinitescroll.the_end,
 			img: infinitescroll.loading_timline,
@@ -339,10 +347,12 @@ jQuery(function($) {
 			}
 		},
 		path: function(index) { 
+			console.log(index-1);
 			return nextPages[index-1].url;
 		}
 	}, function(elems) {
 		if (elems.length > 0) {
+			var isNewYear=false;
 			var $t = $('.timeline').data('infinitescroll');
 			var opts = $t.options;
 			$t._debug('contentSelector', $(opts.contentSelector)[0]);
@@ -350,9 +360,10 @@ jQuery(function($) {
 			// var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor"><span>' + pageText + ' </span></div>');
 			var pageNum = opts.state.currPage;
 			var pageText = nextPages[opts.state.currPage-1].year;
+			isNewYear = pageText !== undefined;
 			if (opts.state.currPage >= max) {
-				var hiddenSeparate = pageText !== undefined ? '' : ' hidden';
-				var separate = $('<div data-page="' + opts.state.currPage + '" class="timeline-pale dwtl full remove-time-anchor'+hiddenSeparate+'"><span>' + pageText + ' </span></div>');
+				var hiddenSeparate = pageText !== undefined ? ' full' : ' hidden';
+				var separate = $('<div data-page="' + pageNum + '" class="timeline-pale dwtl remove-time-anchor'+hiddenSeparate+'"><span>' + pageText + '</span></div>');
 				$(opts.contentSelector).append(separate);
 				$(opts.contentSelector).append(elems);
 			} else {
@@ -369,7 +380,7 @@ jQuery(function($) {
 				opts.state.currPage = max;
 			}
 
-			dwtl_layout();
+			dwtl_layout(isNewYear);
 			nivoLightbox();
 			responsiveIframe();
 
