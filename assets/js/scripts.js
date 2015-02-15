@@ -241,8 +241,7 @@ jQuery(function($) {
 		return links;
 	});
 	$('.timeline-scrubber').attr('data-count', nextPages.length);
-	console.log(nextPages);
-	console.log('----- ready -----');
+	$('.timeline-scrubber ul li:first-child').addClass('loaded');
 
 	$('.timeline-scrubber ul li').on('click', function(event) {
 		event.preventDefault();
@@ -272,6 +271,7 @@ jQuery(function($) {
 					moveByScrubber = false;
 				});
 		} else {
+			t.add(t.prevAll().not('.loaded')).addClass('loading');
 			// todo load everything before avec loadedPage.length pour connaitre le dernier el chargé
 			if (!contentLoading && !moveByScrubber) {
 				moveByScrubber = pageNum;
@@ -313,7 +313,9 @@ jQuery(function($) {
 					$('#infscr-loading img').css({'display':'none'});
 					$('#infscr-loading div').css({'display':'block'});
 				}
-				
+				var yearsUrl = nextPages[opts.state.currPage-1].url.split('/')[1];
+				$('.timeline-scrubber a[href^="/'+yearsUrl+'"]').parent().removeClass('loading').addClass('loaded');
+
 				// Timeline 
 				// dwtl_layout();
 			},
@@ -325,6 +327,9 @@ jQuery(function($) {
 				var $t = $('.timeline').data('infinitescroll');
 				var opts = $t.options;
 				$(opts.navSelector).hide();
+				var yearsUrl = nextPages[opts.state.currPage].url.split('/')[1];
+				console.log(yearsUrl);
+				$('.timeline-scrubber a[href^="/'+yearsUrl+'"]').parent().addClass('loading');
 				if (loadedPage.indexOf(opts.state.currPage + 1) > -1) {
 					contentLoading = false;
 					return false;
@@ -451,23 +456,20 @@ jQuery(function($) {
 	// Window scroll 
 	//------------------------
 	$(window).on('scroll', function() {
-		if (!contentLoading) {
+		// if (!contentLoading) {
 			var pales = $( $('.timeline .timeline-pale:not(.hidden-separate)').get().reverse() );
-			// console.log( $(window).height());
 			pales.each(function() {
 				var t = $(this);
 				var position = t.offset().top - $(window).scrollTop();
-				if (position <= $(window).height()/2 && !moveByScrubber) {
-					// console.log(position);
+				if (position <= $(window).height()/2 /*&& !moveByScrubber*/) {
 					var page = t.data('page');
-					console.log(page);
 					$('.timeline-scrubber ul li.active').removeClass('active par');
 					$('.timeline-scrubber ul li a[data-numpage="' + page + '"]').parent().addClass('active');
 					$('.timeline-scrubber ul li.active').parent().prev().addClass('active par');
 					return false;
 				}
 			});
-		}
+		// }
 	});
 
 	// Get Started

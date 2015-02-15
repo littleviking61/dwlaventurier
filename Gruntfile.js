@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		less: {
 			dist: {
 				options: {
-					compress: true,
+					compress: false,
 					sourceMap: true,
 					sourceMapFilename: "assets/css/dwlaventurier.min.css.map", //Write the source map to a separate file with the given filename.
           sourceMapURL: 'dwlaventurier.min.css.map', // the complete url and filename put in the compiled css file

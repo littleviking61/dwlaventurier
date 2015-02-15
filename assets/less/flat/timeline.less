@@ -78,6 +78,28 @@
          }
       }
 
+      li:not(.loaded){
+         a:before{
+            opacity: 0;
+         }
+      }
+      .loading a{
+         position: relative;
+         &:after{
+            position: absolute;
+            content:'';
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom:0;
+            background-size: 25px 25px;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
+                                 transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                                 transparent 75%, transparent);                         
+            .animation(progress-bar-stripes 1s linear infinite);
+         }
+      }
+
       .par a {
          color: rgba(255, 255, 255, 0.5) !important; 
 
