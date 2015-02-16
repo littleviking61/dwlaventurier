@@ -28,7 +28,7 @@
 	  <?php endif ?>
 	</button>
 
-  <aside class="sidebar sidebar-primary" role="complementary" style="position: absolute; display: none;">
+  <aside class="sidebar sidebar-primary" role="complementary">
     <div class="inner">
       <?php dynamic_sidebar('sidebar-primary'); ?>
     </div>

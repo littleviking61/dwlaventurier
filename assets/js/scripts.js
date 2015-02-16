@@ -105,27 +105,19 @@ jQuery(function($) {
 	// --------------------------------
 	$(document).ready(function() {
 		// Main sidebar
-		$('.sidebar-toggle.active').click(function() {
-			$('.sidebar-primary').css({
-				'display': 'block',
-				'position': 'fixed'
-			});
-			sidebar_hieght();
-			$('html').addClass('main-sidebar-open');
-			setTimeout(function(){
-				$('.sidebar-toggle').addClass('x').removeClass('active');
-			},400);
-		});
+		$('.sidebar-toggle').click(function() {
 
-		$(document).on('click','.wrap, .sidebar-toggle.x', function(){
-			$('html').removeClass('main-sidebar-open');
-			setTimeout(function() {
-				$('.sidebar-primary').css({
-					'display': 'none',
-					'position': 'absolute'
-				});
-				$('.sidebar-toggle').addClass('active').removeClass('x');
-			}, 400);
+			var $b = $('body');
+			$(this).toggleClass('active');
+			sidebar_hieght();
+			if($b.hasClass('main-sidebar-open')) {
+				$b.removeClass('main-sidebar-open');
+				// $b.css('top', '');
+			}else{
+				$b
+					// .css('top', -($b.scrollTop()) + 'px')
+					.addClass('main-sidebar-open');
+			}
 		});
 
 		// Main nav
