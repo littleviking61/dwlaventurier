@@ -25,19 +25,20 @@ body{
 	text-align: center;
 
 	&.cover {
-		min-height: 330px;
+		// min-height: 330px;
 		background-size: cover;
 		background-position: center;
 		height: 100%;
+    overflow: hidden;
 
     .home &,
     .single &,
     .page & {
-      min-height: 660px; 
+      // min-height: 660px; 
     }
 
 		@media(max-width: @screen-xs-max) {
-			min-height: 300px !important;
+			// min-height: 300px !important;
 		}
 
 		&:before {
@@ -58,11 +59,12 @@ body{
 	}
 
   .header-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
     width: 100%;
-    .translate(-50%,-50%);
+    margin-top: 30px;
+    // .translate(-50%,-50%);
   }
 	
   .home & {
@@ -71,18 +73,19 @@ body{
   			position: relative;
         
   			&:after {
-  				content: "";
+  				// content: "";
   				display: block;
-  				width: 280px;
-  				height: 280px;
+  				width: 300px;
+  				height: 300px;
   				position: absolute;
-  				top: 50%;
+  				bottom: 0;
   				left: 50%;  
-  				margin-left: -140px;
-          margin-top: -140px;
+  				margin-left: -150px;
+          margin-top: -150px;
   				z-index: 0;
   				.rotate(45deg);
-  				opacity: .5;
+  				opacity: .4;
+          // background-color: black;
   			}
   		}
   	}
@@ -91,16 +94,18 @@ body{
 	.page-title {
 		position: relative;
 		font-family: @headings-font-family;
-		font-weight: bold;
+		font-weight: lighter;
 		text-transform: uppercase;
-		padding: 13px 30px 15px;
+		padding: 13px 0 10px;
 		line-height: 1;
 		display: inline-block;
 		z-index: 1;
+    border-bottom: 1px solid rgba(250,250,250,0.8);
+    margin-bottom: 0;
 
     .home & {
-      margin-top: -25px;
-      font-size: 80px;
+      margin-top: -5px;
+      // font-size: 80px;
       // border: 1px solid rgba(255,255,255,.25);
     }
 
@@ -136,7 +141,7 @@ body{
 		margin: 0;
 		z-index: 1;
 		position: relative;
-		opacity: .5;
+		// opacity: 1;
 
 		@media(max-width: @screen-xs-max) {
 			font-size: 14px;
@@ -213,6 +218,14 @@ body{
       margin-top: 15px;
       padding-top: 8px;
       padding-bottom: 8px;
+    }
+  }
+
+  .viking{
+    position: relative;
+    z-index: 1;
+    img{
+      max-width: 30vw;
     }
   }
 }

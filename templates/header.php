@@ -128,13 +128,13 @@
 ?>
 
 <header class="banner <?php echo $class ?>" role="banner">
+  <div class="viking">
+    <img src="/mongolia/images/viking-yak.svg">
+  </div>
   <div class="header-inner">
       <?php if( $header_display != 'no-cover' && (is_front_page() || is_archive() || is_search() || is_home()) ) : ?>
         <hgroup>
           <div class="container">
-            <h1 class="page-title">
-              <?php echo dw_timeline_title(); ?>
-            </h1>
 
             <?php if ( is_author() ): ?>
               <h2 class="author-desc">
@@ -144,9 +144,16 @@
               ?>
               </h2>
             <?php endif ?>
-
+            
             <?php if ( is_front_page() ): ?>
               <h2 class="page-description"><?php bloginfo('description'); ?></h2>
+            <?php endif ?>
+
+            <h1 class="page-title">
+              <?php echo dw_timeline_title(); ?>
+            </h1>
+
+            <?php if ( is_front_page() ): ?>
               <?php if ( dw_timeline_get_theme_option('get_start') != '' ): ?>
                 <?php if ( dw_timeline_get_theme_option('get_start_link') == '' ): ?>
                   <button id="get-started" class="btn btn-default btn-coner"><?php echo dw_timeline_get_theme_option('get_start') ?></button>
@@ -165,5 +172,5 @@
         </div>
       <?php endif; ?>
   </div>
-  <img src="/mongolia/images/viking-yak.svg">
+  
 </header>
