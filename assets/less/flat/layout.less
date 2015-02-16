@@ -1,8 +1,13 @@
 /* ==========================================================================
 	Layout
 	========================================================================== */
+body{
+  .bg;
+}
+
 .wrap {
-	background: @body-bg;
+	// background: @body-bg;
+  background-image: url("../img/point.png"); 
 }
 
 .main {
@@ -43,7 +48,7 @@
 			left: 0;
 			bottom: 0;
 			position: absolute;
-			background: red;
+			background: @header-bg;
       
 		}
 	}
@@ -96,7 +101,7 @@
     .home & {
       margin-top: -25px;
       font-size: 80px;
-      border: 1px solid rgba(255,255,255,.25);
+      // border: 1px solid rgba(255,255,255,.25);
     }
 
 		@media(max-width: @screen-xs-max) {

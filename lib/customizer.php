@@ -575,7 +575,7 @@ if( ! function_exists('dw_timeline_favicon') ) {
       echo '<link rel="shortcut icon" href="'.$favicon.'">';
     }
   }
-  add_action( 'wp_head', 'dw_timeline_favicon' );
+  // add_action( 'wp_head', 'dw_timeline_favicon' );
 }
 
 /**
@@ -721,7 +721,7 @@ if (current_user_can( 'edit_theme_options' ) || (!current_user_can( 'edit_theme_
       </style>    
       <?php
     }
-    add_action( 'wp_head', 'dw_timeline_style_flat' );
+    /*add_action( 'wp_head', 'dw_timeline_style_flat' );*/
   }
 }
 
@@ -773,7 +773,7 @@ function dw_timeline_typo_color() {
     <?php
   }
 }
-add_filter('wp_head','dw_timeline_typo_color');
+// add_filter('wp_head','dw_timeline_typo_color');
 
 /**
  * Font Selector
@@ -819,5 +819,5 @@ if( ! function_exists('dw_timeline_typo_font') ) {
       <?php
     }
   }
-  add_filter('wp_head','dw_timeline_typo_font');
+  // add_filter('wp_head','dw_timeline_typo_font');
 }

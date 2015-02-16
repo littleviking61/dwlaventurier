@@ -1,5 +1,24 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 @import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@font-face {
+  font-family: 'Code-Pro-Light';
+  src: url('../fonts/sourcecodepro-regular-webfont.eot');
+  src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'), url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Code-Pro-Light';
+  src: url('../fonts/sourcecpl-webfont.eot');
+  src: url('../fonts/sourcecpl-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecpl-webfont.woff') format('woff'), url('../fonts/sourcecpl-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.bg {
+  background-image: url("../img/fond.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+}
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -356,7 +375,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   color: inherit;
@@ -6305,7 +6324,7 @@ blockquote {
   border-radius: 2px;
   background: #1abc9c;
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
 }
 blockquote p {
   line-height: 1.42857143;
@@ -6501,7 +6520,7 @@ figure.alignnone {
    ========================================================================== */
 .btn {
   outline: none !important;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -6774,8 +6793,14 @@ textarea {
 /* ==========================================================================
 	Layout
 	========================================================================== */
+body {
+  background-image: url("../img/fond.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+}
 .wrap {
-  background: black;
+  background-image: url("../img/point.png");
 }
 .main {
   margin-top: 0;
@@ -6813,7 +6838,7 @@ textarea {
   left: 0;
   bottom: 0;
   position: absolute;
-  background: red;
+  background: transparent;
 }
 .banner .container {
   position: relative;
@@ -6850,7 +6875,7 @@ textarea {
 }
 .banner .page-title {
   position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   padding: 13px 30px 15px;
@@ -6861,7 +6886,6 @@ textarea {
 .home .banner .page-title {
   margin-top: -25px;
   font-size: 80px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 @media (max-width: 767px) {
   .banner .page-title {
@@ -6887,7 +6911,7 @@ textarea {
   }
 }
 .banner .page-description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 400;
@@ -7430,7 +7454,7 @@ textarea {
   background: #222;
   z-index: -1;
   color: rgba(255, 255, 255, 0.3);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   -webkit-transition: opacity 0s 0.3s;
   transition: opacity 0s 0.3s;
 }
@@ -7838,7 +7862,7 @@ textarea {
     display: block;
     margin: 0 0 1px;
     position: relative;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Code-Pro-Light', sans-serif;
   }
   .timeline-scrubber a:before {
     content: ' ';
@@ -7924,10 +7948,13 @@ textarea {
   font-size: 11px;
   line-height: 10px;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   display: inline-block;
-  background: #3e5771;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-image: url("../img/fond.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.8);
   color: #fff;
   font-weight: 700;
   border-radius: 1px;
@@ -7942,9 +7969,9 @@ textarea {
   top: 0;
   left: 50%;
   margin-left: -1px;
-  width: 2px;
+  width: 1px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
   content: '';
 }
 .timeline:after {
@@ -7968,9 +7995,12 @@ textarea {
     top: 0;
     width: 12px;
     height: 12px;
-    border: 3px solid #3e5771;
+    border: 2px solid #fff;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
+    background-image: url("../img/fond.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
     content: '';
   }
 }
@@ -8153,15 +8183,18 @@ textarea {
   padding: 0;
   width: 120px;
   height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
   border-radius: 1px;
-  background: #3e5771;
+  background-image: url("../img/fond.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 11px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   line-height: 28px;
   opacity: 1 !important;
   cursor: default;
@@ -8456,7 +8489,7 @@ p .quote-box {
   margin-right: 5px;
 }
 .single .entry-content {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.66666667;
@@ -8642,7 +8675,7 @@ p .quote-box {
   bottom: 0;
 }
 .page .page-content {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.66666667;
@@ -8676,7 +8709,7 @@ p .quote-box {
   left: 50%;
   color: #fff;
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -8902,7 +8935,7 @@ p .quote-box {
   -ms-user-select: none;
   user-select: none;
   outline: none !important;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Code-Pro-Light', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   color: #333333;

@@ -165,4 +165,5 @@
         </div>
       <?php endif; ?>
   </div>
+  <img src="/mongolia/images/viking-yak.svg">
 </header>
