@@ -106,7 +106,6 @@ jQuery(function($) {
 	$(document).ready(function() {
 		// Main sidebar
 		$(document).on('click','.sidebar-toggle, .main-sidebar-open .wrap', function() {
-
 			var $b = $('body');
 			$(this).toggleClass('active');
 			sidebar_hieght();
