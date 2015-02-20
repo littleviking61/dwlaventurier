@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
 @font-face {
   font-family: 'Code-Pro-Light';
   src: url('../fonts/sourcecodepro-regular-webfont.eot');
@@ -286,7 +287,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #737373;
@@ -375,7 +376,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   color: inherit;
@@ -6324,7 +6325,7 @@ blockquote {
   border-radius: 2px;
   background: #1abc9c;
   color: #fff;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
 }
 blockquote p {
   line-height: 1.42857143;
@@ -6340,7 +6341,7 @@ blockquote small {
   color: #fff;
 }
 blockquote cite {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   font-weight: normal;
   display: block;
@@ -6520,7 +6521,7 @@ figure.alignnone {
    ========================================================================== */
 .btn {
   outline: none !important;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -6749,7 +6750,7 @@ textarea {
   bottom: -1px;
 }
 .nivo-lightbox-title {
-  font: 14px/20px 'Noto Serif', serif;
+  font: 14px/20px 'Raleway', sans-serif;
   color: #fff;
   padding: 7px 15px;
   border-radius: 2px;
@@ -6793,11 +6794,19 @@ textarea {
 /* ==========================================================================
 	Layout
 	========================================================================== */
-body {
+body:before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background-image: url("../img/fond.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-attachment: fixed;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  background-origin: content-box;
 }
 .wrap {
   background-image: url("../img/point.png");
@@ -6859,7 +6868,7 @@ body {
 }
 .banner .page-title {
   position: relative;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
   padding: 13px 0 10px;
@@ -6896,7 +6905,7 @@ body {
   }
 }
 .banner .page-description {
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 400;
@@ -6930,7 +6939,7 @@ body {
   border: 2px solid transparent;
   background: #fff;
   color: #333;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 11px;
 }
 @media (max-width: 767px) {
@@ -6978,7 +6987,7 @@ body {
   border: 2px solid transparent;
   background: #fff;
   color: #333;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 11px;
 }
 @media (max-width: 767px) {
@@ -7109,6 +7118,9 @@ body {
 }
 .main-sidebar-open.single-html {
   height: auto;
+}
+.main-sidebar-open:before {
+  opacity: 0.2;
 }
 .main-sidebar-open .sidebar-primary {
   -webkit-transform: translate(100%, 0);
@@ -7441,7 +7453,7 @@ body {
   background: #222;
   z-index: 20;
   color: rgba(255, 255, 255, 0.3);
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -7844,7 +7856,7 @@ body {
     display: block;
     margin: 0 0 1px;
     position: relative;
-    font-family: 'Code-Pro-Light', sans-serif;
+    font-family: 'Poiret One', sans-serif;
   }
   .timeline-scrubber a:before {
     content: ' ';
@@ -7927,10 +7939,11 @@ body {
 }
 .timeline-pale span {
   padding: 10px 40px;
-  font-size: 11px;
+  font-size: 14px;
+  letter-spacing: 1px;
   line-height: 10px;
   text-transform: uppercase;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   display: inline-block;
   background-image: url("../img/fond.jpg");
   background-repeat: no-repeat;
@@ -8176,7 +8189,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 11px;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   line-height: 28px;
   opacity: 1 !important;
   cursor: default;
@@ -8471,7 +8484,7 @@ p .quote-box {
   margin-right: 5px;
 }
 .single .entry-content {
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.66666667;
@@ -8657,7 +8670,7 @@ p .quote-box {
   bottom: 0;
 }
 .page .page-content {
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.66666667;
@@ -8691,7 +8704,7 @@ p .quote-box {
   left: 50%;
   color: #fff;
   font-size: 18px;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -8804,7 +8817,7 @@ p .quote-box {
 }
 #comments > h3 {
   margin: 15px 0 30px;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -8886,7 +8899,7 @@ p .quote-box {
 }
 #respond > h3 {
   margin: 15px 0 30px;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -8917,7 +8930,7 @@ p .quote-box {
   -ms-user-select: none;
   user-select: none;
   outline: none !important;
-  font-family: 'Code-Pro-Light', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   color: #333333;

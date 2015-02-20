@@ -107,12 +107,17 @@ jQuery(function($) {
 		// Main sidebar
 		$(document).on('click','.sidebar-toggle, .main-sidebar-open .wrap', function() {
 			var $b = $('body');
+			var $h = $('html');
 			$(this).toggleClass('active');
 			sidebar_hieght();
 			if($b.hasClass('main-sidebar-open')) {
-				$b.removeClass('main-sidebar-open');
+				$b
+					.removeClass('main-sidebar-open')
+					.css({'paddingRight': 0, backgroundColor:'black'});
 			}else{
-				$b.addClass('main-sidebar-open');
+				$b
+					.addClass('main-sidebar-open')
+					.css({'paddingRight': 15, backgroundColor:'black'});
 			}
 		});
 
@@ -407,9 +412,9 @@ jQuery(function($) {
 					$t.retrieve();
 
 					// continue moving scroll
-					// $('html, body').stop(true,false).animate({
-					// 	scrollTop: scrollPoint
-					// },1000);
+					$('html, body').stop(true,false).animate({
+						scrollTop: scrollPoint
+					},1000);
 				}else{
 					$('html, body').animate({
 						scrollTop: scrollPoint
