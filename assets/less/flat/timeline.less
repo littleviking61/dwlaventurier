@@ -187,6 +187,7 @@
 .timeline .dwtl {
    position: relative;
    z-index: 1;
+   overflow: hidden;
 
    @media(min-width: @screen-md) {  
       opacity: 0;
@@ -200,9 +201,15 @@
          top: 0; 
          width: 12px;
          height: 12px;
-         border: 2px solid #fff;
-         border-radius: 50%;
-        .bg;
+         // background-color: white;
+         // .rotate(45);
+         // border: 2px solid #fff;
+         // border-radius: 50%;
+         width: 0; 
+         height: 0; 
+         border-top: 8px solid transparent;
+         border-bottom: 8px solid transparent; 
+        // .bg;
          content: '';
       }
    }
@@ -224,7 +231,8 @@
       padding-right: 15px;
 
       &:before {
-         right: -6px; 
+         border-right: 8px solid white;
+         right: 0px; 
       }
    }
 
@@ -234,7 +242,8 @@
       padding-left: 15px;
 
       &:before {
-         left: -6px; 
+         border-left: 8px solid white;
+         left: 0px; 
       }
    }
 }

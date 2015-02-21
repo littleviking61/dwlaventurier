@@ -31,7 +31,7 @@ function dw_timeline_scripts() {
   wp_register_script('infinitescroll', $template_directory_uri . '/assets/js/vendor/jquery.infinitescroll.min.js', false, '', true);
   wp_register_script('bootstrap', $template_directory_uri . '/assets/js/vendor/bootstrap.min.js', false, '', true);
   wp_register_script('prettify', $template_directory_uri . '/assets/js/vendor/prettify.js', false, '', false);
-  wp_register_script('nivo_lightbox', $template_directory_uri . '/assets/js/vendor/nivo-lightbox.min.js', false, '', false);
+  wp_register_script('fotorama', $template_directory_uri . '/assets/js/vendor/fotorama.js', false, '', false);
   wp_register_script('imagesLoaded', $template_directory_uri . '/assets/js/vendor/imagesloaded.pkgd.min.js', false, '', false);
   wp_register_script('velocity', $template_directory_uri . '/assets/js/vendor/velocity.min.js', false, '', false);
   wp_register_script('velocity-ui', $template_directory_uri . '/assets/js/vendor/velocity.ui.min.js', false, '', false);
@@ -69,7 +69,7 @@ function dw_timeline_scripts() {
   wp_enqueue_script('bootstrap');
   wp_enqueue_script('infinitescroll');
   wp_enqueue_script('prettify');
-  wp_enqueue_script('nivo_lightbox');
+  wp_enqueue_script('fotorama');
   wp_enqueue_script('imagesLoaded');
   wp_enqueue_script('velocity');
   wp_enqueue_script('velocity-ui');
@@ -81,11 +81,10 @@ function dw_timeline_scripts() {
     wp_enqueue_script('dw_timeline_post_form');
   }
 
-
-  if (function_exists('dwpb')) {
-    wp_enqueue_style( 'dw_promobar_style', $template_directory_uri .'/assets/plugin/dw-promobar/style.css',true);
-    wp_enqueue_script('dw_promobar_script', $template_directory_uri . '/assets/plugin//dw-promobar/script.js', array('jquery','dwpb_script'),'',true);
-  }
+  // if (function_exists('dwpb')) {
+  //   wp_enqueue_style( 'dw_promobar_style', $template_directory_uri .'/assets/plugin/dw-promobar/style.css',true);
+  //   wp_enqueue_script('dw_promobar_script', $template_directory_uri . '/assets/plugin//dw-promobar/script.js', array('jquery','dwpb_script'),'',true);
+  // }
 }
 add_action('wp_enqueue_scripts', 'dw_timeline_scripts', 100);
 

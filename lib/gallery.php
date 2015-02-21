@@ -107,9 +107,9 @@ function dw_timeline_gallery($attr) {
   return $output;
 }
 if (current_theme_supports('bootstrap-gallery')) {
-  remove_shortcode('gallery');
-  add_shortcode('gallery', 'dw_timeline_gallery');
-  add_filter('use_default_gallery_style', '__return_null');
+  // remove_shortcode('gallery');
+  // add_shortcode('gallery', 'dw_timeline_gallery');
+  // add_filter('use_default_gallery_style', '__return_null');
 }
 
 /**
@@ -120,4 +120,4 @@ function dw_timeline_attachment_link_class($html) {
   $html = str_replace('<a', '<a class="thumbnail img-thumbnail"', $html);
   return $html;
 }
-add_filter('wp_get_attachment_link', 'dw_timeline_attachment_link_class', 10, 1);
+// add_filter('wp_get_attachment_link', 'dw_timeline_attachment_link_class', 10, 1);

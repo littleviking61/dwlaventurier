@@ -3,11 +3,20 @@
    ========================================================================== */
 
 .hentry {
+   /*header *{
+      display: inline-block;
+      vertical-align: bottom;
+   }*/
+
    .entry-thumbnail {
       margin: 0 0 15px;
 
       img {
          width: 100%;
+      }
+
+      .overlay{
+         display: none;
       }
    } 
 
@@ -41,6 +50,10 @@
          font-size: 18px;
          line-height: 1.2;
       }
+
+      & + .entry-meta{
+         margin-top: -8px;
+      }
    }
 
    .entry-meta {
@@ -50,6 +63,9 @@
 
       a {
          color: #bbb;
+         &:extend(.btn);
+         &:extend(.btn-default);
+         &:extend(.btn-xs);
 
          &:hover {
             color: @brand-info; 
@@ -256,7 +272,7 @@ p .quote-box {
 .timeline {
    .hentry {
       .entry-thumbnail {
-         margin: -30px -30px 15px;
+         margin: -32px -30px 30px;
 
          @media(max-width: @screen-xs-max){
             margin: -20px -20px 15px;            

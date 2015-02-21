@@ -40,10 +40,14 @@ jQuery(function($) {
 
 	// Nivo lightbox
 	// -------------------------------------
-	function nivoLightbox() {
-		if (dwtl.gallery_lightbox != 'disable') {
-			$('.gallery .thumbnail, .lightbox').nivoLightbox();
-		};
+	function fotoramaLightbox() {
+		$('.gallery').fotorama({
+			width: '100%',
+		  ratio: 3/2,
+		  allowfullscreen: true,
+		  nav: 'thumbs',
+		  // fit: 'cover'
+		});
 	} 
 
 	// Timeline layout
@@ -121,35 +125,6 @@ jQuery(function($) {
 			}
 		});
 
-		// Main nav
-		// $('.nav-main-toggle.active').click(function() {
-		// 	$('.nav-main').css({
-		// 		'display': 'block',
-		// 		'position': 'fixed'
-		// 	});
-			
-		// 	$('html').addClass('main-nav-open');
-		// 	setTimeout(function(){
-		// 		$('.nav-main-toggle').addClass('x').removeClass('active');
-		// 	},400);
-		// });
-
-		// $(document).on('click','.wrap, .nav-main-toggle.x', function(){
-		// 	$('html').removeClass('main-nav-open');
-		// 	setTimeout(function() {
-		// 		$('.nav-main').css({
-		// 			'display': 'none',
-		// 			'position': 'absolute'
-		// 		});
-		// 		$('.nav-main-toggle').addClass('active').removeClass('x');
-		// 	}, 400);
-		// });
-
-		// $(document).on('click','.sub-nav-open', function(){
-		// 	$(this).toggleClass('active');
-		// 	sidebar_hieght();
-		// });
-
 		sidebar_hieght();
 		wrap_height();
 
@@ -166,7 +141,7 @@ jQuery(function($) {
 		prettyPrint();
 
 		// Nivo lightbox
-		nivoLightbox();
+		fotoramaLightbox();
 
 		$('.widget .children').before('<i class="fa fa-caret-right sub-nav-open"></i>');
 
@@ -393,7 +368,7 @@ jQuery(function($) {
 				// elems.velocity("transition.slideUpBigIn", {stagger: 300});
 			});
 
-			nivoLightbox();
+			fotoramaLightbox();
 			responsiveIframe();
 
 			// $("img.lazy").lazyload();
