@@ -78,7 +78,7 @@ if ( ! function_exists('dw_timeline_post_setting_callback')) {
         </td>
       </tr>
       
-      <tr><td height="10"></td></tr>
+      <!-- <tr><td height="10"></td></tr>
       <tr><td colspan="2"><strong><?php _e('Featured image size','dw-timeline') ?></strong></td></tr>
       <tr>
         <td colspan="2"><input name="dw_timeline_feature_image_size" type="text" value="<?php echo $feature_image_size ?>" /></td>
@@ -94,7 +94,7 @@ if ( ! function_exists('dw_timeline_post_setting_callback')) {
       <tr><td colspan="2"><strong><?php _e('Background color of featured mask','dw-timeline') ?></strong></td></tr>
       <tr>
         <td colspan="2"><input name="dw_timeline_post_background_color" type="text" value="<?php echo $background_color; ?>" class="post-background-color" /></td>
-      </tr>
+      </tr> -->
     </table>
 
     <?php

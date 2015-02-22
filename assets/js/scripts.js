@@ -41,13 +41,14 @@ jQuery(function($) {
 	// Nivo lightbox
 	// -------------------------------------
 	function fotoramaLightbox() {
-		$('.gallery').fotorama({
+		$('.galleryrgegrgeger').not('.fotorama').fotorama({
 			width: '100%',
 		  ratio: 3/2,
 		  allowfullscreen: true,
 		  nav: 'thumbs',
-		  // fit: 'cover'
-		});
+		  thumbborderwidth: 0,
+		  fit: 'scaledown'
+		}).children().addClass('fotorama__wrap--no-controls');
 	} 
 
 	// Timeline layout
