@@ -41,7 +41,7 @@ jQuery(function($) {
 	// Nivo lightbox
 	// -------------------------------------
 	function fotoramaLightbox() {
-		$('.galleryrgegrgeger').not('.fotorama').fotorama({
+		$('.gallery').not('.fotorama').fotorama({
 			width: '100%',
 		  ratio: 3/2,
 		  allowfullscreen: true,
@@ -49,7 +49,28 @@ jQuery(function($) {
 		  thumbborderwidth: 0,
 		  fit: 'scaledown'
 		}).children().addClass('fotorama__wrap--no-controls');
+		$('<style></style>').appendTo($(document.body)).remove();
 	} 
+
+	// magnifying popup
+	function popupInit() {
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: true,
+
+      fixedContentPos: false,
+    });
+
+	  $('.simple-ajax-popup').magnificPopup({
+	    type: 'ajax'
+	  });
+        
+    
+    
+	}
 
 	// Timeline layout
 	// -------------------------------------
@@ -143,6 +164,9 @@ jQuery(function($) {
 
 		// Nivo lightbox
 		fotoramaLightbox();
+
+		// magnifying popup
+		popupInit();
 
 		$('.widget .children').before('<i class="fa fa-caret-right sub-nav-open"></i>');
 

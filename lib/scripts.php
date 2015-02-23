@@ -32,6 +32,7 @@ function dw_timeline_scripts() {
   wp_register_script('bootstrap', $template_directory_uri . '/assets/js/vendor/bootstrap.min.js', false, '', true);
   wp_register_script('prettify', $template_directory_uri . '/assets/js/vendor/prettify.js', false, '', false);
   wp_register_script('fotorama', $template_directory_uri . '/assets/js/vendor/fotorama.js', false, '', false);
+  wp_register_script('magnific-popup', $template_directory_uri . '/assets/js/vendor/jquery.magnific-popup.min.js', false, '', false);
   wp_register_script('imagesLoaded', $template_directory_uri . '/assets/js/vendor/imagesloaded.pkgd.min.js', false, '', false);
   wp_register_script('velocity', $template_directory_uri . '/assets/js/vendor/velocity.min.js', false, '', false);
   wp_register_script('velocity-ui', $template_directory_uri . '/assets/js/vendor/velocity.ui.min.js', false, '', false);
@@ -70,6 +71,7 @@ function dw_timeline_scripts() {
   wp_enqueue_script('infinitescroll');
   wp_enqueue_script('prettify');
   wp_enqueue_script('fotorama');
+  wp_enqueue_script('magnific-popup');
   wp_enqueue_script('imagesLoaded');
   wp_enqueue_script('velocity');
   wp_enqueue_script('velocity-ui');
@@ -137,4 +139,4 @@ function dw_timeline_facebook_api(){
   }(document, 'script', 'facebook-jssdk'));</script>
   <?php
 }
-add_action('wp_footer','dw_timeline_facebook_api');
+// add_action('wp_footer','dw_timeline_facebook_api');

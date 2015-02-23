@@ -3630,10 +3630,6 @@ $.fn.fotorama = function (opts) {
       }, function () {
         fotoramaData.urtext = $fotorama.html();
         new $.Fotorama($fotorama,
-            /* Priority for options:
-             * 1. <div data-loop="true"></div>
-             * 2. $('div').fotorama({loop: false})
-             * 3. Defaults */
             $.extend(
                 {},
                 OPTIONS,
