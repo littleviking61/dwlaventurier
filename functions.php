@@ -109,3 +109,29 @@ function my_gallery_shortcode($output, $attr) {
     return $output;
 }
 add_filter('post_gallery', 'my_gallery_shortcode', 10, 2);
+
+function bimLes_comment() {
+    global $post, $id, $comments;
+    $post_id = (int) $_GET['postId'] ?: (int) $_POST['postId'];
+    $post = get_post($post_id);
+    $ajax_class = 'mp-popup';
+    $comments_args = array(
+        'post_id' => $post_id,
+        // 'number' => $get,//Número Máximo de Comentarios a Cargar
+        // 'order' => $orderComments,//Orden de los Comentarios
+        // 'offset' => $offset,//Desplazamiento desde el último comentario
+        'status' => 'approve'
+    );
+    
+    $comments = get_comments($comments_args);
+    // wp_list_comments(array('walker' => new DW_Timeline_Walker_Comment), $comments);
+    $template = locate_template( 'templates/comments.php' );
+    if(file_exists($template)) {
+        include($template);
+    }
+    
+    die();
+}
+// creating Ajax call for WordPress
+add_action( 'wp_ajax_nopriv_get_comment', 'bimLes_comment' );
+add_action( 'wp_ajax_get_comment', 'bimLes_comment' );

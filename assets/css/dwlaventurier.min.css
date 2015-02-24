@@ -7159,6 +7159,15 @@ img.mfp-img {
   right: 0;
   padding-top: 0;
 }
+/* add my style */
+.mp-popup {
+  width: 60vw;
+  height: 60vh;
+  background-color: white;
+  padding: 30px;
+  overflow: auto;
+  margin: 0 auto;
+}
 /* ==========================================================================
    Base
    ========================================================================== */

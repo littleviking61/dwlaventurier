@@ -65,7 +65,8 @@ jQuery(function($) {
     });
 
 	  $('.simple-ajax-popup').magnificPopup({
-	    type: 'ajax'
+	    type: 'ajax',
+	    tError: '<a href="%url%">The content</a> could not be loaded.'
 	  });
         
     
