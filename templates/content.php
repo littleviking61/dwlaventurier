@@ -18,13 +18,14 @@
 <article <?php post_class(); ?>>
   <div class="entry-inner">
     <div class="entry-thumbnail">
-      <?php if ( has_shortcode( $content, 'gallery' ) ) :
+      <?php if ( has_shortcode( $content, 'gallery' ) && $type == "gallery" ) :
         $pattern = get_shortcode_regex();
         preg_match('/'.$pattern.'/s', $post->post_content, $matches);
         if (is_array($matches) && $matches[2] == 'gallery') {
           echo do_shortcode( $matches[0] );
         };
-      elseif(get_field('video')) :
+        $content = strip_shortcodes($content, 'gallery');
+      elseif(get_field('video') && $type == "video") :
         echo get_field('video');
       elseif(has_post_thumbnail()) : ?>
           <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', ['class'=> 'lazy']); ?></a>
@@ -42,7 +43,7 @@
       <?php endif ?>
     </header>
     <div class="entry-content">
-      <?= strip_shortcodes($content, 'gallery'); ?>
+      <?= do_shortcode($content) ?>
     </div>
     <hr>
     <footer class="entry-infos">

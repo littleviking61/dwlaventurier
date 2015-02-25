@@ -49,7 +49,7 @@ jQuery(function($) {
 		  thumbborderwidth: 0,
 		  fit: 'scaledown'
 		}).children().addClass('fotorama__wrap--no-controls');
-		$('<style></style>').appendTo($(document.body)).remove();
+		// $('<style></style>').appendTo($(document.body)).remove();
 	} 
 
 	// magnifying popup

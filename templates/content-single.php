@@ -2,11 +2,12 @@
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content">
       <?php the_content(); ?>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'dw- timeline'), 'after' => '</p></nav>')); ?>
+      <br>
+      <?php get_template_part('templates/map'); ?>
     </div>
     <footer>
       <?php

@@ -95,8 +95,16 @@ function my_gallery_shortcode($output, $attr) {
 
     $i = 0;
     foreach ( $attachments as $id => $attachment ) {
-        $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, false, false);
+        // $link = wp_get_attachment_link($id, $size, false, false);
         // Here we add the image title
+
+        $urlFull = wp_get_attachment_image_src($id, 'full');
+        $urlLarge = is_single() ? wp_get_attachment_image_src($id, 'large') : wp_get_attachment_image_src($id, 'medium');
+
+        $link = "<a href='{$urlLarge[0]}' data-full='{$urlFull[0]}'>";
+        $link .= wp_get_attachment_image($id);
+        $link .= '</a>';
+
         $output .= "$link";
         if ( $captiontag && trim($attachment->post_excerpt) ) {
             $output .= wptexturize($attachment->post_excerpt);
