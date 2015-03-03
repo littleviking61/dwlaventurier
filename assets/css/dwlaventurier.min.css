@@ -7927,11 +7927,6 @@ body {
     top: 32px;
   }
 }
-@media (max-width: 1023px) {
-  .navbar-toggle {
-    opacity: .3;
-  }
-}
 .main-sidebar-open .navbar-toggle {
   -webkit-transform: translate(260px, 0);
   -ms-transform: translate(260px, 0);

@@ -63,31 +63,31 @@ class dw_timeline_about extends WP_Widget {
 
 			<ul class="share list-inline text-center">
 				<?php if ($facebook): ?>
-					<li class="facebook"><a href="<?php echo $facebook ?>"><i class="fa fa-facebook"></i></a></li>
+					<li class="facebook"><a target="other" href="<?php echo $facebook ?>"><i class="fa fa-facebook"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($twitter): ?>
-					<li class="twitter"><a href="<?php echo $twitter ?>"><i class="fa fa-twitter"></i></a></li>
+					<li class="twitter"><a target="other" href="<?php echo $twitter ?>"><i class="fa fa-twitter"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($google_plus): ?>
-					<li class="google-plus"><a href="<?php echo $google_plus ?>"><i class="fa fa-google-plus"></i></a></li>
+					<li class="google-plus"><a target="other" href="<?php echo $google_plus ?>"><i class="fa fa-google-plus"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($youtube): ?>
-					<li class="youtube"><a href="<?php echo $youtube ?>"><i class="fa fa-youtube"></i></a></li> 
+					<li class="youtube"><a target="other" href="<?php echo $youtube ?>"><i class="fa fa-youtube"></i></a></li> 
 				<?php endif ?>
 
 				<?php if ($linkedin): ?>
-					<li class="linkedin"><a href="<?php echo $linkedin ?>"><i class="fa fa-linkedin"></i></a></li>
+					<li class="linkedin"><a target="other" href="<?php echo $linkedin ?>"><i class="fa fa-linkedin"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($instagram): ?>
-					<li class="instagram"><a href="<?php echo $instagram ?>"><i class="fa fa-instagram"></i></a></li>
+					<li class="instagram"><a target="other" href="<?php echo $instagram ?>"><i class="fa fa-instagram"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($tumblr): ?>
-					<li class="tumblr"><a href="<?php echo $tumblr ?>"><i class="fa fa-tumblr"></i></a></li>
+					<li class="tumblr"><a target="other" href="<?php echo $tumblr ?>"><i class="fa fa-tumblr"></i></a></li>
 				<?php endif ?>
 
 				<?php if ($custom): ?>

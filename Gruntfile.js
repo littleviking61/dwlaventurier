@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 
 					src: "./assets/css",
 					dest: "/var/www/html/laventurierviking/wp-content/themes/dwlaventurier/assets",
-					host: "root@online",
+					host: "laventurier@onlinet",
 				}
 			}
 		},

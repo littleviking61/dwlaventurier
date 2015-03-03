@@ -11,6 +11,7 @@ function dw_timeline_scripts() {
   //   wp_enqueue_style('dw_timeline_main', $template_directory_uri . '/assets/css/dw-timeline-pro.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
   // }
   wp_enqueue_style('dw_timeline_flat', $template_directory_uri . '/assets/css/dwlaventurier.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
+  wp_enqueue_style('font-awesome', $template_directory_uri . '/assets/css/font-awesome.min.css', false, '6c39f42987ae297a5a21e2bb35bf3402');
 
   wp_enqueue_style( 'dw_timeline_style', get_stylesheet_uri(), false, 'c1a58eb4baaf24c3771085df3d54ff8d' );
 

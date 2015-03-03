@@ -6,7 +6,7 @@
       <?php
         $cat = get_the_category();
         $cat = is_home() ? [] : [ 'cat' => $cat[0]->cat_ID];
-        
+
         $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $cat);
 
         $years = wp_get_archives( $archiveArg );

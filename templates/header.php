@@ -129,7 +129,7 @@
 
 <header class="banner <?php echo $class ?>" role="banner">
   <div class="viking">
-    <img src="/mongolia/images/viking-yak.svg">
+    <img src="<?php bloginfo('template_url') ?>/assets/img/viking-yak.svg">
   </div>
   <div class="header-inner">
       <?php if( $header_display != 'no-cover' && (is_front_page() || is_archive() || is_search() || is_home()) ) : ?>
