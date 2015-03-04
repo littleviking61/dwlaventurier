@@ -148,6 +148,11 @@ jQuery(function($) {
 			}
 		});
 
+		$(document).on('click','.sub-nav-open', function(){
+        $(this).toggleClass('active');
+        sidebar_hieght();
+    });
+
 		sidebar_hieght();
 		wrap_height();
 
