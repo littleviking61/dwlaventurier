@@ -4,7 +4,14 @@ $location = get_field('travel_point');
 
 if( !empty($location) ):
 ?>
-<p><i class="glyphicon glyphicon-map-marker"></i> <?= $location['address'] ?></p>
+<hr>
+<h3>
+	<b><?= $location['address'] ?></b>
+</h3>
+<p>
+	<i class="fa fa-dot-circle-o"></i> <b>Latitude</b> : <?= $location['lat'] ?>&nbsp;&nbsp;
+	<i class="fa fa-dot-circle-o"></i> <b>Longitude</b> : <?= $location['lng'] ?>
+</p>
 <div class="acf-map">
 	<div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"></div>
 </div>

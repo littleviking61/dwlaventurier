@@ -1,47 +1,33 @@
 <?php while (have_posts()) : the_post(); ?>
+  <?php 
+    $content = get_the_content( __('Lire la suite &rarr;', 'dw-timeline') );
+    $type = get_post_format();
+  ?>
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
+      <?php get_template_part('templates/entry-meta'); ?>
     </header>
+    <hr>
     <div class="entry-content">
-      <?php the_content(); ?>
+      <?php if ( has_shortcode( $content, 'gallery' ) && $type == "gallery" ) :
+        $pattern = get_shortcode_regex();
+        preg_match('/'.$pattern.'/s', $post->post_content, $matches);
+        if (is_array($matches) && $matches[2] == 'gallery') {
+          echo do_shortcode( $matches[0] );
+        };
+        $content = strip_shortcodes($content, 'gallery');
+      elseif(get_field('video') && $type == "video") :
+        echo get_field('video');
+      endif; ?>
+      <p><?= apply_filters('the_content', $content) ?></p>
       <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'dw- timeline'), 'after' => '</p></nav>')); ?>
-      <br>
-      <?php get_template_part('templates/map'); ?>
     </div>
+
     <footer>
-      <?php
-        $tags_list = get_the_tag_list( '', '' );
-        if ( $tags_list ) :
-      ?>
-        <div class="entry-tags">
-          <span class="tags-links">
-          <?php printf( __( '%1$s', 'dw-timeline' ), $tags_list ); ?>
-        </span>
-        </div>
-      <?php endif; ?>
-
-      <?php 
-        $desc = get_the_author_meta('description');
-        if ( $desc != ''): 
-      ?>
-
-      <div class="author-info">
-        <div class="author-avatar">
-          <?php echo get_avatar( get_the_author_meta( 'user_email' ), 100 ); ?>
-        </div>
-        <h4 class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-          <?php echo get_the_author(); ?></a>
-        </h4>
-        <div class="author-description"><?php echo $desc; ?></div>
-      </div>
-      <?php endif ?>
+      <?php get_template_part('templates/map'); ?>
     </footer>
 
-    <div class="quote-box">
-      <!-- <button id="btn-comment-quote" class="btn-post-comment"></button> -->
-      <button id="btn-tweet-quote" class="btn-tweet"></button>
-    </div>
     <div class="quick-comment-box form-group">
       <?php 
         global $current_user;

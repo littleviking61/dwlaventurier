@@ -305,6 +305,11 @@ p .quote-box {
 }
 
 .single {
+
+   .entry-comments{
+      display: none;
+   }
+
    .wrap {
       background: #fff !important;
       height: 100%; 
@@ -334,15 +339,23 @@ p .quote-box {
       p {
          position: relative;
       }
+
+      .gallery:not(:last-child) {
+         margin-bottom: 30px;
+      }
    }
 
    .no-cover + .container {
       min-height: ~'calc(100% - 400px)';
       .hentry header {
-         .page-header();
+         // .page-header();
          margin-top: 0px;
          margin-bottom: 20px;
-         color: #333;
+         // color: #333;
+         .entry-title{
+            font-weight: 700;
+            font-size: 48px;
+         }
       }
 
       .entry-meta {
@@ -358,11 +371,10 @@ p .quote-box {
    .cover + .container {
       .hentry header { 
          position: absolute;
-         top: -150px;
+         top: -30px;
          z-index: 1;
-         color: #fff;
          width: 100%;
-         max-width: 90%;
+         background: white;
       }
 
       .entry-title {
@@ -370,7 +382,10 @@ p .quote-box {
          font-size: 48px;
          position: absolute;
          bottom: 0;
-         padding-bottom: 50px;
+         background: white;
+         padding: 15px 30px;
+         left: -30px;
+         width: 100%;
 
          @media( max-width: @screen-xs-max ) {
             padding-right: 10px;
@@ -417,6 +432,11 @@ p .quote-box {
    background-size: cover;
    position: relative;
    min-height: 400px;
+   color: white;
+   width: 50%;
+   float: left;
+
+   &.prev{ text-align: right; }
 
    @media( max-width: @screen-xs-max ) {
       min-height: 200px;      
@@ -433,8 +453,14 @@ p .quote-box {
       background: #222;
    }
 
+
    &.has-thumbnail:before {
-      opacity: .5;
+      opacity: .3;
+      .transition(opacity .4s);
+   }
+
+   &.has-thumbnail:hover:before{
+      opacity: .8;
    }
 
    .adjacent-post-link {
@@ -442,6 +468,7 @@ p .quote-box {
       width: 100%;
       height: 100%;
       z-index: 1;
+      left: 0;
    }
    
    .container {
@@ -456,6 +483,11 @@ p .quote-box {
       position: absolute;
       top: 50%;
       opacity: .8;
+      right: 110px;
+      margin-left: 0;
+      
+
+
       @media(max-width: @screen-sm-max){
          width: 100%;
       }

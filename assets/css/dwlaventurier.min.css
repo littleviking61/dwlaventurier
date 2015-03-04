@@ -6571,6 +6571,7 @@ ol.linenums li {
   right: 2px;
   background-position: 0 -32px;
   z-index: 20;
+  background: transparent;
 }
 .fotorama__arr:focus,
 .fotorama__fullscreen-icon:focus {
@@ -7716,6 +7717,7 @@ body {
   text-align: center;
 }
 .banner.cover {
+  min-height: 330px;
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -9373,6 +9375,9 @@ p .quote-box {
 .single-html {
   height: 100%;
 }
+.single .entry-comments {
+  display: none;
+}
 .single .wrap {
   background: #fff !important;
   height: 100%;
@@ -9396,24 +9401,19 @@ p .quote-box {
 .single .entry-content p {
   position: relative;
 }
+.single .entry-content .gallery:not(:last-child) {
+  margin-bottom: 30px;
+}
 .single .no-cover + .container {
   min-height: calc(100% - 400px);
 }
 .single .no-cover + .container .hentry header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
-  margin-top: 65px;
-  padding-bottom: 0;
-  margin-bottom: 10px;
   margin-top: 0px;
   margin-bottom: 20px;
-  color: #333;
 }
-@media (max-width: 767px) {
-  .single .no-cover + .container .hentry header h1 {
-    font-size: 26px;
-  }
+.single .no-cover + .container .hentry header .entry-title {
+  font-weight: 700;
+  font-size: 48px;
 }
 .single .no-cover + .container .entry-meta a {
   color: #999;
@@ -9423,18 +9423,20 @@ p .quote-box {
 }
 .single .cover + .container .hentry header {
   position: absolute;
-  top: -150px;
+  top: -30px;
   z-index: 1;
-  color: #fff;
   width: 100%;
-  max-width: 90%;
+  background: white;
 }
 .single .cover + .container .entry-title {
   font-weight: 700;
   font-size: 48px;
   position: absolute;
   bottom: 0;
-  padding-bottom: 50px;
+  background: white;
+  padding: 15px 30px;
+  left: -30px;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .single .cover + .container .entry-title {
@@ -9472,6 +9474,12 @@ p .quote-box {
   background-size: cover;
   position: relative;
   min-height: 400px;
+  color: white;
+  width: 50%;
+  float: left;
+}
+.adjacent-post.prev {
+  text-align: right;
 }
 @media (max-width: 767px) {
   .adjacent-post {
@@ -9489,13 +9497,19 @@ p .quote-box {
   background: #222;
 }
 .adjacent-post.has-thumbnail:before {
-  opacity: .5;
+  opacity: .3;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.adjacent-post.has-thumbnail:hover:before {
+  opacity: .8;
 }
 .adjacent-post .adjacent-post-link {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
+  left: 0;
 }
 .adjacent-post .container {
   height: 300px;
@@ -9512,6 +9526,8 @@ p .quote-box {
   position: absolute;
   top: 50%;
   opacity: .8;
+  right: 110px;
+  margin-left: 0;
 }
 @media (max-width: 991px) {
   .adjacent-post .adjacent-post-header {

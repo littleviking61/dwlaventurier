@@ -2,13 +2,13 @@
   $class = 'no-cover';
   $header_display = dw_timeline_get_theme_option('header_display');
 
-  if ( $header_display != 'no-cover' && (is_front_page() || is_archive() || is_search() || is_home()) ) {
-    $class = 'cover';
-  }
+  // if ( $header_display != 'no-cover' && ( is_archive() || is_search() )) {
+  //   $class = 'cover';
+  // }
 
   $feature_image = 'no';
   if( ! is_home() ) {
-    //$feature_image = get_post_meta( get_the_ID(), 'dw-feature-image', true );
+    $feature_image = get_post_meta( get_the_ID(), 'dw-feature-image', true );
   }
   
   if ( is_single() && $feature_image != 'no' ) {
@@ -128,9 +128,11 @@
 ?>
 
 <header class="banner <?php echo $class ?>" role="banner">
-  <div class="viking">
-    <img src="<?php bloginfo('template_url') ?>/assets/img/viking-yak.svg">
-  </div>
+  <?php if ( is_home() ): ?>
+    <div class="viking">
+      <img src="<?php bloginfo('template_url') ?>/assets/img/viking-yak.svg">
+    </div>
+  <?php endif ?>
   <div class="header-inner">
       <?php if( $header_display != 'no-cover' && (is_front_page() || is_archive() || is_search() || is_home()) ) : ?>
         <hgroup>

@@ -46,8 +46,6 @@
       <?= do_shortcode($content) ?>
     </div>
     <hr>
-    <footer class="entry-infos">
-      <?php get_template_part('templates/entry-meta'); ?>
-    </footer>
+    <?php get_template_part('templates/entry-meta'); ?>
   </div>
 </article>

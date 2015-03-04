@@ -11,12 +11,12 @@
         </main>
       </div>
     </div>
-    <?php 
-      $adjacent_post = dw_timeline_get_theme_option('adjacent_post');
-      if ($adjacent_post != 'disable') {
-        dw_timeline_adjacent_post();
-      }
-    ?>
+    <?php $adjacent_post = dw_timeline_get_theme_option('adjacent_post');
+    if ($adjacent_post != 'disable') : ?>
+        <footer class="adjacent">
+          <?php dw_timeline_adjacent_post(); ?>
+        </footer>
+    <?php endif; ?>
   </div>
   <?php get_template_part('templates/footer'); ?>
 </body>

@@ -78,10 +78,10 @@ function dw_timeline_scripts() {
   wp_enqueue_script('velocity-ui');
   wp_enqueue_script('dw_timeline_scripts','','jquery');
   if( is_single() ) {
-    wp_enqueue_script('dw_timeline_single_scripts');
+    // wp_enqueue_script('dw_timeline_single_scripts');
   }
   if( !is_single() && !is_page() && is_user_logged_in() ) {
-    wp_enqueue_script('dw_timeline_post_form');
+    // wp_enqueue_script('dw_timeline_post_form');
   }
 
   // if (function_exists('dwpb')) {

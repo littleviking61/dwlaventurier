@@ -235,39 +235,52 @@ if ( !function_exists('dw_timeline_adjacent_post')) {
       if (dw_timeline_get_theme_option('adjacent_post_exclude')) {
         $adjacent_post_exclude = implode(',', dw_timeline_get_theme_option('adjacent_post_exclude'));
       }
+      
+      $adjacent_post = get_adjacent_post(false,$adjacent_post_exclude,false);
+      if ($adjacent_post) {
+        global $post;
+        $post = $adjacent_post;
+        setup_postdata($post);
+        $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id() );
+        $class = 'no-thumbnail';
+        if ( !empty($adjacent_post_thumb)) {
+          $class = 'has-thumbnail';
+        } ?>
+        <div class="adjacent-post prev <?php echo $class; ?> " style="background-image: url(<?php echo $adjacent_post_thumb?>)">
+          <a class="adjacent-post-link" href="<?php echo get_permalink(); ?>"></a>
+          <div class="adjacent-post-header col-md-8 col-md-offset-2">
+            <span class="read-next"><?php _e('Escapade suivante','dw-timeline') ?></span>
+            <h2 class="entry-title"><?php the_title(); ?></h2>
+            <span class="entry-date"><i class="fa fa-calendar"></i> <time class="published" datetime="<?= get_the_time('c'); ?>"><?= get_the_date(); ?></time></span>
+          </div>
+        </div>
+        <?php wp_reset_postdata();
+      } else { ?>
+        <div class="adjacent-post empty"></div>
+      <?php }
+
       $adjacent_post = get_adjacent_post(false,$adjacent_post_exclude);
       if ($adjacent_post) {
-        $adjacent_post_id = $adjacent_post->ID;
-        $the_query = new WP_Query( 'p='.$adjacent_post_id );
-        // The Loop
-        if ( $the_query->have_posts() ) {
-          while ( $the_query->have_posts() ) {
-            $the_query->the_post();
-            $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id() );
-            $class = 'no-thumbnail';
-            if ( !empty($adjacent_post_thumb)) {
-              $class = 'has-thumbnail';
-            }
-            ?>
-            <div class="adjacent-post <?php echo $class; ?> " style="background-image: url(<?php echo $adjacent_post_thumb?>)">
-              <a class="adjacent-post-link" href="<?php echo get_permalink(); ?>"></a>
-              <div class="container">
-                <div class="row">
-                  <div class="adjacent-post-header col-md-8 col-md-offset-2">
-                    <span class="read-next"><?php _e('read next','dw-timeline') ?></span>
-                    <h2 class="entry-title"><?php the_title(); ?></h2>
-                    <?php get_template_part('templates/entry-meta'); ?>
-                  </div>
-                </div>
-              </div>
+        global $post;
+        $post = $adjacent_post;
+        setup_postdata($post);
+        $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id() );
+        $class = 'no-thumbnail';
+        if ( !empty($adjacent_post_thumb)) {
+          $class = 'has-thumbnail';
+        } ?>
+          <div class="adjacent-post next <?php echo $class; ?> " style="background-image: url(<?php echo $adjacent_post_thumb?>)">
+            <a class="adjacent-post-link" href="<?php echo get_permalink(); ?>"></a>
+            <div class="adjacent-post-header col-md-8 col-md-offset-2">
+              <span class="read-next"><?php _e('Escapade précédente','dw-timeline') ?></span>
+              <h2 class="entry-title"><?php the_title(); ?></h2>
+              <span class="entry-date"><i class="fa fa-calendar"></i> <time class="published" datetime="<?= get_the_time('c'); ?>"><?= get_the_date(); ?></time></span>
             </div>
-            <?php
-          }
-        }
-        wp_reset_postdata();
-      } else {
-
-      }
+          </div>
+        <?php wp_reset_postdata();
+      }else { ?>
+        <div class="adjacent-post empty"></div>
+      <?php }
     }
   }
 }
