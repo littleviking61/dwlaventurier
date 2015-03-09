@@ -9109,7 +9109,9 @@ body {
   margin-right: 5px;
 }
 .hentry .entry-infos > * {
-  margin-right: 10px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 15px;
 }
 .hentry .entry-thumbnail {
   margin: 0 0 15px;
@@ -9227,7 +9229,8 @@ body {
 .hentry .entry-summary .link-preview .carousel img {
   margin-bottom: 0;
 }
-.hentry .more-link {
+.hentry .more-link,
+.hentry .gallery-link {
   display: block;
   clear: both;
   margin: 10px 0 0;

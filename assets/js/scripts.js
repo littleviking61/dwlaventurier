@@ -401,6 +401,7 @@ jQuery(function($) {
 
 			fotoramaLightbox();
 			responsiveIframe();
+			popupInit();
 
 			// $("img.lazy").lazyload();
 

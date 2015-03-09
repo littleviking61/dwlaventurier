@@ -6,7 +6,6 @@
 	
 	<span class="entry-date"><i class="fa fa-calendar"></i> <time class="published" datetime="<?= get_the_time('c'); ?>"><?= get_the_date(); ?></time></span>
 	
-	<span class="entry-comments"><a class="simple-ajax-popup" href="/wp-admin/admin-ajax.php?postId=<?= get_the_id() ?>&action=get_comment"><i class="fa fa-comments"></i> <?php comments_number( '0', '1', '%' ); ?></a></span>
 	<?php $tags_list = get_the_tag_list( '', ', ' ); ?>
 	<?php if ( $tags_list) : ?>
 		<span class="tags">

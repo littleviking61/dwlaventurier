@@ -1,5 +1,4 @@
 <div class="timeline two-col" data-perpage="<?= get_option('posts_per_page') ?>">
-  <div data-page="1" class="timeline-pale dwtl full remove-time-anchor"><span><?php //_e('Page','dw-timeline') ?><?= date('Y') ?></span></div>
 
   <div class="timeline-scrubber">
     <ul>
@@ -10,6 +9,7 @@
         $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $cat);
 
         $years = wp_get_archives( $archiveArg );
+
         $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
         echo $years;
       ?>
@@ -33,9 +33,15 @@
       endif; // Front-end post form for admin user ?>
     
     
-    <?php // get_template_part( 'templates/home', 'stickiest' ); //Sticky posts ?>
+    <?php $year = null;// get_template_part( 'templates/home', 'stickiest' ); //Sticky posts ?>
 
-    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    <?php while ($the_query->have_posts()) : $the_query->the_post(); 
+      if(is_null($year)) :
+        $year = get_the_date( 'Y' );  ?>
+        <div data-page="1" class="timeline-pale dwtl full remove-time-anchor"><span><?php //_e('Page','dw-timeline') ?><?= $year ?></span></div>
+      <?php endif;
+      if($year !== get_the_date( 'Y' )) break; ?>
+    
 
       <?php get_template_part('templates/content', get_post_format()); ?>
       <?php if ( $wp_query->max_num_pages == 1): ?>
