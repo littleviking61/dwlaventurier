@@ -37,7 +37,7 @@
         preg_match('/'.$pattern.'/s', $post->post_content, $matches);
       endif; 
       $content = strip_shortcodes($content, 'gallery'); 
-      echo do_shortcode($content);
+      echo apply_filters('the_content', do_shortcode($content));
       if (is_array($matches) && $matches[2] == 'gallery' && $type == 'image') : ?>
         <a href="#view-gallery" class="gallery-link" data-<?= substr($matches[3],1) ?>>Voir la gallerie →</a>
       <?php endif; ?>

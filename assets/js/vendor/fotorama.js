@@ -1422,9 +1422,12 @@ function clone (array) {
 }
 
 function lockScroll ($el, left, top) {
-  $el
-    .scrollLeft(left || 0)
-    .scrollTop(top || 0);
+  /* modify lock function) - BR */
+  if($('html').css('overflow') === 'hidden') $('html').css({marginRight: '0', overflow: 'auto'});
+  else $('html').css({marginRight: '15px', overflow: 'hidden'});
+  // $el
+  //   .scrollLeft(left || 0)
+  //   .scrollTop(top || 0);
 }
 
 function optionsToLowerCase (options) {
@@ -3171,7 +3174,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
     var time = arguments[1] || 0,
         setFLAG = arguments[2];
 
-    extendMeasures(!that.fullScreen ? optionsToLowerCase(options) : {width: '100%', maxwidth: null, minwidth: null, height: '100%', maxheight: null, minheight: null}, [measures, setFLAG || that.fullScreen || opts]);
+    extendMeasures(!that.fullScreen ? optionsToLowerCase(options) : {width: '100%', maxwidth: null, minwidth: null, height: '94%', maxheight: null, minheight: null}, [measures, setFLAG || that.fullScreen || opts]);
 
     var width = measures.width,
         height = measures.height,
@@ -3197,7 +3200,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
       //////console.log('measures.w', measures.w);
 
       height = numberFromWhatever(height, windowHeight);
-
       height = height || (ratio && width / ratio);
 
       if (height) {

@@ -41,15 +41,66 @@ jQuery(function($) {
 	// Nivo lightbox
 	// -------------------------------------
 	function fotoramaLightbox() {
-		$('.gallery').not('.fotorama').fotorama({
-			width: '100%',
-		  ratio: 3/2,
-		  allowfullscreen: true,
-		  nav: 'thumbs',
-		  thumbborderwidth: 0,
-		  fit: 'scaledown'
-		}).children().addClass('fotorama__wrap--no-controls');
+
+		$('.gallery').not('.fotorama')
+		 .on('fotorama:fullscreenenter', function (e, fotorama, extra) {
+			 	fotorama.setOptions({
+				  margin: 10,
+				  thumbmargin: 10
+				});
+      })
+		 .on('fotorama:fullscreenexit', function (e, fotorama, extra) {
+			 	fotorama.setOptions({
+				  margin: 2,
+				  thumbmargin: 2
+				});
+      })
+			.fotorama({
+				width: '100%',
+				maxwidth: '100%',
+			  ratio: 3/2,
+			  allowfullscreen: true,
+			  nav: 'thumbs',
+			  thumbborderwidth: 0,
+			  fit: 'scaledown',
+			}).children().addClass('fotorama__wrap--no-controls');
+
 		// $('<style></style>').appendTo($(document.body)).remove();
+		// 
+		$('a[href="#view-gallery"]').magnificPopup({
+			type: 'ajax',
+			ajax: {
+				settings: {
+					url: '/wp-admin/admin-ajax.php',
+					type: 'post'
+				}
+			},
+			callbacks: {
+				elementParse: function() {
+					this.st.ajax.settings.data = {
+						action: 'get_gallery',
+						gallery: this.st.el.attr('data-ids'),
+						index: '0'
+					};
+				},
+				ajaxContentAdded: function() {
+					// Ajax content is loaded and appended to DOM
+					$modal = this.content;
+
+					$('.fotorama-ajax', $modal).fotorama({
+						height: this.container.height() - 140,
+					  width: '100%',
+						maxwidth: '100%',
+					  ratio: 3/2,
+					  nav: 'thumbs',
+					  thumbborderwidth: 0,
+					  fit: 'scaledown',
+					  margin: 10,
+			  		thumbmargin: 10
+					});
+				}
+			}
+		});
 	} 
 
 	// magnifying popup

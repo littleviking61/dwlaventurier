@@ -6256,38 +6256,25 @@ ol.linenums li {
 .fotorama:not(.fotorama--unobtrusive) > *:not(:first-child) {
   display: none;
 }
-.fullscreen {
-  width: 100%!important;
-  height: 100%!important;
-  max-width: 100%!important;
-  max-height: 100%!important;
-  margin: 0!important;
-  padding: 0!important;
-  overflow: hidden!important;
-  background: #000000;
-}
 .fotorama--fullscreen {
-  position: absolute!important;
+  position: fixed!important;
   top: 0!important;
   left: 0!important;
   right: 0!important;
   bottom: 0!important;
   float: none!important;
   z-index: 2147483647!important;
-  background: #000;
+  background: rgba(11, 11, 11, 0.8);
   width: 100%!important;
   height: 100%!important;
-  margin: 0 !important;
-}
-.fotorama--fullscreen .fotorama__nav,
-.fotorama--fullscreen .fotorama__stage {
-  background: #000000;
+  padding: 3vh 3vw !important;
 }
 .fotorama__wrap {
   -webkit-text-size-adjust: 100%;
   position: relative;
   direction: ltr;
   z-index: 0;
+  max-height: 100%;
 }
 .fotorama__wrap--rtl .fotorama__stage__frame {
   direction: rtl;
@@ -6571,7 +6558,7 @@ ol.linenums li {
   right: 2px;
   background-position: 0 -32px;
   z-index: 20;
-  background: transparent;
+  background-color: transparent;
 }
 .fotorama__arr:focus,
 .fotorama__fullscreen-icon:focus {
@@ -6788,6 +6775,9 @@ ol.linenums li {
   text-align: left;
   z-index: 1045;
 }
+.mfp-content .gallery {
+  padding: 0 3vw;
+}
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
   width: 100%;
@@ -6890,9 +6880,6 @@ button::-moz-focus-inner {
 }
 .mfp-close:active {
   top: 1px;
-}
-.mfp-close-btn-in .mfp-close {
-  color: #333;
 }
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
@@ -9377,6 +9364,9 @@ p .quote-box {
    ========================================================================== */
 .single-html {
   height: 100%;
+}
+.single .hentry header > * {
+  display: block;
 }
 .single .entry-comments {
   display: none;

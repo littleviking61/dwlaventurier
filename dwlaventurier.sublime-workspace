@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"inli",
+				"inline-block"
+			],
+			[
 				"mar",
 				"margin-bottom"
 			],
@@ -216,22 +220,6 @@
 	"buffers":
 	[
 		{
-			"file": "assets/js/scripts.js",
-			"settings":
-			{
-				"buffer_size": 14169,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/less/vendor/fotorama.less",
-			"settings":
-			{
-				"buffer_size": 16063,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "assets/less/flat/variables.less",
 			"settings":
 			{
@@ -240,28 +228,18 @@
 			}
 		},
 		{
-			"file": "index.php",
+			"file": "assets/js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 2336,
+				"buffer_size": 14185,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 3025 files for \"awesome\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/README.txt:\n   28  - Modernizr 2.6.2 - http://modernizr.com/license/\n   29  - GLYPHICONS in Twitter Bootstrap: http://glyphicons.com/license/\n   30: - Fontawesome 4.0.3 - http://fontawesome.io/license/\n   31  - Nivo-lightbox - http://dev7studios.com/plugins/nivo-lightbox/\n   32  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 7443  .btn-tweet:before {\n 7444    content: '\\f099';\n 7445:   font-family: FontAwesome;\n 7446  }\n 7447  .btn-post-comment:before {\n 7448    content: '\\f075';\n 7449:   font-family: FontAwesome;\n 7450  }\n 7451  /* ==========================================================================\n ....\n 8291    .nav-main li[class*=fa-] .sub-menu a:before {\n 8292      content: '\\f0da';\n 8293:     font-family: FontAwesome;\n 8294      position: absolute;\n 8295      left: 30px;\n ....\n 8418  .widget_archive li:before {\n 8419    content: '\\f073';\n 8420:   font-family: FontAwesome;\n 8421    position: absolute;\n 8422    left: -30px;\n ....\n 8456  .widget_categories > ul > li:before {\n 8457    content: '\\f115';\n 8458:   font-family: FontAwesome;\n 8459    position: absolute;\n 8460    left: -30px;\n ....\n 8531  .widget_nav_menu li[class*=fa-] .sub-menu a:before {\n 8532    content: '\\f0da';\n 8533:   font-family: FontAwesome;\n 8534    position: absolute;\n 8535    left: 30px;\n ....\n 8635  .widget_rss .widget-title a:first-child:before {\n 8636    content: \"\\f09e\";\n 8637:   font-family: FontAwesome;\n 8638  }\n 8639  .widget_rss li {\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/fonts/fontawesome-webfont.svg:\n    4  <metadata></metadata>\n    5  <defs>\n    6: <font id=\"fontawesomeregular\" horiz-adv-x=\"1536\" >\n    7  <font-face units-per-em=\"1792\" ascent=\"1536\" descent=\"-256\" />\n    8  <missing-glyph horiz-adv-x=\"448\" />\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/fonts/FontAwesome.otf:\n    <binary>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/flat.less:\n   22  }\n   23  \n   24: // @import \"font-awesome/font-awesome.less\";\n   25  @import \"../bootstrap/variables.less\";\n   26  @import \"variables.less\";\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less:\n  690        a:before {\n  691          content: '\\f0da';\n  692:         font-family: FontAwesome;\n  693          position: absolute;\n  694          left: 30px;\n  ...\n  841  		&:before {\n  842  			content: '\\f073';\n  843: 			font-family: FontAwesome;\n  844  			position: absolute;\n  845  			left: -30px;\n  ...\n  893    	&:before {\n  894    		content: '\\f115';\n  895:   		font-family: FontAwesome;\n  896    		position: absolute;\n  897    		left: -30px;\n  ...\n  990  		a:before {\n  991  			content: '\\f0da';\n  992: 			font-family: FontAwesome;\n  993  			position: absolute;\n  994  			left: 30px;\n  ...\n 1130      	&:before {\n 1131        	content: \"\\f09e\";\n 1132:       	font-family: FontAwesome;\n 1133        }\n 1134      }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/theme.less:\n  308  .btn-tweet:before {\n  309     content: '\\f099';\n  310:    font-family: FontAwesome;\n  311  }\n  312  \n  313  .btn-post-comment:before {\n  314     content: '\\f075'; \n  315:    font-family: FontAwesome;\n  316  }\n  317  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/lib/grunt/event.js:\n   13  var EventEmitter2 = require('eventemitter2').EventEmitter2;\n   14  \n   15: // Awesome.\n   16  module.exports = new EventEmitter2({wildcard: true});\n   17  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/grunt-legacy-log/node_modules/underscore.string/test/test_underscore/vendor/jquery.js:\n 6734  		}\n 6735  \n 6736: 		// A tribute to the \"awesome hack by Dean Edwards\"\n 6737  		// WebKit uses \"computed value (percentage if specified)\" instead of \"used value\" for margins\n 6738  		// which is against the CSSOM draft spec: http://dev.w3.org/csswg/cssom/#resolved-values\n ....\n 6760  		}\n 6761  \n 6762: 		// From the awesome hack by Dean Edwards\n 6763  		// http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291\n 6764  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/nopt/README.md:\n    8  options that you go half-insane just trying to manage them all, and put\n    9  it off with duct-tape solutions until you see exactly to the core of the\n   10: problem, and finally snap and write an awesome option parser.\n   11  \n   12  If you want to write an option parser, don't write an option parser.\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/mkdirp/node_modules/minimist/test/parse.js:\n   20          parse([\n   21              '--name=meowmers', 'bare', '-cats', 'woo',\n   22:             '-h', 'awesome', '--multi=quux',\n   23              '--key', 'value',\n   24              '-b', '--bool', '--no-meep', '--multi=baz',\n   ..\n   30              t : true,\n   31              s : 'woo',\n   32:             h : 'awesome',\n   33              b : true,\n   34              bool : true,\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/promise/Readme.md:\n  117  \n  118  ```javascript\n  119: module.exports = Promise.nodeify(awesomeAPI)\n  120: function awesomeAPI(a, b) {\n  121    return download(a, b)\n  122  }\n  ...\n  158  \n  159  ```javascript\n  160: function awesomeAPI(foo, bar, callback) {\n  161    return internalAPI(foo, bar)\n  162      .then(parseResult)\n  ...\n  166  ```\n  167  \n  168: People who use typical node.js style callbacks will be able to just pass a callback and get the expected behavior.  The enlightened people can not pass a callback and will get awesome promises.\n  169  \n  170  ## Extending Promises\n  ...\n  174  ### Inheritance\n  175  \n  176:   You can use inheritance if you want to create your own complete promise library with this as your basic starting point, perfect if you have lots of cool features you want to add.  Here is an example of a promise library called `Awesome`, which is built on top of `Promise` correctly.\n  177  \n  178  ```javascript\n  179  var Promise = require('promise');\n  180: function Awesome(fn) {\n  181:   if (!(this instanceof Awesome)) return new Awesome(fn);\n  182    Promise.call(this, fn);\n  183  }\n  184: Awesome.prototype = Object.create(Promise.prototype);\n  185: Awesome.prototype.constructor = Awesome;\n  186  \n  187: //Awesome extension\n  188: Awesome.prototype.spread = function (cb) {\n  189    return this.then(function (arr) {\n  190      return cb.apply(this, arr);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/examples/README.md:\n   60    // all meta data should be included here for proper signing\n   61    qs: {\n   62:     title: 'My cat is awesome',\n   63      description: 'Sent on ' + new Date(),\n   64      is_public: 1\n   ..\n   66    // again the same meta data + the actual photo\n   67    formData: {\n   68:     title: 'My cat is awesome',\n   69      description: 'Sent on ' + new Date(),\n   70      is_public: 1,\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/bl/package.json:\n   22      \"buffers\",\n   23      \"stream\",\n   24:     \"awesomesauce\"\n   25    ],\n   26    \"license\": \"MIT\",\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/urls.css:\n   66  }\n   67  #data-uri-ascii {\n   68:   uri-1: url(\"data:text/html,%3Ch1%3EThis%20page%20is%20100%25%20Awesome.%3C%2Fh1%3E%0A\");\n   69:   uri-2: url(\"data:text/html,%3Ch1%3EThis%20page%20is%20100%25%20Awesome.%3C%2Fh1%3E%0A\");\n   70  }\n   71  #file-functions {\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/url-args/urls.css:\n   43  }\n   44  #data-uri-ascii {\n   45:   uri-1: url(\"data:text/html,%3Ch1%3EThis%20page%20is%20100%25%20Awesome.%3C%2Fh1%3E%0A\");\n   46:   uri-2: url(\"data:text/html,%3Ch1%3EThis%20page%20is%20100%25%20Awesome.%3C%2Fh1%3E%0A\");\n   47  }\n   48  #svg-functions {\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/data/page.html:\n    1: <h1>This page is 100% Awesome.</h1>\n    2  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/maxmin/node_modules/gzip-size/node_modules/browserify-zlib/node_modules/pako/README.md:\n  132  var pako = require('pako');\n  133  \n  134: var test = { my: 'super', puper: [456, 567], awesome: 'pako' };\n  135  \n  136  var binaryString = pako.deflate(JSON.stringify(test), { to: 'string' });\n  ...\n  163  \n  164  Personal thanks to Vyacheslav Egorov ([@mraleph](https://github.com/mraleph))\n  165: for his awesome tutoruals about optimising JS code for v8,\n  166  [IRHydra](http://mrale.ph/irhydra/) tool and his advices.\n  167  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/optimist/example/usage-options.js:\n    1  var optimist = require('./../index');\n    2  \n    3: var argv = optimist.usage('This is my awesome program', {\n    4    'about': {\n    5      description: 'Provide some details about the author of this program',\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/optimist/test/parse.js:\n  134          optimist.parse([\n  135              '--name=meowmers', 'bare', '-cats', 'woo',\n  136:             '-h', 'awesome', '--multi=quux',\n  137              '--key', 'value',\n  138              '-b', '--bool', '--no-meep', '--multi=baz',\n  ...\n  144              t : true,\n  145              s : 'woo',\n  146:             h : 'awesome',\n  147              b : true,\n  148              bool : true,\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-watch/node_modules/gaze/node_modules/globule/package.json:\n   43      \"pattern\",\n   44      \"sync\",\n   45:     \"awesome\"\n   46    ],\n   47    \"dependencies\": {\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/node_modules/noptify/node_modules/nopt/README.md:\n    8  options that you go half-insane just trying to manage them all, and put\n    9  it off with duct-tape solutions until you see exactly to the core of the\n   10: problem, and finally snap and write an awesome option parser.\n   11  \n   12  If you want to write an option parser, don't write an option parser.\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/node_modules/qs/test/browser/jquery.js:\n 6529  			style = elem.style;\n 6530  \n 6531: 		// From the awesome hack by Dean Edwards\n 6532  		// http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291\n 6533  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/node_modules/gaze/AUTHORS:\n    1  Kyle Robinson Young (http://dontkry.com)\n    2: Sam Day (http://sam.is-super-awesome.com)\n    3  Roarke Gaskill (http://starkinvestments.com)\n    4  Lance Pollard (http://lancepollard.com/)\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/node_modules/gaze/package.json:\n   49      {\n   50        \"name\": \"Sam Day\",\n   51:       \"url\": \"http://sam.is-super-awesome.com\"\n   52      },\n   53      {\n\n61 matches across 25 files\n\n\nSearching 3028 files for \"scrubber\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/index.php:\n    2    <div data-page=\"1\" class=\"timeline-pale dwtl full remove-time-anchor\"><span><?php //_e('Page','dw-timeline') ?><?= date('Y') ?></span></div>\n    3  \n    4:   <div class=\"timeline-scrubber\">\n    5      <ul>\n    6        <?php\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 8725  }\n 8726  @media (min-width: 1366px) {\n 8727:   .timeline-scrubber {\n 8728      position: absolute;\n 8729      margin-left: 1150px;\n 8730      width: 90px;\n 8731    }\n 8732:   .timeline-scrubber.affix {\n 8733      position: fixed;\n 8734      top: 30px;\n 8735    }\n 8736:   .admin-bar .timeline-scrubber.affix {\n 8737      top: 60px;\n 8738    }\n 8739:   .timeline-scrubber ul {\n 8740      list-style: none;\n 8741      padding: 0 0 30px 0;\n 8742      margin: 0;\n 8743    }\n 8744:   .timeline-scrubber a {\n 8745      padding: 5px 0 5px 10px;\n 8746      color: rgba(255, 255, 255, 0.5);\n ....\n 8751      font-family: 'Poiret One', sans-serif;\n 8752    }\n 8753:   .timeline-scrubber a:before {\n 8754      content: ' ';\n 8755      width: 3px;\n ....\n 8761      opacity: .2;\n 8762    }\n 8763:   .timeline-scrubber a:hover {\n 8764      color: #1abc9c;\n 8765    }\n 8766:   .timeline-scrubber a:hover:before {\n 8767      background: #1abc9c;\n 8768      opacity: 1;\n 8769    }\n 8770:   .timeline-scrubber .active a {\n 8771      color: #1abc9c;\n 8772    }\n 8773:   .timeline-scrubber .active a:before {\n 8774      background: #1abc9c;\n 8775      opacity: 1;\n 8776    }\n 8777:   .timeline-scrubber li:not(.loaded) a:before {\n 8778      opacity: 0;\n 8779    }\n 8780:   .timeline-scrubber .loading a {\n 8781      position: relative;\n 8782    }\n 8783:   .timeline-scrubber .loading a:after {\n 8784      position: absolute;\n 8785      content: '';\n ....\n 8793      animation: progress-bar-stripes 1s linear infinite;\n 8794    }\n 8795:   .timeline-scrubber .par a {\n 8796      color: rgba(255, 255, 255, 0.5) !important;\n 8797    }\n 8798:   .timeline-scrubber .par a:before {\n 8799      background: #fff !important;\n 8800      opacity: .2 !important;\n ....\n 8802  }\n 8803  @media (max-width: 1365px) {\n 8804:   .timeline-scrubber {\n 8805      display: none;\n 8806    }\n 8807  }\n 8808: .timeline-scrubber ul ul {\n 8809    display: none;\n 8810    padding-bottom: 0;\n 8811  }\n 8812: .timeline-scrubber .active + ul {\n 8813    display: block;\n 8814  }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/scripts.js:\n   13  		perPage = timeline.data('perpage'),\n   14  		contentLoading = false,\n   15: 		moveByScrubber = false,\n   16  		loadedPage = [1],\n   17  		viewWidth = $(window).outerWidth(),\n   ..\n  203  	});\n  204  \n  205: 	//Timeline scrubber\n  206  	// -------------------------------------\n  207: 	if (typeof $('.timeline-scrubber').offset() !== 'undefined') {\n  208: 		var scrubberOffset = $('.timeline-scrubber').offset().top - 30;\n  209  		if ($('body').hasClass('admin-bar')) {\n  210: 			scrubberOffset -= 32;\n  211  		}\n  212: 		$('.timeline-scrubber').affix({\n  213  			offset: {\n  214: 				top: scrubberOffset\n  215  			}\n  216  		});\n  ...\n  218  \n  219  	var nextPagesIndex = 1;\n  220: 	var nextPages = $('.timeline-scrubber ul li a').map(function(index, el) {\n  221  		$el = $(el);\n  222  		year = $el.text();\n  ...\n  235  		return links;\n  236  	});\n  237: 	$('.timeline-scrubber').attr('data-count', nextPages.length);\n  238: 	$('.timeline-scrubber ul li:first-child').addClass('loaded');\n  239  \n  240: 	$('.timeline-scrubber ul li').on('click', function(event) {\n  241  		event.preventDefault();\n  242  		var timelineInfinitescroll = $('.timeline').data('infinitescroll');\n  ...\n  245  		var scrollPoint = 0;\n  246  		if (loadedPage.indexOf(pageNum) > -1 && timeline.find('.timeline-pale[data-page=\"' + pageNum + '\"]').length > 0) {\n  247: 			if (moveByScrubber == pageNum) {\n  248  				return false;\n  249  			}\n  250: 			moveByScrubber = pageNum;\n  251  			//Loaded\n  252  			scrollPoint = timeline.find('.timeline-pale[data-page=\"' + pageNum + '\"]').offset().top;\n  ...\n  260  				1000, function() {\n  261  					timelineInfinitescroll._binding('bind');\n  262: 					$('.timeline-scrubber ul li').removeClass('active');\n  263  					t.addClass('active');\n  264  					t.parent().prev().addClass('active par');\n  265: 					moveByScrubber = false;\n  266  				});\n  267  		} else {\n  268  			t.add(t.prevAll().not('.loaded')).addClass('loading');\n  269  			// todo load everything before avec loadedPage.length pour connaitre le dernier el chargé\n  270: 			if (!contentLoading && !moveByScrubber) {\n  271: 				moveByScrubber = pageNum;\n  272  				timelineInfinitescroll._binding('unbind');\n  273  				// timelineInfinitescroll.options.state.currPage = parseInt(pageNum) - 1;\n  274  				// var currPage = timelineInfinitescroll.options.state.currPage;\n  275: 				// if (timelineInfinitescroll.options.state.isDone && loadedPage.length < parseInt($('.timeline-scrubber').data('count')) ) {\n  276  				timelineInfinitescroll.options.state.isDone = false;\n  277  				// }\n  ...\n  309  				}\n  310  				var yearsUrl = nextPages[opts.state.currPage-1].url.split('/')[1];\n  311: 				$('.timeline-scrubber a[href^=\"/'+yearsUrl+'\"]').parent().removeClass('loading').addClass('loaded');\n  312  \n  313  				// Timeline \n  ...\n  322  				var opts = $t.options;\n  323  				var yearsUrl = nextPages[opts.state.currPage];\n  324: 				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^=\"/'+yearsUrl.url.split('/')[1]+'\"]').parent().addClass('loading');\n  325  				$(opts.navSelector).hide();\n  326  				if (loadedPage.indexOf(opts.state.currPage + 1) > -1) {\n  ...\n  345  			timelineInfinitescroll._binding('bind');\n  346  			contentLoading = false;\n  347: 			moveByScrubber = false;\n  348  \n  349  			if (infinitescroll.show_more_button == 'yes') {\n  ...\n  406  			}\n  407  \n  408: 			// retrieve all content to scrubber when clicked\n  409: 			if (moveByScrubber) {\n  410: 				if(loadedPage.indexOf(moveByScrubber) === -1){\n  411  					$t._binding('bind');\n  412  					$t.options.state.isDone = false;\n  ...\n  422  					},\n  423  					1000, function() {\n  424: 						moveByScrubber = false;\n  425  						$t._binding('bind');\n  426  						// $t.options.state.isDone = true;\n  427: 						$('.timeline-scrubber ul li').removeClass('active');\n  428: 						$('.timeline-scrubber ul li[data-page=\"' + pageNum + '\"]').addClass('active');\n  429: 						$('.timeline-scrubber ul li.active').parent().prev().addClass('active par');\n  430  					});\n  431  				}\n  ...\n  455  				var t = $(this);\n  456  				var position = t.offset().top - $(window).scrollTop();\n  457: 				if (position <= $(window).height()/2 /*&& !moveByScrubber*/) {\n  458  					var page = t.data('page');\n  459: 					$('.timeline-scrubber ul li.active').removeClass('active par');\n  460: 					$('.timeline-scrubber ul li a[data-numpage=\"' + page + '\"]').parent().addClass('active');\n  461: 					$('.timeline-scrubber ul li.active').parent().prev().addClass('active par');\n  462  					return false;\n  463  				}\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/scripts.min.js:\n    1: if(navigator.userAgent.match(/IEMobile\\/10\\.0/)){var msViewportStyle=document.createElement(\"style\");msViewportStyle.appendChild(document.createTextNode(\"@-ms-viewport{width:auto!important}\")),document.querySelector(\"head\").appendChild(msViewportStyle)}jQuery(function(a){function b(){a(\"iframe\").each(function(){var b=a(this).parent().attr(\"class\");if(!a(this).hasClass(\"twitter-tweet\")&&\"video-preview form-group\"!=b){var c=a(this).attr(\"width\"),d=a(this).attr(\"height\"),e=a(this).parent().width(),f=e/c,g=d*f;\"100%\"!=c&&a(this).css({width:e,height:g})}})}function c(){\"disable\"!=dwtl.gallery_lightbox&&a(\".gallery .thumbnail, .lightbox\").nivoLightbox()}function d(){var b=a(\".timeline\"),c=b.outerWidth(),d=b.find(\".dwtl\");if(c>=800){b.removeClass(\"one-col\").addClass(\"two-col\");var e=0,f=0;d.each(function(b,c){a(c).hasClass(\"normal\")?f>=e?(a(c).removeClass(\"dwtl-right\").addClass(\"dwtl-left\"),e+=a(c).outerHeight()):(a(c).removeClass(\"dwtl-left\").addClass(\"dwtl-right\"),f+=a(c).outerHeight()):a(c).hasClass(\"full\")&&(e=0,f=0)}),a(\".dwtl\").addClass(\"show\")}else b.removeClass(\"two-col\").addClass(\"one-col\"),d.each(function(b,c){a(c).removeClass(\"dwtl-left dwtl-right\")})}function e(){var b=a(\"#wpadminbar\").outerHeight();a(\".wrap\").css({\"min-height\":k-b})}function f(){var b=a(\".sidebar-primary .inner\").outerHeight();b>k&&a(\".sidebar-primary\").css({\"overflow-y\":\"scroll\"})}var g=a(\".timeline\"),h=!1,i=!1,j=[1],k=(a(window).outerWidth(),a(window).outerHeight());if(a(document).ready(function(){a(\".sidebar-toggle.active\").click(function(){a(\".sidebar-primary\").css({display:\"block\",position:\"fixed\"}),f(),a(\"html\").addClass(\"main-sidebar-open\"),setTimeout(function(){a(\".sidebar-toggle\").addClass(\"x\").removeClass(\"active\")},400)}),a(document).on(\"click\",\".wrap, .sidebar-toggle.x\",function(){a(\"html\").removeClass(\"main-sidebar-open\"),setTimeout(function(){a(\".sidebar-primary\").css({display:\"none\",position:\"absolute\"}),a(\".sidebar-toggle\").addClass(\"active\").removeClass(\"x\")},400)}),a(\".nav-main-toggle.active\").click(function(){a(\".nav-main\").css({display:\"block\",position:\"fixed\"}),a(\"html\").addClass(\"main-nav-open\"),setTimeout(function(){a(\".nav-main-toggle\").addClass(\"x\").removeClass(\"active\")},400)}),a(document).on(\"click\",\".wrap, .nav-main-toggle.x\",function(){a(\"html\").removeClass(\"main-nav-open\"),setTimeout(function(){a(\".nav-main\").css({display:\"none\",position:\"absolute\"}),a(\".nav-main-toggle\").addClass(\"active\").removeClass(\"x\")},400)}),a(document).on(\"click\",\".sub-nav-open\",function(){a(this).toggleClass(\"active\"),f()}),f(),e(),d(),b(),prettyPrint(),c(),a(\".widget .children\").before('<i class=\"fa fa-caret-right sub-nav-open\"></i>'),a(window).scroll(function(){a(this).scrollTop()>k/2?a(\".scrollup\").fadeIn():a(\".scrollup\").fadeOut()}),a(\".scrollup\").click(function(){return a(\"html, body\").animate({scrollTop:0},600),!1})}),a(window).resize(function(){f(),e(),d(),b()}),\"undefined\"!=typeof a(\".timeline-scrubber\").offset()){var l=a(\".timeline-scrubber\").offset().top-30;a(\"body\").hasClass(\"admin-bar\")&&(l-=32),a(\".timeline-scrubber\").affix({offset:{top:l}})}a(\".timeline-scrubber ul li\").on(\"click\",function(b){b.preventDefault();var c=a(\".timeline\").data(\"infinitescroll\"),d=a(this),e=d.data(\"page\"),f=0;if(j.indexOf(e)>-1&&g.find('.timeline-pale[data-page=\"'+e+'\"]').length>0){if(i==e)return!1;i=e,f=g.find('.timeline-pale[data-page=\"'+e+'\"]').offset().top,a(\"body\").hasClass(\"admin-bar\")&&(f-=32),a(\"html, body\").animate({scrollTop:f},1e3,function(){c._binding(\"bind\"),a(\".timeline-scrubber ul li\").removeClass(\"active\"),d.addClass(\"active\"),d.parent().prev().addClass(\"active par\"),i=!1})}else if(!h&&!i){i=e,c._binding(\"unbind\"),c.options.state.currPage=parseInt(e)-1;{c.options.state.currPage}c.options.state.isDone&&j.length<a(\".timeline-scrubber ul li\").length&&(c.options.state.isDone=!1),c.retrieve()}});var m=\"\";\"yes\"==infinitescroll.show_more_button&&(m=infinitescroll.more),g.infinitescroll({navSelector:\".post-nav\",nextSelector:\".post-nav .previous a\",itemSelector:\".post\",loading:{finished:function(){h=!1;var b=a(\".timeline\").data(\"infinitescroll\"),c=b.options;c.state.isBeyondMaxPage||c.loading.msg.fadeOut(c.loading.speed),\"yes\"==infinitescroll.show_more_button&&(a(\"#infscr-loading img\").css({display:\"none\"}),a(\"#infscr-loading div\").css({display:\"block\"})),d()},finishedMsg:infinitescroll.the_end,img:infinitescroll.loading_timline,msgText:m,start:function(){h=!0;var b=a(\".timeline\").data(\"infinitescroll\"),c=b.options;return a(c.navSelector).hide(),j.indexOf(c.state.currPage+1)>-1?(h=!1,!1):(j.push(c.state.currPage+1),c.loading.msg.appendTo(c.loading.selector).show(c.loading.speed,a.proxy(function(){b.beginAjax(c)},b)),void(\"yes\"==infinitescroll.show_more_button&&a(\"#infscr-loading div\").addClass(\"show-more\")))}},appendCallback:!1,errorCallback:function(){var b=a(\".timeline\").data(\"infinitescroll\");b._binding(\"bind\"),h=!1,i=!1,\"yes\"==infinitescroll.show_more_button&&(a(\"#infscr-loading div\").addClass(\"end\").css({display:\"block\"}),setTimeout(function(){a(\"#infscr-loading\").css({cursor:\"initial\"})},2e3))}},function(e){if(e.length>0){var f=a(\".timeline\").data(\"infinitescroll\"),h=f.options;f._debug(\"contentSelector\",a(h.contentSelector)[0]);var k=Math.max.apply(null,j),l=a('<div data-page=\"'+h.state.currPage+'\" class=\"timeline-pale dwtl full remove-time-anchor\"><span>'+infinitescroll.page+\" \"+h.state.currPage+\" </span></div>\"),m=h.state.currPage;if(h.state.currPage>=k){var l=a('<div data-page=\"'+h.state.currPage+'\" class=\"timeline-pale dwtl full remove-time-anchor\"><span>'+infinitescroll.page+\" \"+h.state.currPage+\" </span></div>\");a(h.contentSelector).append(l),a(h.contentSelector).append(e)}else{for(var n=h.state.currPage;n>0&&(n--,!(j.indexOf(n)>-1)););a(h.contentSelector).find('.post[data-page=\"'+n+'\"]:last').after(e),a(h.contentSelector).find('.post[data-page=\"'+n+'\"]:last').after(l),h.state.currPage=k}d(),c(),b(),scrollPoint=g.find('.timeline-pale[data-page=\"'+m+'\"]').offset().top,a(\"body\").hasClass(\"admin-bar\")&&(scrollPoint-=32),i&&a(\"html, body\").animate({scrollTop:scrollPoint},1e3,function(){i=!1,f._binding(\"bind\"),a(\".timeline-scrubber ul li\").removeClass(\"active\"),a('.timeline-scrubber ul li[data-page=\"'+m+'\"]').addClass(\"active\"),a(\".timeline-scrubber ul li.active\").parent().prev().addClass(\"active par\")})}}),\"yes\"==infinitescroll.show_more_button&&(a(window).unbind(\".infscr\"),a(document).on(\"click\",\"#infscr-loading\",function(){return g.infinitescroll(\"retrieve\"),a(\"#infscr-loading div\").hasClass(\"end\")||(a(\"#infscr-loading div\").css({display:\"none\"}),a(\"#infscr-loading img\").css({display:\"inline-block\"})),!1})),a(window).on(\"scroll\",function(){h||a(\".timeline .post\").each(function(){var b=a(this),c=a(window).scrollTop()-b.offset().top;if(0>=c&&c>=-500&&!i){var d=b.data(\"page\");a(\".timeline-scrubber ul li.active\").removeClass(\"active par\"),a('.timeline-scrubber ul li[data-page=\"'+d+'\"]').addClass(\"active\"),a(\".timeline-scrubber ul li.active\").parent().prev().addClass(\"active par\")}})}),a(\".touch #get-started\").click(function(){a(this).addClass(\"active\"),setTimeout(function(){a(\"#get-started\").removeClass(\"active\")},300)}),a(\".no-touch #get-started\").mouseover(function(){a(this).addClass(\"active\")}),a(\".no-touch #get-started\").mouseout(function(){a(this).removeClass(\"active\")}),a(\"#get-started\").click(function(){var b=a(\".wrap > .container\").offset().top;wpadminbar_height=a(\"#wpadminbar\").outerHeight(),a(\"html, body\").animate({scrollTop:b-wpadminbar_height},500)})});\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/timeline.less:\n   17  }\n   18  \n   19: // Scrubber\n   20  // ============================\n   21: .timeline-scrubber {\n   22     @media(min-width: 1366px) {\n   23        position: absolute;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php:\n  678        }\n  679  \n  680:       .style-flat .timeline-scrubber .active a, \n  681:       .style-flat .timeline-scrubber a:hover {\n  682          color: <?php echo $timeline_color;  ?>; \n  683        }\n  684  \n  685        @media (min-width: 1366px){\n  686:         .style-flat .timeline-scrubber .active a:before,\n  687:         .style-flat .timeline-scrubber a:hover:before {\n  688            background: <?php echo $timeline_color;  ?>; \n  689          }\n  ...\n  740        .single .no-cover + .container .entry-meta a:hover,\n  741        #comments .comment time a:hover,\n  742:       .timeline-scrubber .active a {\n  743          color: <?php echo $timeline_color; ?>;\n  744        }\n  ...\n  766        }\n  767  \n  768:       .timeline-scrubber .active a,\n  769:       .timeline-scrubber a:hover {\n  770          border-left-color: <?php echo $timeline_color; ?>;\n  771        }\n\n73 matches across 6 files\n\n\nSearching 3029 files for \".navbar-toggle\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 3985    }\n 3986  }\n 3987: .navbar-toggle {\n 3988    position: relative;\n 3989    float: right;\n ....\n 3997    border-radius: 2px;\n 3998  }\n 3999: .navbar-toggle:focus {\n 4000    outline: none;\n 4001  }\n 4002: .navbar-toggle .icon-bar {\n 4003    display: block;\n 4004    width: 22px;\n ....\n 4006    border-radius: 1px;\n 4007  }\n 4008: .navbar-toggle .icon-bar + .icon-bar {\n 4009    margin-top: 4px;\n 4010  }\n 4011  @media (min-width: 768px) {\n 4012:   .navbar-toggle {\n 4013      display: none;\n 4014    }\n ....\n 4204    background-color: transparent;\n 4205  }\n 4206: .navbar-default .navbar-toggle {\n 4207    border-color: #dddddd;\n 4208  }\n 4209: .navbar-default .navbar-toggle:hover,\n 4210: .navbar-default .navbar-toggle:focus {\n 4211    background-color: #dddddd;\n 4212  }\n 4213: .navbar-default .navbar-toggle .icon-bar {\n 4214    background-color: #888888;\n 4215  }\n ....\n 4287    background-color: transparent;\n 4288  }\n 4289: .navbar-inverse .navbar-toggle {\n 4290    border-color: #333333;\n 4291  }\n 4292: .navbar-inverse .navbar-toggle:hover,\n 4293: .navbar-inverse .navbar-toggle:focus {\n 4294    background-color: #333333;\n 4295  }\n 4296: .navbar-inverse .navbar-toggle .icon-bar {\n 4297    background-color: #ffffff;\n 4298  }\n ....\n 7902    width: 30vw;\n 7903  }\n 7904: .navbar-toggle {\n 7905    position: fixed;\n 7906    top: 0;\n ....\n 7920    transition: 0.3s;\n 7921  }\n 7922: .admin-bar .navbar-toggle {\n 7923    top: 46px;\n 7924  }\n 7925  @media (min-width: 783px) {\n 7926:   .admin-bar .navbar-toggle {\n 7927      top: 32px;\n 7928    }\n 7929  }\n 7930  @media (max-width: 1023px) {\n 7931:   .navbar-toggle {\n 7932      opacity: .3;\n 7933    }\n 7934  }\n 7935: .main-sidebar-open .navbar-toggle {\n 7936    -webkit-transform: translate(260px, 0);\n 7937    -ms-transform: translate(260px, 0);\n 7938    transform: translate(260px, 0);\n 7939  }\n 7940: .main-sidebar-open .navbar-toggle .icon-bar {\n 7941    position: relative;\n 7942  }\n 7943: .main-sidebar-open .navbar-toggle .first {\n 7944    top: 3px;\n 7945    -webkit-transform: rotate(45deg);\n ....\n 7947    transform: rotate(45deg);\n 7948  }\n 7949: .main-sidebar-open .navbar-toggle .second {\n 7950    display: none;\n 7951  }\n 7952: .main-sidebar-open .navbar-toggle .third {\n 7953    top: -3px;\n 7954    -webkit-transform: rotate(-45deg);\n ....\n 7956    transform: rotate(-45deg);\n 7957  }\n 7958: .main-nav-open .navbar-toggle {\n 7959    -webkit-transform: translate(-260px, 0);\n 7960    -ms-transform: translate(-260px, 0);\n 7961    transform: translate(-260px, 0);\n 7962  }\n 7963: .main-nav-open .navbar-toggle .icon-bar {\n 7964    position: relative;\n 7965  }\n 7966: .main-nav-open .navbar-toggle .first {\n 7967    top: 3px;\n 7968    -webkit-transform: rotate(45deg);\n ....\n 7970    transform: rotate(45deg);\n 7971  }\n 7972: .main-nav-open .navbar-toggle .second {\n 7973    display: none;\n 7974  }\n 7975: .main-nav-open .navbar-toggle .third {\n 7976    top: -3px;\n 7977    -webkit-transform: rotate(-45deg);\n ....\n 7979    transform: rotate(-45deg);\n 7980  }\n 7981: .navbar-toggle .icon-bar {\n 7982    background: #fff;\n 7983    width: 18px;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/navbar.less:\n   26  // Navbar heading\n   27  //\n   28: // Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy\n   29  // styling of responsive aspects.\n   30  \n   ..\n  177  // JavaScript plugin.\n  178  \n  179: .navbar-toggle {\n  180    position: relative;\n  181    float: right;\n  ...\n  422    }\n  423  \n  424:   .navbar-toggle {\n  425      border-color: @navbar-default-toggle-border-color;\n  426      &:hover,\n  ...\n  543  \n  544    // Darken the responsive nav toggle\n  545:   .navbar-toggle {\n  546      border-color: @navbar-inverse-toggle-border-color;\n  547      &:hover,\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less:\n  239  }\n  240  \n  241: .navbar-toggle { \n  242    position: fixed;\n  243    top: 0;\n\n33 matches across 3 files\n\n\nSearching 3029 files for \"opacity: .3\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 7930  @media (max-width: 1023px) {\n 7931    .navbar-toggle {\n 7932:     opacity: .3;\n 7933    }\n 7934  }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less:\n  264  \n  265    @media(max-width: 1023px) {\n  266:     opacity: .3;\n  267    }\n  268  \n\n2 matches across 2 files\n\n\nSearching 3029 files for \"read next\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/languages/default.po:\n  322  \n  323  #: ../lib/custom.php:257\n  324: msgid \"read next\"\n  325  msgstr \"\"\n  326  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php:\n  255                  <div class=\"row\">\n  256                    <div class=\"adjacent-post-header col-md-8 col-md-offset-2\">\n  257:                     <span class=\"read-next\"><?php _e('read next','dw-timeline') ?></span>\n  258                      <h2 class=\"entry-title\"><?php the_title(); ?></h2>\n  259                      <?php get_template_part('templates/entry-meta'); ?>\n\n2 matches across 2 files\n\n\nSearching 3029 files for \"adjacent-post-link\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 9493    opacity: .5;\n 9494  }\n 9495: .adjacent-post .adjacent-post-link {\n 9496    position: absolute;\n 9497    width: 100%;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less:\n  438     }\n  439  \n  440:    .adjacent-post-link {\n  441        position: absolute;\n  442        width: 100%;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php:\n  251              ?>\n  252              <div class=\"adjacent-post <?php echo $class; ?> \" style=\"background-image: url(<?php echo $adjacent_post_thumb?>)\">\n  253:               <a class=\"adjacent-post-link\" href=\"<?php echo get_permalink(); ?>\"></a>\n  254                <div class=\"container\">\n  255                  <div class=\"row\">\n\n3 matches across 3 files\n\n\nSearching 3029 files for \"quote-box\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 9277    clear: both;\n 9278  }\n 9279: p .quote-box {\n 9280    display: block;\n 9281  }\n 9282: .quote-box {\n 9283    position: absolute;\n 9284    padding: 0 5px;\n ....\n 9289    transition: 0.5s;\n 9290  }\n 9291: .quote-box:before {\n 9292    position: absolute;\n 9293    bottom: -6px;\n ....\n 9299    content: '';\n 9300  }\n 9301: .quote-box button {\n 9302    background: none;\n 9303    border: none;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.js:\n   68              var pos = p.offset(),\n   69                  lineHeight = parseInt(p.css('line-height').replace('px', '')),\n   70:                 height = $('.quote-box').outerHeight(),\n   71:                 width = $('.quote-box').outerWidth();\n   72:             p.append($('.quote-box'));\n   73  \n   74:             $('.quote-box').css({\n   75                  left: x - pos.left - (width / 2),\n   76                  top: y - pos.top - lineHeight - (height / 2) + 1\n   ..\n   79  \n   80          _destroyTooltip: function() {\n   81:             $('.quote-box').hide();\n   82          }\n   83  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.min.js:\n    1: !function(a,b){\"use strict\";a.widget(\"ab.tips\",{_create:function(){this._super(),this._on({mouseup:this._tip});var b=this;a(\"#btn-tweet-quote\").on(\"click\",function(){var a='\"'+b._selectedText()+'\"';window.open(\"http://twitter.com/home?status=\"+a,\"Twitter\",\"width=500,height=300\")})},_destroy:function(){this._super(),this._destroyTooltip()},_tip:function(c){if(a(c.target).is(\"#btn-tweet-quote\")||a(c.target).is(\"#btn-comment-quote\"))return void this._destroyTooltip();var d=this._selectedText();if(d===b||d.length<=0)return void this._destroyTooltip();if(d.indexOf(\"\\n\")>=0)return void this._destroyTooltip();var e=a(c.target).is(\"p\")?a(c.target):a(c.target).closest(\"p\");this._createTooltip(c,e)},_selectedText:function(){var a=\"\";return window.getSelection?a=window.getSelection().toString():document.selection&&\"Control\"!=document.selection.type&&(a=document.selection.createRange().text),a},_createTooltip:function(b,c){if(c.length<=0)return!1;var d=window.getSelection().getRangeAt(0),e=document.createElement(\"span\");d.insertNode(e);var f=(e.getBoundingClientRect(),a(e).offset().left),g=a(e).offset().top;e.parentNode.removeChild(e);var h=c.offset(),i=parseInt(c.css(\"line-height\").replace(\"px\",\"\")),j=a(\".quote-box\").outerHeight(),k=a(\".quote-box\").outerWidth();c.append(a(\".quote-box\")),a(\".quote-box\").css({left:f-h.left-k/2,top:g-h.top-i-j/2+1}).show()},_destroyTooltip:function(){a(\".quote-box\").hide()}}),jQuery(document).ready(function(a){a(\".single .post .entry-content\").tips(),a(document).on(\"mouseup\",function(b){return a(b.target).is(\".single .post .entry-content, .single .post .entry-content *\")?void 0:void a(\".single .post .entry-content\").data(\"abTips\")._destroyTooltip()})})}(jQuery);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less:\n  192  }\n  193  \n  194: p .quote-box {\n  195     display: block;\n  196  }\n  197  \n  198: .quote-box {\n  199     position:absolute;\n  200     padding: 0 5px;\n\n16 matches across 4 files\n\n\nSearching 3029 files for \"single-scripts\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/scripts.php:\n   38    wp_register_script('velocity', $template_directory_uri . '/assets/js/vendor/velocity.min.js', false, '', false);\n   39    wp_register_script('velocity-ui', $template_directory_uri . '/assets/js/vendor/velocity.ui.min.js', false, '', false);\n   40:   wp_register_script('dw_timeline_single_scripts', $template_directory_uri . '/assets/js/single-scripts.min.js', array( 'jquery' ), '', true);\n   41    wp_register_script('dw_timeline_scripts', $template_directory_uri . '/assets/js/scripts.js', array( 'jquery' ), '', true);\n   42    // if (is_user_logged_in() && is_home()) wp_register_script('dw_timeline_post_form', $template_directory_uri . '/assets/js/post-form.min.js' , array('jquery','dw_timeline_scripts'), '', true );\n\n1 match in 1 file\n\n\nSearching 3029 files for \"escapade suivante\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php:\n  255                  <div class=\"row\">\n  256                    <div class=\"adjacent-post-header col-md-8 col-md-offset-2\">\n  257:                     <span class=\"read-next\"><?php _e('Escapade suivante','dw-timeline') ?></span>\n  258                      <h2 class=\"entry-title\"><?php the_title(); ?></h2>\n  259                      <span class=\"entry-date\"><i class=\"fa fa-calendar\"></i> <time class=\"published\" datetime=\"<?= get_the_time('c'); ?>\"><?= get_the_date(); ?></time></span>\n\n1 match in 1 file\n\n\nSearching 3029 files for \"dw_timeline_adjacent_post\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/base.php:\n   15        $adjacent_post = dw_timeline_get_theme_option('adjacent_post');\n   16        if ($adjacent_post != 'disable') {\n   17:         dw_timeline_adjacent_post();\n   18        }\n   19      ?>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php:\n  229   *  Adjacent post\n  230   */\n  231: if ( !function_exists('dw_timeline_adjacent_post')) {\n  232:   function dw_timeline_adjacent_post(){\n  233      if ( is_single() ) {\n  234        $adjacent_post_exclude = '';\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php:\n  183    // NEXT POST\n  184    // -------------------------------------------\n  185:   $wp_customize->add_section('dw_timeline_adjacent_post', array(\n  186      'title'    => __('Next Post', 'dw-timeline'),\n  187      'priority' => 100,\n  ...\n  199      'settings' => 'dw_timeline_theme_options[adjacent_post]',\n  200      'label'   => __('Disable next post featured ?', 'dw-timeline'),\n  201:     'section' => 'dw_timeline_adjacent_post',\n  202      'type'    => 'select',\n  203      'choices'    => array(\n  ...\n  219      'settings' => 'dw_timeline_theme_options[adjacent_post_exclude]',\n  220      'label'   => __('Excluded categories:', 'dw-timeline'),\n  221:     'section' => 'dw_timeline_adjacent_post',\n  222      'choices' => $categories_arr\n  223    )));\n\n6 matches across 3 files\n\n\nSearching 3029 files for \"adjacent\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/base.php:\n   12        </div>\n   13      </div>\n   14:     <?php $adjacent_post = dw_timeline_get_theme_option('adjacent_post');\n   15:     if ($adjacent_post != 'disable') : ?>\n   16:         <footer class=\"adjacent\">\n   17:           <?php dw_timeline_adjacent_post(); ?>\n   18          </footer>\n   19      <?php endif; ?>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 9473    display: table;\n 9474  }\n 9475: .adjacent-post {\n 9476    background-size: cover;\n 9477    position: relative;\n ....\n 9480  }\n 9481  @media (max-width: 767px) {\n 9482:   .adjacent-post {\n 9483      min-height: 200px;\n 9484    }\n 9485  }\n 9486: .adjacent-post:before {\n 9487    content: \"\";\n 9488    display: block;\n ....\n 9494    background: #222;\n 9495  }\n 9496: .adjacent-post.has-thumbnail:before {\n 9497    opacity: .5;\n 9498  }\n 9499: .adjacent-post .adjacent-post-link {\n 9500    position: absolute;\n 9501    width: 100%;\n ....\n 9503    z-index: 1;\n 9504  }\n 9505: .adjacent-post .container {\n 9506    height: 300px;\n 9507  }\n 9508  @media (min-width: 768px) {\n 9509:   .adjacent-post .container {\n 9510      position: relative;\n 9511    }\n 9512  }\n 9513: .adjacent-post .adjacent-post-header {\n 9514    -webkit-transform: translate(0, -50%);\n 9515    -ms-transform: translate(0, -50%);\n ....\n 9520  }\n 9521  @media (max-width: 991px) {\n 9522:   .adjacent-post .adjacent-post-header {\n 9523      width: 100%;\n 9524    }\n 9525  }\n 9526: .adjacent-post .read-next {\n 9527    display: block;\n 9528    border-top: 1px solid #fff;\n ....\n 9531    text-transform: uppercase;\n 9532  }\n 9533: .adjacent-post .entry-title {\n 9534    font-weight: 700;\n 9535    color: #fff;\n 9536  }\n 9537  @media (max-width: 767px) {\n 9538:   .adjacent-post .entry-title {\n 9539      font-size: 26px;\n 9540      line-height: 1.2;\n 9541    }\n 9542  }\n 9543: .adjacent-post .entry-meta {\n 9544    color: #fff;\n 9545  }\n 9546: .adjacent-post .entry-meta a {\n 9547    color: #fff;\n 9548  }\n 9549: .adjacent-post .entry-meta a:hover {\n 9550    color: #fff;\n 9551    opacity: .8;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less:\n  416  }\n  417  \n  418: .adjacent-post {\n  419     background-size: cover;\n  420     position: relative;\n  ...\n  441     }\n  442  \n  443:    .adjacent-post-link {\n  444        position: absolute;\n  445        width: 100%;\n  ...\n  455     }\n  456  \n  457:    .adjacent-post-header {\n  458        .translate(0, -50%);\n  459        position: absolute;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/cleanup.php:\n   14    remove_action('wp_head', 'rsd_link');\n   15    remove_action('wp_head', 'wlwmanifest_link');\n   16:   remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);\n   17    remove_action('wp_head', 'wp_generator');\n   18    remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php:\n  227  \n  228  /**\n  229:  *  Adjacent post\n  230   */\n  231: if ( !function_exists('dw_timeline_adjacent_post')) {\n  232:   function dw_timeline_adjacent_post(){\n  233      if ( is_single() ) {\n  234:       $adjacent_post_exclude = '';\n  235:       if (dw_timeline_get_theme_option('adjacent_post_exclude')) {\n  236:         $adjacent_post_exclude = implode(',', dw_timeline_get_theme_option('adjacent_post_exclude'));\n  237        }\n  238        \n  239:       $adjacent_post = get_adjacent_post(false,$adjacent_post_exclude,false);\n  240:       if ($adjacent_post) {\n  241          global $post;\n  242:         $post = $adjacent_post;\n  243          setup_postdata($post);\n  244:         $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id() );\n  245          $class = 'no-thumbnail';\n  246:         if ( !empty($adjacent_post_thumb)) {\n  247            $class = 'has-thumbnail';\n  248          } ?>\n  249:           <div class=\"adjacent-post prev <?php echo $class; ?> \" style=\"background-image: url(<?php echo $adjacent_post_thumb?>)\">\n  250:             <a class=\"adjacent-post-link\" href=\"<?php echo get_permalink(); ?>\"></a>\n  251              <div class=\"container\">\n  252                <div class=\"row\">\n  253:                 <div class=\"adjacent-post-header col-md-8 col-md-offset-2\">\n  254                    <span class=\"read-next\"><?php _e('Escapade précédente','dw-timeline') ?></span>\n  255                    <h2 class=\"entry-title\"><?php the_title(); ?></h2>\n  ...\n  262        } \n  263  \n  264:       $adjacent_post = get_adjacent_post(false,$adjacent_post_exclude);\n  265:       if ($adjacent_post) {\n  266          global $post;\n  267:         $post = $adjacent_post;\n  268          setup_postdata($post);\n  269:         $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id() );\n  270          $class = 'no-thumbnail';\n  271:         if ( !empty($adjacent_post_thumb)) {\n  272            $class = 'has-thumbnail';\n  273          } ?>\n  274:           <div class=\"adjacent-post next <?php echo $class; ?> \" style=\"background-image: url(<?php echo $adjacent_post_thumb?>)\">\n  275:             <a class=\"adjacent-post-link\" href=\"<?php echo get_permalink(); ?>\"></a>\n  276              <div class=\"container\">\n  277                <div class=\"row\">\n  278:                 <div class=\"adjacent-post-header col-md-8 col-md-offset-2\">\n  279                    <span class=\"read-next\"><?php _e('Escapade suivante','dw-timeline') ?></span>\n  280                    <h2 class=\"entry-title\"><?php the_title(); ?></h2>\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php:\n  183    // NEXT POST\n  184    // -------------------------------------------\n  185:   $wp_customize->add_section('dw_timeline_adjacent_post', array(\n  186      'title'    => __('Next Post', 'dw-timeline'),\n  187      'priority' => 100,\n  ...\n  191    ));\n  192  \n  193:   $wp_customize->add_setting('dw_timeline_theme_options[adjacent_post]', array(\n  194      'default'        => 'enable',\n  195      'capability'     => 'edit_theme_options',\n  196      'type'           => 'option',\n  197    ));\n  198:   $wp_customize->add_control( 'adjacent_post', array(\n  199:     'settings' => 'dw_timeline_theme_options[adjacent_post]',\n  200      'label'   => __('Disable next post featured ?', 'dw-timeline'),\n  201:     'section' => 'dw_timeline_adjacent_post',\n  202      'type'    => 'select',\n  203      'choices'    => array(\n  ...\n  212      $categories_arr[$category->term_id] = $category->name;\n  213    }\n  214:   $wp_customize->add_setting('dw_timeline_theme_options[adjacent_post_exclude]', array(\n  215      'capability'     => 'edit_theme_options',\n  216      'type'           => 'option',\n  217    ));\n  218:   $wp_customize->add_control( new Next_Post_Cats_Custom_control( $wp_customize, 'adjacent_post_exclude', array(\n  219:     'settings' => 'dw_timeline_theme_options[adjacent_post_exclude]',\n  220      'label'   => __('Excluded categories:', 'dw-timeline'),\n  221:     'section' => 'dw_timeline_adjacent_post',\n  222      'choices' => $categories_arr\n  223    )));\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js:\n 7655    // Functions for conformance of style.\n 7656  \n 7657:   function nobreaknonadjacent(left, right) {\n 7658      left = left || state.tokens.curr;\n 7659      right = right || state.tokens.next;\n ....\n 7850      x.led = function (left) {\n 7851        if (!w) {\n 7852:         nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7853        }\n 7854        if (s === \"in\" && left.id === \"!\") {\n ....\n 7875        }\n 7876  \n 7877:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7878  \n 7879        this.left = left;\n ....\n 7888  \n 7889      x.led = function (left) {\n 7890:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7891        var right = expression(100);\n 7892  \n ....\n 10843            (state.tokens.next.id !== \";\" && !state.tokens.next.reach && state.tokens.next.nud)) {\n 10844  \n 10845:         nobreaknonadjacent(state.tokens.curr, state.tokens.next);\n 10846          this.first = expression(10);\n 10847  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint.js:\n 7653    // Functions for conformance of style.\n 7654  \n 7655:   function nobreaknonadjacent(left, right) {\n 7656      left = left || state.tokens.curr;\n 7657      right = right || state.tokens.next;\n ....\n 7848      x.led = function (left) {\n 7849        if (!w) {\n 7850:         nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7851        }\n 7852        if (s === \"in\" && left.id === \"!\") {\n ....\n 7873        }\n 7874  \n 7875:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7876  \n 7877        this.left = left;\n ....\n 7886  \n 7887      x.led = function (left) {\n 7888:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 7889        var right = expression(100);\n 7890  \n ....\n 10841            (state.tokens.next.id !== \";\" && !state.tokens.next.reach && state.tokens.next.nud)) {\n 10842  \n 10843:         nobreaknonadjacent(state.tokens.curr, state.tokens.next);\n 10844          this.first = expression(10);\n 10845  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/src/jshint.js:\n  954    // Functions for conformance of style.\n  955  \n  956:   function nobreaknonadjacent(left, right) {\n  957      left = left || state.tokens.curr;\n  958      right = right || state.tokens.next;\n  ...\n 1149      x.led = function (left) {\n 1150        if (!w) {\n 1151:         nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 1152        }\n 1153        if (s === \"in\" && left.id === \"!\") {\n ....\n 1174        }\n 1175  \n 1176:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 1177  \n 1178        this.left = left;\n ....\n 1187  \n 1188      x.led = function (left) {\n 1189:       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);\n 1190        var right = expression(100);\n 1191  \n ....\n 4142            (state.tokens.next.id !== \";\" && !state.tokens.next.reach && state.tokens.next.nud)) {\n 4143  \n 4144:         nobreaknonadjacent(state.tokens.curr, state.tokens.next);\n 4145          this.first = expression(10);\n 4146  \n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/node-uuid/test/test.js:\n  109  assert(id == 'd9428888-122b-11e1-b85c-61cd3cbb3210', 'Explicit options produce expected id');\n  110  \n  111: // Verify adjacent ids across a msec boundary are 1 time unit apart\n  112  var u0 = uuid.v1({msecs: TIME, nsecs: 9999});\n  113  var u1 = uuid.v1({msecs: TIME + 1, nsecs: 0});\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/source-map/lib/source-map/source-node.js:\n   63  \n   64        // All even indices of this array are one line of the generated code,\n   65:       // while all odd indices are the newlines between two adjacent lines\n   66        // (since `REGEX_NEWLINE` captures its match).\n   67        // Processed fragments are removed from this array, by calling `shiftNextLine`.\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/lib/source-map/source-node.js:\n   55  \n   56        // All even indices of this array are one line of the generated code,\n   57:       // while all odd indices are the newlines between two adjacent lines\n   58        // (since `REGEX_NEWLINE` captures its match).\n   59        // Processed fragments are removed from this array, by calling `shiftNextLine`.\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/header.php:\n   13    \n   14    if ( is_single() && $feature_image != 'no' ) {\n   15:     $adjacent_post = get_adjacent_post();\n   16:     $adjacent_post_id = '';\n   17:     $adjacent_post_thumb = '';\n   18      \n   19:     if ($adjacent_post) {\n   20:       $adjacent_post_id = get_adjacent_post()->ID;\n   21:       $adjacent_post_thumb =  wp_get_attachment_url(get_post_thumbnail_id($adjacent_post_id) );\n   22      }\n   23  \n   24      $post_thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );\n   25      $post_background = get_post_meta( get_the_ID(), 'dw-background-color', true );\n   26:     $adjacent_post_background = get_post_meta( $adjacent_post_id, 'dw-background-color', true );\n   27      $post_background_size = get_post_meta( get_the_ID(), 'dw-feature-image-size', true );\n   28      $post_background_position = get_post_meta( get_the_ID(), 'dw-feature-image-position', true );\n   29:     $adjacent_post_background_size = get_post_meta( $adjacent_post_id, 'dw-feature-image-size', true );\n   30:     $adjacent_post_background_position = get_post_meta( $adjacent_post_id, 'dw-feature-image-position', true );\n   31  \n   32      if ( ! empty($post_thumbnail_url) ) {\n   ..\n   63      }\n   64  \n   65:     if ( ! empty($adjacent_post_thumb) ) {\n   66        ?>\n   67        <style>        \n   68:       <?php if ($adjacent_post_background) { ?>\n   69:         .adjacent-post:before {\n   70:           background: <?php echo $adjacent_post_background; ?>;\n   71          }\n   72        <?php } ?>\n   73  \n   74:       <?php if ($adjacent_post_background_size) { ?>\n   75:         .adjacent-post {\n   76:           background-size: <?php echo $adjacent_post_background_size; ?> !important;\n   77          }\n   78        <?php } ?>\n   79  \n   80:       <?php if ($adjacent_post_background_position) { ?>\n   81:         .adjacent-post {\n   82:           background-position: <?php echo $adjacent_post_background_position; ?> !important;\n   83          }\n   84        <?php } ?>\n\n108 matches across 13 files\n\n\nSearching 3029 files for \".single\"\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css:\n 7205    margin-right: auto !important;\n 7206  }\n 7207: .single iframe.twitter-tweet {\n 7208    width: 100%;\n 7209  }\n ....\n 8006    }\n 8007  }\n 8008: .main-sidebar-open.single-html {\n 8009    height: auto;\n 8010  }\n ....\n 8026      overflow: hidden;\n 8027    }\n 8028:   .main-nav-open.single-html {\n 8029      height: auto;\n 8030    }\n ....\n 9373     Single Post\n 9374     ========================================================================== */\n 9375: .single-html {\n 9376    height: 100%;\n 9377  }\n 9378: .single .wrap {\n 9379    background: #fff !important;\n 9380    height: 100%;\n 9381  }\n 9382: .single .no-cover + .container .main {\n 9383    margin-top: 65px;\n 9384  }\n 9385: .single .main {\n 9386    margin-top: 60px;\n 9387  }\n 9388: .single .entry-meta .avatar {\n 9389    border-radius: 50%;\n 9390    margin-right: 5px;\n 9391  }\n 9392: .single .entry-content {\n 9393    font-family: 'Poiret One', sans-serif;\n 9394    font-weight: 300;\n ....\n 9396    line-height: 1.66666667;\n 9397  }\n 9398: .single .entry-content p {\n 9399    position: relative;\n 9400  }\n 9401: .single .no-cover + .container {\n 9402    min-height: calc(100% - 400px);\n 9403  }\n 9404: .single .no-cover + .container .hentry header {\n 9405    padding-bottom: 9px;\n 9406    margin: 40px 0 20px;\n ....\n 9414  }\n 9415  @media (max-width: 767px) {\n 9416:   .single .no-cover + .container .hentry header h1 {\n 9417      font-size: 26px;\n 9418    }\n 9419  }\n 9420: .single .no-cover + .container .entry-meta a {\n 9421    color: #999;\n 9422  }\n 9423: .single .no-cover + .container .entry-meta a:hover {\n 9424    color: #e74c3c;\n 9425  }\n 9426: .single .cover + .container .hentry header {\n 9427    position: absolute;\n 9428    top: -30px;\n ....\n 9431    background: white;\n 9432  }\n 9433: .single .cover + .container .entry-title {\n 9434    font-weight: 700;\n 9435    font-size: 48px;\n ....\n 9442  }\n 9443  @media (max-width: 767px) {\n 9444:   .single .cover + .container .entry-title {\n 9445      padding-right: 10px;\n 9446      font-size: 26px;\n 9447    }\n 9448  }\n 9449: .single .cover + .container .entry-meta {\n 9450    color: #fff;\n 9451    position: relative;\n 9452  }\n 9453: .single .cover + .container .entry-meta a {\n 9454    color: #fff;\n 9455  }\n 9456: .single .cover + .container .entry-meta a:hover {\n 9457    color: #fff;\n 9458    opacity: .8;\n 9459  }\n 9460: .single .entry-content .addthis_toolbox {\n 9461    display: block;\n 9462    margin-top: 30px;\n ....\n 9464    text-align: center;\n 9465  }\n 9466: .single .addthis_default_style .at300b,\n 9467: .single .addthis_default_style .at300m,\n 9468: .single .addthis_default_style .addthis_counter {\n 9469    float: none;\n 9470    display: inline-block;\n 9471  }\n 9472: .single .addthis_default_style .addthis_counter .addthis_button_expanded {\n 9473    display: table;\n 9474  }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.js:\n   86      // Single post\n   87      jQuery(document).ready(function($) {\n   88:         $(\".single .post .entry-content\").tips();\n   89          $(document).on('mouseup', function(event) {\n   90:             if (!$(event.target).is(\".single .post .entry-content, .single .post .entry-content *\")) {\n   91:                 $(\".single .post .entry-content\").data('abTips')._destroyTooltip();\n   92                  return;\n   93              }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.min.js:\n    1: !function(a,b){\"use strict\";a.widget(\"ab.tips\",{_create:function(){this._super(),this._on({mouseup:this._tip});var b=this;a(\"#btn-tweet-quote\").on(\"click\",function(){var a='\"'+b._selectedText()+'\"';window.open(\"http://twitter.com/home?status=\"+a,\"Twitter\",\"width=500,height=300\")})},_destroy:function(){this._super(),this._destroyTooltip()},_tip:function(c){if(a(c.target).is(\"#btn-tweet-quote\")||a(c.target).is(\"#btn-comment-quote\"))return void this._destroyTooltip();var d=this._selectedText();if(d===b||d.length<=0)return void this._destroyTooltip();if(d.indexOf(\"\\n\")>=0)return void this._destroyTooltip();var e=a(c.target).is(\"p\")?a(c.target):a(c.target).closest(\"p\");this._createTooltip(c,e)},_selectedText:function(){var a=\"\";return window.getSelection?a=window.getSelection().toString():document.selection&&\"Control\"!=document.selection.type&&(a=document.selection.createRange().text),a},_createTooltip:function(b,c){if(c.length<=0)return!1;var d=window.getSelection().getRangeAt(0),e=document.createElement(\"span\");d.insertNode(e);var f=(e.getBoundingClientRect(),a(e).offset().left),g=a(e).offset().top;e.parentNode.removeChild(e);var h=c.offset(),i=parseInt(c.css(\"line-height\").replace(\"px\",\"\")),j=a(\".quote-box\").outerHeight(),k=a(\".quote-box\").outerWidth();c.append(a(\".quote-box\")),a(\".quote-box\").css({left:f-h.left-k/2,top:g-h.top-i-j/2+1}).show()},_destroyTooltip:function(){a(\".quote-box\").hide()}}),jQuery(document).ready(function(a){a(\".single .post .entry-content\").tips(),a(document).on(\"mouseup\",function(b){return a(b.target).is(\".single .post .entry-content, .single .post .entry-content *\")?void 0:void a(\".single .post .entry-content\").data(\"abTips\")._destroyTooltip()})})}(jQuery);\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less:\n  301     Single Post\n  302     ========================================================================== */\n  303: .single-html {\n  304     height: 100%;\n  305  }\n  306  \n  307: .single {\n  308     .wrap {\n  309        background: #fff !important;\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less:\n   34  \n   35      .home &,\n   36:     .single &,\n   37      .page & {\n   38        // min-height: 660px; \n   ..\n  342    }\n  343  \n  344:   &.single-html {\n  345      height: auto;\n  346    }\n  ...\n  380      }\n  381  \n  382:     &.single-html {\n  383        height: auto;\n  384      }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/theme.less:\n   35     margin-right: auto !important;\n   36  \n   37:    .single & {\n   38        width: 100%;\n   39     }\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php:\n  738        .dwtl-post-form .post-formats .active,\n  739        .dwtl-post-form .post-formats button:hover,\n  740:       .single .no-cover + .container .entry-meta a:hover,\n  741        #comments .comment time a:hover,\n  742        .timeline-scrubber .active a {\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint-rhino.js:\n 7642      }\n 7643  \n 7644:     if (state.option.singleGroups && left && left.paren && !left.exprs &&\n 7645        !isFatArrowBody && !left.triggerFnExpr) {\n 7646        warning(\"W126\");\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/dist/jshint.js:\n 7640      }\n 7641  \n 7642:     if (state.option.singleGroups && left && left.paren && !left.exprs &&\n 7643        !isFatArrowBody && !left.triggerFnExpr) {\n 7644        warning(\"W126\");\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/src/jshint.js:\n  941      }\n  942  \n  943:     if (state.option.singleGroups && left && left.paren && !left.exprs &&\n  944        !isFatArrowBody && !left.triggerFnExpr) {\n  945        warning(\"W126\");\n\n/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/header.php:\n   34        ?>\n   35        <style>\n   36:         .single .banner.cover {\n   37            background-image: url( <?php echo $post_thumbnail_url; ?> ) !important;\n   38          }\n   39  \n   40:         .single .banner.cover:before {\n   41            opacity: .5;\n   42          }\n   43  \n   44          <?php if ($post_background) { ?>\n   45:           .single .banner.cover:before {\n   46              background: <?php echo $post_background; ?> !important;\n   47            }\n   ..\n   49  \n   50          <?php if ($post_background_size) { ?>\n   51:           .single .banner.cover {\n   52              background-size: <?php echo $post_background_size; ?> !important;\n   53            }\n   ..\n   55  \n   56          <?php if ($post_background_position) { ?>\n   57:           .single .banner.cover {\n   58              background-position: <?php echo $post_background_position; ?> !important;\n   59            }\n\n49 matches across 11 files\n",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 63965,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "lib/scripts.php",
-			"settings":
-			{
-				"buffer_size": 6906,
+				"buffer_size": 2492,
 				"line_ending": "Unix"
 			}
 		},
@@ -282,43 +260,19 @@
 			}
 		},
 		{
-			"file": "assets/less/flat/hentry.less",
-			"settings":
-			{
-				"buffer_size": 15946,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "templates/content-single.php",
-			"settings":
-			{
-				"buffer_size": 1871,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "templates/content.php",
 			"settings":
 			{
-				"buffer_size": 1725,
+				"buffer_size": 2116,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "functions.php",
+			"file": "assets/less/flat/hentry.less",
 			"settings":
 			{
-				"buffer_size": 6166,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/custom.php",
-			"settings":
-			{
-				"buffer_size": 13590,
-				"line_ending": "Unix"
+				"buffer_size": 16027,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -403,16 +357,24 @@
 	[
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/vendor"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/scripts.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/entry-meta.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/vendor/fotorama.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/node_modules/livereload-server/lib/connection.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-none.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/underscore.string/test/strings_standalone.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/.idea/scopes/scope_settings.xml",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/image-size",
@@ -423,21 +385,17 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/mixins.less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/base.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/single.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/entry-meta.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/sidebar.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/debug/linenumbers-all.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/LICENSE",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/Gruntfile.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/navbar.less",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/scripts.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/run-tests.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-relative-urls-options.js",
 		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1425376518/mapped/var/www/html/laventurierviking/wp-config.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/sftp-config.json",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/functions.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/page.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-single.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/comments.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/flat.less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/widgets.php",
@@ -448,7 +406,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/vendor/fotorama.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/header.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/timeline.less",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/extend-nest.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/head.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css",
@@ -460,7 +417,6 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dw-timeline-pro.min.css",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/img/fond.jpg",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/scripts.js",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/index.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/progress-bars.less",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/fonts/glyphicons-halflings-regular.svg",
@@ -534,8 +490,7 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/page-artiste.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/style.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-salon.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artistes.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single-actu.php"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/intro-artistes.php"
 	],
 	"find":
 	{
@@ -557,6 +512,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"entry-date",
+			"fotoramaLightbox",
 			"no-cover",
 			".no-cover",
 			".single",
@@ -682,9 +639,7 @@
 			"allText",
 			"$image->alttext",
 			"$image->description",
-			"$image->imageURL",
-			"$caption = $image->caption;",
-			"\n					"
+			"$image->imageURL"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -706,76 +661,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/js/scripts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14169,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "assets/less/vendor/fotorama.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10682,
-								10682
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 7640.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "assets/less/flat/variables.less",
 					"semi_transient": false,
 					"settings":
@@ -802,24 +692,57 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "index.php",
+					"buffer": 1,
+					"file": "assets/js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2336,
+						"buffer_size": 14185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								2336
+								11493,
+								11493
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 6.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1583,
+								1585
 							]
 						],
 						"settings":
@@ -832,1493 +755,15 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": 24.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 63965,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										266,
-										273
-									],
-									[
-										293,
-										300
-									],
-									[
-										582,
-										589
-									],
-									[
-										687,
-										694
-									],
-									[
-										908,
-										915
-									],
-									[
-										1065,
-										1072
-									],
-									[
-										1229,
-										1236
-									],
-									[
-										1408,
-										1415
-									],
-									[
-										1582,
-										1589
-									],
-									[
-										1802,
-										1809
-									],
-									[
-										2216,
-										2223
-									],
-									[
-										2229,
-										2236
-									],
-									[
-										2518,
-										2525
-									],
-									[
-										2670,
-										2677
-									],
-									[
-										2816,
-										2823
-									],
-									[
-										2961,
-										2968
-									],
-									[
-										3114,
-										3121
-									],
-									[
-										3338,
-										3345
-									],
-									[
-										3454,
-										3461
-									],
-									[
-										3680,
-										3687
-									],
-									[
-										4002,
-										4009
-									],
-									[
-										4279,
-										4286
-									],
-									[
-										4722,
-										4729
-									],
-									[
-										5123,
-										5130
-									],
-									[
-										5338,
-										5345
-									],
-									[
-										5636,
-										5643
-									],
-									[
-										5664,
-										5671
-									],
-									[
-										5774,
-										5781
-									],
-									[
-										6083,
-										6090
-									],
-									[
-										6412,
-										6419
-									],
-									[
-										6554,
-										6561
-									],
-									[
-										6599,
-										6606
-									],
-									[
-										6620,
-										6627
-									],
-									[
-										6682,
-										6689
-									],
-									[
-										6743,
-										6750
-									],
-									[
-										6775,
-										6782
-									],
-									[
-										6801,
-										6808
-									],
-									[
-										6826,
-										6833
-									],
-									[
-										7231,
-										7238
-									],
-									[
-										7426,
-										7433
-									],
-									[
-										7742,
-										7749
-									],
-									[
-										8046,
-										8053
-									],
-									[
-										8144,
-										8151
-									],
-									[
-										8464,
-										8471
-									],
-									[
-										8562,
-										8569
-									],
-									[
-										8797,
-										8804
-									],
-									[
-										9125,
-										9132
-									],
-									[
-										9346,
-										9353
-									],
-									[
-										9749,
-										9756
-									],
-									[
-										10160,
-										10167
-									],
-									[
-										10375,
-										10382
-									],
-									[
-										10661,
-										10668
-									],
-									[
-										11099,
-										11106
-									],
-									[
-										11440,
-										11447
-									],
-									[
-										11771,
-										11778
-									],
-									[
-										12108,
-										12115
-									],
-									[
-										12489,
-										12497
-									],
-									[
-										12709,
-										12717
-									],
-									[
-										12837,
-										12845
-									],
-									[
-										12945,
-										12953
-									],
-									[
-										13014,
-										13022
-									],
-									[
-										13141,
-										13149
-									],
-									[
-										13320,
-										13328
-									],
-									[
-										13448,
-										13456
-									],
-									[
-										13524,
-										13532
-									],
-									[
-										13635,
-										13643
-									],
-									[
-										13713,
-										13721
-									],
-									[
-										13826,
-										13834
-									],
-									[
-										13915,
-										13923
-									],
-									[
-										13998,
-										14006
-									],
-									[
-										14180,
-										14188
-									],
-									[
-										14283,
-										14291
-									],
-									[
-										14453,
-										14461
-									],
-									[
-										14527,
-										14535
-									],
-									[
-										14622,
-										14630
-									],
-									[
-										14871,
-										14879
-									],
-									[
-										15006,
-										15014
-									],
-									[
-										15096,
-										15104
-									],
-									[
-										15148,
-										15156
-									],
-									[
-										15178,
-										15186
-									],
-									[
-										15266,
-										15274
-									],
-									[
-										15321,
-										15329
-									],
-									[
-										15376,
-										15384
-									],
-									[
-										15499,
-										15507
-									],
-									[
-										15656,
-										15664
-									],
-									[
-										15726,
-										15734
-									],
-									[
-										15804,
-										15812
-									],
-									[
-										16141,
-										16149
-									],
-									[
-										16217,
-										16225
-									],
-									[
-										16469,
-										16477
-									],
-									[
-										16615,
-										16623
-									],
-									[
-										16871,
-										16879
-									],
-									[
-										16900,
-										16908
-									],
-									[
-										17242,
-										17250
-									],
-									[
-										17473,
-										17481
-									],
-									[
-										17742,
-										17750
-									],
-									[
-										18039,
-										18047
-									],
-									[
-										18186,
-										18194
-									],
-									[
-										18228,
-										18236
-									],
-									[
-										18279,
-										18287
-									],
-									[
-										18447,
-										18455
-									],
-									[
-										18573,
-										18581
-									],
-									[
-										18639,
-										18647
-									],
-									[
-										18731,
-										18739
-									],
-									[
-										18984,
-										18992
-									],
-									[
-										19062,
-										19070
-									],
-									[
-										19138,
-										19146
-									],
-									[
-										19240,
-										19248
-									],
-									[
-										22384,
-										22392
-									],
-									[
-										22424,
-										22432
-									],
-									[
-										22505,
-										22513
-									],
-									[
-										22553,
-										22561
-									],
-									[
-										22967,
-										22975
-									],
-									[
-										23227,
-										23235
-									],
-									[
-										25570,
-										25578
-									],
-									[
-										25622,
-										25630
-									],
-									[
-										25690,
-										25698
-									],
-									[
-										26249,
-										26257
-									],
-									[
-										26312,
-										26320
-									],
-									[
-										26380,
-										26388
-									],
-									[
-										27073,
-										27081
-									],
-									[
-										27138,
-										27146
-									],
-									[
-										27374,
-										27382
-									],
-									[
-										27430,
-										27438
-									],
-									[
-										27606,
-										27614
-									],
-									[
-										27670,
-										27678
-									],
-									[
-										27916,
-										27924
-									],
-									[
-										28058,
-										28066
-									],
-									[
-										28101,
-										28109
-									],
-									[
-										28409,
-										28423
-									],
-									[
-										28529,
-										28543
-									],
-									[
-										28592,
-										28606
-									],
-									[
-										28717,
-										28731
-									],
-									[
-										28835,
-										28849
-									],
-									[
-										28967,
-										28981
-									],
-									[
-										29048,
-										29062
-									],
-									[
-										29093,
-										29107
-									],
-									[
-										29184,
-										29198
-									],
-									[
-										29334,
-										29348
-									],
-									[
-										29415,
-										29429
-									],
-									[
-										29460,
-										29474
-									],
-									[
-										29551,
-										29565
-									],
-									[
-										29667,
-										29681
-									],
-									[
-										29787,
-										29801
-									],
-									[
-										29888,
-										29902
-									],
-									[
-										29992,
-										30006
-									],
-									[
-										30079,
-										30093
-									],
-									[
-										30266,
-										30280
-									],
-									[
-										30357,
-										30371
-									],
-									[
-										30519,
-										30533
-									],
-									[
-										30603,
-										30617
-									],
-									[
-										30764,
-										30778
-									],
-									[
-										30950,
-										30964
-									],
-									[
-										31037,
-										31051
-									],
-									[
-										31195,
-										31209
-									],
-									[
-										31275,
-										31289
-									],
-									[
-										31421,
-										31435
-									],
-									[
-										31681,
-										31695
-									],
-									[
-										31829,
-										31843
-									],
-									[
-										31932,
-										31946
-									],
-									[
-										32099,
-										32113
-									],
-									[
-										32328,
-										32342
-									],
-									[
-										32640,
-										32651
-									],
-									[
-										32835,
-										32846
-									],
-									[
-										33084,
-										33093
-									],
-									[
-										33399,
-										33408
-									],
-									[
-										33830,
-										33848
-									],
-									[
-										34039,
-										34057
-									],
-									[
-										34399,
-										34417
-									],
-									[
-										34764,
-										34773
-									],
-									[
-										34818,
-										34827
-									],
-									[
-										34934,
-										34943
-									],
-									[
-										35050,
-										35059
-									],
-									[
-										35387,
-										35396
-									],
-									[
-										35449,
-										35458
-									],
-									[
-										35507,
-										35516
-									],
-									[
-										35552,
-										35561
-									],
-									[
-										35781,
-										35790
-									],
-									[
-										37156,
-										37165
-									],
-									[
-										37188,
-										37197
-									],
-									[
-										37226,
-										37235
-									],
-									[
-										37243,
-										37252
-									],
-									[
-										37339,
-										37348
-									],
-									[
-										37786,
-										37795
-									],
-									[
-										37849,
-										37858
-									],
-									[
-										38426,
-										38440
-									],
-									[
-										39160,
-										39177
-									],
-									[
-										39763,
-										39788
-									],
-									[
-										39979,
-										40004
-									],
-									[
-										40028,
-										40053
-									],
-									[
-										40342,
-										40367
-									],
-									[
-										40639,
-										40664
-									],
-									[
-										40910,
-										40935
-									],
-									[
-										41198,
-										41206
-									],
-									[
-										41244,
-										41252
-									],
-									[
-										41277,
-										41285
-									],
-									[
-										41340,
-										41348
-									],
-									[
-										41386,
-										41394
-									],
-									[
-										41610,
-										41618
-									],
-									[
-										41748,
-										41756
-									],
-									[
-										41822,
-										41830
-									],
-									[
-										41942,
-										41950
-									],
-									[
-										42018,
-										42026
-									],
-									[
-										42033,
-										42041
-									],
-									[
-										42149,
-										42157
-									],
-									[
-										42254,
-										42262
-									],
-									[
-										42340,
-										42348
-									],
-									[
-										42355,
-										42363
-									],
-									[
-										42530,
-										42538
-									],
-									[
-										42545,
-										42553
-									],
-									[
-										42620,
-										42628
-									],
-									[
-										42768,
-										42776
-									],
-									[
-										42900,
-										42908
-									],
-									[
-										43014,
-										43022
-									],
-									[
-										43081,
-										43089
-									],
-									[
-										43150,
-										43158
-									],
-									[
-										43361,
-										43369
-									],
-									[
-										43478,
-										43486
-									],
-									[
-										43595,
-										43603
-									],
-									[
-										43915,
-										43923
-									],
-									[
-										44196,
-										44204
-									],
-									[
-										44263,
-										44271
-									],
-									[
-										44312,
-										44320
-									],
-									[
-										44375,
-										44383
-									],
-									[
-										44450,
-										44458
-									],
-									[
-										44493,
-										44501
-									],
-									[
-										44560,
-										44568
-									],
-									[
-										44629,
-										44637
-									],
-									[
-										44649,
-										44657
-									],
-									[
-										44670,
-										44678
-									],
-									[
-										44718,
-										44726
-									],
-									[
-										44788,
-										44796
-									],
-									[
-										44857,
-										44865
-									],
-									[
-										44997,
-										45005
-									],
-									[
-										45113,
-										45121
-									],
-									[
-										45197,
-										45205
-									],
-									[
-										45251,
-										45259
-									],
-									[
-										45431,
-										45439
-									],
-									[
-										45704,
-										45712
-									],
-									[
-										45724,
-										45732
-									],
-									[
-										45745,
-										45753
-									],
-									[
-										45787,
-										45795
-									],
-									[
-										45857,
-										45865
-									],
-									[
-										45926,
-										45934
-									],
-									[
-										46066,
-										46074
-									],
-									[
-										46182,
-										46190
-									],
-									[
-										46266,
-										46274
-									],
-									[
-										46320,
-										46328
-									],
-									[
-										46500,
-										46508
-									],
-									[
-										46950,
-										46958
-									],
-									[
-										47150,
-										47158
-									],
-									[
-										47360,
-										47368
-									],
-									[
-										47435,
-										47443
-									],
-									[
-										47564,
-										47572
-									],
-									[
-										47794,
-										47802
-									],
-									[
-										48021,
-										48029
-									],
-									[
-										48104,
-										48112
-									],
-									[
-										48233,
-										48241
-									],
-									[
-										48539,
-										48547
-									],
-									[
-										48746,
-										48754
-									],
-									[
-										48911,
-										48919
-									],
-									[
-										49072,
-										49080
-									],
-									[
-										49316,
-										49324
-									],
-									[
-										49648,
-										49656
-									],
-									[
-										49855,
-										49863
-									],
-									[
-										50020,
-										50028
-									],
-									[
-										50181,
-										50189
-									],
-									[
-										50425,
-										50433
-									],
-									[
-										50756,
-										50764
-									],
-									[
-										50963,
-										50971
-									],
-									[
-										51128,
-										51136
-									],
-									[
-										51289,
-										51297
-									],
-									[
-										51530,
-										51538
-									],
-									[
-										51940,
-										51948
-									],
-									[
-										52444,
-										52452
-									],
-									[
-										52958,
-										52966
-									],
-									[
-										53302,
-										53310
-									],
-									[
-										53322,
-										53330
-									],
-									[
-										53351,
-										53359
-									],
-									[
-										53386,
-										53394
-									],
-									[
-										53440,
-										53448
-									],
-									[
-										53471,
-										53479
-									],
-									[
-										53494,
-										53502
-									],
-									[
-										53529,
-										53537
-									],
-									[
-										53597,
-										53605
-									],
-									[
-										53838,
-										53846
-									],
-									[
-										53881,
-										53889
-									],
-									[
-										54144,
-										54152
-									],
-									[
-										54192,
-										54200
-									],
-									[
-										54255,
-										54263
-									],
-									[
-										54307,
-										54315
-									],
-									[
-										54471,
-										54479
-									],
-									[
-										54565,
-										54573
-									],
-									[
-										54612,
-										54620
-									],
-									[
-										54676,
-										54684
-									],
-									[
-										54779,
-										54787
-									],
-									[
-										54831,
-										54839
-									],
-									[
-										54893,
-										54901
-									],
-									[
-										55012,
-										55020
-									],
-									[
-										55068,
-										55076
-									],
-									[
-										55134,
-										55142
-									],
-									[
-										55457,
-										55464
-									],
-									[
-										55570,
-										55577
-									],
-									[
-										55686,
-										55693
-									],
-									[
-										55860,
-										55867
-									],
-									[
-										55914,
-										55921
-									],
-									[
-										56007,
-										56014
-									],
-									[
-										56089,
-										56096
-									],
-									[
-										56148,
-										56155
-									],
-									[
-										56251,
-										56258
-									],
-									[
-										56407,
-										56414
-									],
-									[
-										56479,
-										56486
-									],
-									[
-										56569,
-										56576
-									],
-									[
-										56736,
-										56743
-									],
-									[
-										56842,
-										56849
-									],
-									[
-										56927,
-										56934
-									],
-									[
-										57021,
-										57028
-									],
-									[
-										57166,
-										57173
-									],
-									[
-										57321,
-										57328
-									],
-									[
-										57451,
-										57458
-									],
-									[
-										57560,
-										57567
-									],
-									[
-										57642,
-										57649
-									],
-									[
-										57752,
-										57759
-									],
-									[
-										57897,
-										57904
-									],
-									[
-										57944,
-										57951
-									],
-									[
-										57991,
-										57998
-									],
-									[
-										58111,
-										58118
-									],
-									[
-										58417,
-										58424
-									],
-									[
-										58559,
-										58566
-									],
-									[
-										58589,
-										58596
-									],
-									[
-										58651,
-										58658
-									],
-									[
-										60341,
-										60348
-									],
-									[
-										60439,
-										60446
-									],
-									[
-										60469,
-										60476
-									],
-									[
-										60517,
-										60524
-									],
-									[
-										60818,
-										60825
-									],
-									[
-										60881,
-										60888
-									],
-									[
-										61096,
-										61103
-									],
-									[
-										61199,
-										61206
-									],
-									[
-										61289,
-										61296
-									],
-									[
-										61508,
-										61515
-									],
-									[
-										61776,
-										61783
-									],
-									[
-										62118,
-										62125
-									],
-									[
-										62451,
-										62458
-									],
-									[
-										62783,
-										62790
-									],
-									[
-										63072,
-										63079
-									],
-									[
-										63225,
-										63232
-									],
-									[
-										63376,
-										63383
-									],
-									[
-										63585,
-										63592
-									],
-									[
-										63801,
-										63808
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								60696,
-								60697
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"line_numbers": false,
-							"output_tag": 12,
-							"remote_loading": false,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"synced": false,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1061.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "lib/scripts.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6906,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4783,
-								4783
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 838.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 3,
 					"file": "templates/header.php",
 					"semi_transient": false,
 					"settings":
@@ -2345,14 +790,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2474.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 4,
 					"file": "assets/less/flat/layout.less",
 					"semi_transient": false,
 					"settings":
@@ -2378,27 +823,61 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 241.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "assets/less/flat/hentry.less",
+					"buffer": 5,
+					"file": "templates/content.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15946,
+						"buffer_size": 2116,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6538,
-								6538
+								1146,
+								1146
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 22.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/less/flat/hentry.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2506,
+								2506
 							]
 						],
 						"settings":
@@ -2410,142 +889,8 @@
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 6401.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "templates/content-single.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								854,
-								854
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "templates/content.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1725,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								113,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "functions.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1175,
-								1165
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 461.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "lib/custom.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10195,
-								10195
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4699.0,
+						"translation.x": -0.0,
+						"translation.y": 2162.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -2608,6 +953,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"hen",
+				"assets/less/flat/hentry.less"
+			],
 			[
 				"cus",
 				"lib/custom.php"
