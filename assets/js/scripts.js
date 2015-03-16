@@ -199,7 +199,9 @@ jQuery(function($) {
 			}
 		});
 
-		$(document).on('click','.sub-nav-open', function(){
+		$(document).on('click','.sub-nav-open, .widget .menu a[href^="#"]', function(e){
+				console.log('oui');
+				e.preventDefault();
         $(this).toggleClass('active');
         sidebar_hieght();
     });
@@ -277,12 +279,13 @@ jQuery(function($) {
 		$el = $(el);
 		year = $el.text();
 		link = $el.attr('href');
-		links = [{'url': window.location.pathname + year, 'year': year}];
+		param = link.split('?')[1]
+		links = [{'url': link, 'year': year}];
 		count = parseInt(($el.next().text() / perPage).toFixed(0));
 		$el.attr('data-numPage', nextPagesIndex);
 		if(count > 0) {
 			for (i = 1; i < count; i++) { 
-			  links.push({'url': window.location.pathname + year +'/page/'+(i+1), 'year': undefined});
+			  links.push({'url': '/'+year+'/page/'+(i+1)+(param !== undefined ? '?'+param : ''), 'year': undefined});
 			}
 			count--;
 		};
@@ -290,6 +293,7 @@ jQuery(function($) {
 
 		return links;
 	});
+	// console.log(nextPages);
 
 	$('.timeline-scrubber').attr('data-count', nextPages.length);
 	$('.timeline-scrubber ul li:first-child').addClass('loaded');
@@ -364,9 +368,10 @@ jQuery(function($) {
 					$('#infscr-loading img').css({'display':'none'});
 					$('#infscr-loading div').css({'display':'block'});
 				}
-				var yearsUrl = nextPages[opts.state.currPage-1].url.replace(window.location.pathname, '/').split('/')[1];
-				$('.timeline-scrubber a[href^="/'+yearsUrl+'"]').parent().removeClass('loading').addClass('loaded');
-
+				if(nextPages[opts.state.currPage-1] !== undefined) {
+					var yearsUrl = nextPages[opts.state.currPage-1].url.split('/')[1];
+					$('.timeline-scrubber a[href^="/'+yearsUrl+'"]').parent().removeClass('loading').addClass('loaded');
+				}
 				// Timeline 
 				// dwtl_layout();
 			},
@@ -378,7 +383,7 @@ jQuery(function($) {
 				var $t = $('.timeline').data('infinitescroll');
 				var opts = $t.options;
 				var yearsUrl = nextPages[opts.state.currPage];
-				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^="/'+yearsUrl.url.replace(window.location.pathname, '/').split('/')[1]+'"]').parent().addClass('loading');
+				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^="/'+yearsUrl.url.split('/')[1]+'"]').parent().addClass('loading');
 				$(opts.navSelector).hide();
 				if (loadedPage.indexOf(opts.state.currPage + 1) > -1) {
 					contentLoading = false;

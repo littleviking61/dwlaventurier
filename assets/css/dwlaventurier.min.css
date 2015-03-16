@@ -8539,7 +8539,7 @@ body {
 .widget_nav_menu .sub-menu .sub-menu a {
   padding-left: 40px;
 }
-.widget_nav_menu .active + .sub-menu {
+.widget_nav_menu .active ~ .sub-menu {
   max-height: 1000px;
   -webkit-transition: max-height 2s;
   transition: max-height 2s;
@@ -9969,5 +9969,11 @@ fieldset[disabled] #respond .form-submit input[type=submit].active {
 }
 #respond .form-group.required .form-control {
   padding-right: 24px;
+}
+pre {
+  display: none;
+}
+.logged-in pre {
+  display: block;
 }
 /*# sourceMappingURL=dwlaventurier.min.css.map */

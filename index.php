@@ -3,10 +3,20 @@
   <div class="timeline-scrubber">
     <ul>
       <?php
-        $cat = get_category(get_query_var('cat'));
-        $cat = is_home() ? [] : [ 'cat' => $cat->cat_ID];
+        $cat = get_query_var('cat');
+        $tag = get_query_var('tag_id');
+        $moreArg = [];
 
-        $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $cat);
+        if(!empty($cat)) {
+          // $cat = get_category($cat);
+          $moreArg['cat'] = $cat;
+        }
+
+        if(!empty($tag)) {
+          $moreArg['tag'] = $tag;
+        }
+
+        $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $moreArg);
 
         $years = wp_get_archives( $archiveArg );
 

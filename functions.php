@@ -160,3 +160,25 @@ function bimLa_gallery($id) {
 // creating Ajax call for WordPress
 add_action( 'wp_ajax_nopriv_get_gallery', 'bimLa_gallery' );
 add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
+
+
+// bookmark
+function bookmarks_shortcode( $atts = array() ) {
+    $defaults = array(
+        'title_li'         => false,
+        'title_before'     => '<h2>',
+        'title_after'      => '</h2>',
+        'category_before'  => false,
+        'category_after'   => false,
+        'categorize'       => true,
+        'show_description' => true,
+        'between'          => '<br />',
+        'show_images'      => false,
+        'show_rating'      => false,
+        'echo'             => false,
+    );
+
+    $args = wp_parse_args( $atts, $defaults );
+    return wp_list_bookmarks( $args );
+}
+add_shortcode( 'links', 'bookmarks_shortcode' );
