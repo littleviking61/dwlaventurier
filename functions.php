@@ -166,8 +166,9 @@ add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
 function bookmarks_shortcode( $atts = array() ) {
     $defaults = array(
         'title_li'         => false,
-        'title_before'     => '<h2>',
+        'title_before'     => '<hr><h2>',
         'title_after'      => '</h2>',
+        'category'         => ' ',
         'category_before'  => false,
         'category_after'   => false,
         'categorize'       => true,

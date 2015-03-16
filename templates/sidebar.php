@@ -18,6 +18,9 @@
 ?>
 
 <?php if ( ! is_404()): ?>
+	<a href="<?= get_home_url() ?>" class="navbar-toggle nav-bar-home">
+		<i class="glyphicon glyphicon-home"></i>
+	</a>
 	<button class="navbar-toggle sidebar-toggle active">
 		<?php if ( $menu_icon == 'no'): ?>
 	  	<?php _e('Sidebar','dw-timeline') ?>

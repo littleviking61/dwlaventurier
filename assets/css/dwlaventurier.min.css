@@ -7966,6 +7966,14 @@ body {
   background: #fff;
   width: 18px;
 }
+.navbar-toggle.nav-bar-home {
+  top: 60px;
+  font-size: 16px;
+  padding: 10px 11px 9px;
+}
+.navbar-toggle.nav-bar-home:hover {
+  color: white;
+}
 .nav-main-toggle {
   right: 0;
 }
@@ -8314,6 +8322,10 @@ body {
 /* ==========================================================================
 	Content
 	========================================================================== */
+.entry-content a,
+.page-content a {
+  text-decoration: underline;
+}
 /* ==========================================================================
 	Primary Content
 	========================================================================== */
