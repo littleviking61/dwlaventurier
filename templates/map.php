@@ -2,7 +2,7 @@
 
 $location = get_field('travel_point');
 
-if( !empty($location) ):
+if( !empty($location) && !empty($location['lat']) && !empty($location['lng']) ):
 ?>
 <hr>
 <h3>

@@ -3,15 +3,15 @@
   <div class="timeline-scrubber">
     <ul>
       <?php
-        $cat = get_the_category();
-        $cat = is_home() ? [] : [ 'cat' => $cat[0]->cat_ID];
+        $cat = get_category(get_query_var('cat'));
+        $cat = is_home() ? [] : [ 'cat' => $cat->cat_ID];
 
         $archiveArg = array_merge([ 'type' => 'yearly', 'show_post_count' => true, 'echo' => false ], $cat);
 
         $years = wp_get_archives( $archiveArg );
 
         $years = preg_replace( '~(&nbsp;)\((\d++)\)~', '<span class="count hide">$2</span>', $years );
-        echo $years;
+        if(!is_year()) echo $years;
       ?>
     </ul>
   </div>

@@ -2,7 +2,7 @@
 <div class="comment-body">
   <div class="comment-header">
     <h4 class="comment-heading"><?php echo get_comment_author_link(); ?></h4>
-    <time datetime="<?php echo comment_date('c'); ?>"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s at %2$s', 'dw-timeline'), get_comment_date(),  get_comment_time()); ?></a></time>
+    <time datetime="<?php echo comment_date('c'); ?>"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s à %2$s', 'dw-timeline'), get_comment_date(),  get_comment_time()); ?></a></time>
   </div>
 
   <div class="comment-content">

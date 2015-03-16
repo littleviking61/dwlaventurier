@@ -3,10 +3,10 @@
     return;
   } ?>
 
-<div class="<?= $ajax_class ?>">
+<div class="<?= $ajax_class ?: 'comments-single' ?>">
 
   <?php if (have_comments() || count($comments) > 0) : ?>
-    <section id="comments">
+    <section class="comments">
       <h3>
         <?php 
           printf( _n('One Response to &ldquo; %2$s &rdquo;', '%1$s Responses to &ldquo; %2$s &rdquo;', 
@@ -39,10 +39,14 @@
       </div>
       <?php endif; ?>
     </section><!-- /#comments -->
+  <?php else: ?>
+    <section class="comments no-comments">
+      <h3>Aucun commentaire pour le moment</h3>
+    </section><!-- /#comments -->
   <?php endif; ?>
 
   <?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-    <section id="comments">
+    <section class="comments">
       <div class="alert alert-warning">
         <?php _e('Comments are closed.', 'dw-timeline'); ?>
       </div>

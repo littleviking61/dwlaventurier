@@ -725,15 +725,22 @@ p .quote-box {
    Comments List
    ========================================================================== */
 
-#comments {
-   border-top: 1px solid #ddd;
+.comments-single{
+   margin-top: 15px;
+}
+
+.comments {
 
    .alert {
       margin-top: 20px;
    }
-
+   &:not(.no-comments) > h3{
+      border-bottom: 1px solid #ddd;
+   }
+   
    > h3 {
-      margin: 15px 0 30px;
+      padding-bottom: 15px;
+      margin: 0 0 30px;
       font-family: @font-family-base;
       font-size: 11px;
       letter-spacing: .1em;

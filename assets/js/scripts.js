@@ -174,7 +174,7 @@ jQuery(function($) {
 		var sidebarHieght = $('.sidebar-primary .inner').outerHeight();
 		if (sidebarHieght > viewHeight) {
 			$('.sidebar-primary').css({
-				'overflow-y': 'scroll'
+				'overflow-y': 'auto'
 			});
 		}
 	}
@@ -277,12 +277,12 @@ jQuery(function($) {
 		$el = $(el);
 		year = $el.text();
 		link = $el.attr('href');
-		links = [{'url': link, 'year': year}];
+		links = [{'url': window.location.pathname + year, 'year': year}];
 		count = parseInt(($el.next().text() / perPage).toFixed(0));
 		$el.attr('data-numPage', nextPagesIndex);
 		if(count > 0) {
 			for (i = 1; i < count; i++) { 
-			  links.push({'url': link+'page/'+(i+1), 'year': undefined});
+			  links.push({'url': window.location.pathname + year +'/page/'+(i+1), 'year': undefined});
 			}
 			count--;
 		};
@@ -290,6 +290,7 @@ jQuery(function($) {
 
 		return links;
 	});
+
 	$('.timeline-scrubber').attr('data-count', nextPages.length);
 	$('.timeline-scrubber ul li:first-child').addClass('loaded');
 
@@ -363,7 +364,7 @@ jQuery(function($) {
 					$('#infscr-loading img').css({'display':'none'});
 					$('#infscr-loading div').css({'display':'block'});
 				}
-				var yearsUrl = nextPages[opts.state.currPage-1].url.split('/')[1];
+				var yearsUrl = nextPages[opts.state.currPage-1].url.replace(window.location.pathname, '/').split('/')[1];
 				$('.timeline-scrubber a[href^="/'+yearsUrl+'"]').parent().removeClass('loading').addClass('loaded');
 
 				// Timeline 
@@ -377,7 +378,7 @@ jQuery(function($) {
 				var $t = $('.timeline').data('infinitescroll');
 				var opts = $t.options;
 				var yearsUrl = nextPages[opts.state.currPage];
-				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^="/'+yearsUrl.url.split('/')[1]+'"]').parent().addClass('loading');
+				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^="/'+yearsUrl.url.replace(window.location.pathname, '/').split('/')[1]+'"]').parent().addClass('loading');
 				$(opts.navSelector).hide();
 				if (loadedPage.indexOf(opts.state.currPage + 1) > -1) {
 					contentLoading = false;

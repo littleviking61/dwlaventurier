@@ -9722,86 +9722,90 @@ p .quote-box {
 /* ==========================================================================
    Comments List
    ========================================================================== */
-#comments {
-  border-top: 1px solid #ddd;
+.comments-single {
+  margin-top: 15px;
 }
-#comments .alert {
+.comments .alert {
   margin-top: 20px;
 }
-#comments > h3 {
-  margin: 15px 0 30px;
+.comments:not(.no-comments) > h3 {
+  border-bottom: 1px solid #ddd;
+}
+.comments > h3 {
+  padding-bottom: 15px;
+  margin: 0 0 30px;
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: #999;
 }
-#comments .comment-list {
+.comments .comment-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#comments .comment {
+.comments .comment {
   border-top: 1px solid #ddd;
   padding: 30px 0 30px 70px;
   position: relative;
 }
-#comments .comment:first-child {
+.comments .comment:first-child {
   border-top: none;
   padding-top: 0;
 }
-#comments .comment h4 {
+.comments .comment h4 {
   margin: 5px 0;
   color: #333333;
 }
-#comments .comment time {
+.comments .comment time {
   display: block;
   margin: 0 0 15px;
 }
-#comments .comment time a {
+.comments .comment time a {
   font-size: 12px;
   color: #999;
 }
-#comments .comment time a:hover {
+.comments .comment time a:hover {
   color: #e74c3c;
 }
-#comments .comment .avatar {
+.comments .comment .avatar {
   border-radius: 40px;
   position: absolute;
   left: 0;
   top: 35px;
 }
-#comments .comment:first-child .avatar {
+.comments .comment:first-child .avatar {
   top: 0;
 }
-#comments .comment .comment-reply-link .glyphicon-share-alt {
+.comments .comment .comment-reply-link .glyphicon-share-alt {
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-#comments .comment .children {
+.comments .comment .children {
   border-top: 1px solid #ddd;
   padding: 30px 0 0;
   margin: 30px 0 0;
   list-style: none;
 }
-#comments .comment .children li:last-child {
+.comments .comment .children li:last-child {
   padding-bottom: 0;
 }
 @media (max-width: 767px) {
-  #comments .comment {
+  .comments .comment {
     padding: 20px 0 20px 0px;
   }
-  #comments .comment .comment-header,
-  #comments .comment .comment-content,
-  #comments .comment .comment-action {
+  .comments .comment .comment-header,
+  .comments .comment .comment-content,
+  .comments .comment .comment-action {
     padding-left: 60px;
   }
-  #comments .comment .avatar {
+  .comments .comment .avatar {
     top: 20px;
   }
 }
-#comments .comment-action a {
+.comments .comment-action a {
   margin-right: 5px;
 }
 /* ==========================================================================
