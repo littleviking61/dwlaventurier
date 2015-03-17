@@ -186,6 +186,37 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   border-radius: @border-radius-base;
+  padding: 0;
+  height: auto;
+
+  > * {
+    display: block;
+    width: 100%;
+    height: 34px;
+    &, &:focus{
+      color: white;
+    }
+  }
+
+  .sidebar-toggle{
+    padding: 5px 5px 4px 10px;
+  }
+
+  a{
+    font-size: 16px;
+    padding: 6px 11px 9px;
+    
+    &:hover{
+      color: white;
+    }
+  }
+
+    
+  button{
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+  }
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.

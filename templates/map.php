@@ -1,31 +1,60 @@
 <?php 
+	if(isset($allMarker)){
 
-$location = get_field('travel_point');
+		$locationsAll = [];
+		$args = array( 'posts_per_page' => -1);
+		$myposts = get_posts( $args );
+		foreach ( $myposts as $post ) : 
+		  setup_postdata( $post ); 
+			$point = get_field('travel_point', $post->ID);
+			if( !empty($point) && !empty($point['lat']) && !empty($point['lng']) ){
+				$point['link'] = get_permalink($post->ID);
+				$point['title'] = get_the_title($post->ID);
+				$point['thumbnail'] = get_the_post_thumbnail($post->ID, 'thumbnail');
+				$locationsAll[] = $point;
+			}
+		endforeach;
+		wp_reset_postdata();
 
-if( !empty($location) && !empty($location['lat']) && !empty($location['lng']) ):
-?>
-<hr>
-<h3>
-	<b><?= $location['address'] ?></b>
-</h3>
-<p>
-	<i class="fa fa-dot-circle-o"></i> <b>Latitude</b> : <?= $location['lat'] ?>&nbsp;&nbsp;
-	<i class="fa fa-dot-circle-o"></i> <b>Longitude</b> : <?= $location['lng'] ?>
-</p>
-<div class="acf-map">
-	<div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"></div>
-</div>
+	}else{
+		$locations = [];
+		$point = get_field('travel_point', $post->ID);
+		if( !empty($point) && !empty($point['lat']) && !empty($point['lng']) ){
+			$locations[] = $point;
+		}
+	}
+
+if( count($locations) === 1 ): ?>
+
+	<?php foreach ($locations as $location): ?>
+		<h3>
+			<b><?= $location['address'] ?></b>
+		</h3>
+		<p>
+			<i class="fa fa-dot-circle-o"></i> <b>Latitude</b> : <?= $location['lat'] ?>&nbsp;&nbsp;
+			<i class="fa fa-dot-circle-o"></i> <b>Longitude</b> : <?= $location['lng'] ?>
+		</p>
+		<div class="acf-map">
+			<div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>"><?= $location['address'] ?></div>
+		</div>
+	<?php endforeach ?>
+
+<?php elseif(count($locationsAll) > 0): ?>
+	<div class="full-content">
+		<div class="acf-map">
+			<?php foreach ($locationsAll as $location): ?>
+				<div class="marker" data-lat="<?= $location['lat']; ?>" data-lng="<?= $location['lng']; ?>">
+					<a href="<?= $location['link'] ?>">
+						<?= $location['thumbnail'] ?>
+						<h4><?= $location['title'] ?></h4>
+					</a>
+				</div>
+			<?php endforeach ?>
+		</div>
+	</div>
+
 <?php endif; ?>
 
-<style type="text/css">
-
-.acf-map {
-	width: 100%;
-	height: 400px;
-	margin: 20px 0;
-}
-
-</style>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script type="text/javascript">
 (function($) {
@@ -52,7 +81,21 @@ function render_map( $el ) {
 	var args = {
 		zoom		: 16,
 		center		: new google.maps.LatLng(0, 0),
-		mapTypeId	: google.maps.MapTypeId.ROADMAP
+		mapTypeId	: google.maps.MapTypeId.ROADMAP,
+	  mapTypeControl: false,
+    panControl: true,
+    panControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
+    scaleControl: true,  // fixed to BOTTOM_RIGHT
+    streetViewControl: true,
+    streetViewControlOptions: {
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
 	};
 
 	// create map	        	
@@ -70,7 +113,6 @@ function render_map( $el ) {
 
 	// center map
 	center_map( map );
-
 }
 
 /*

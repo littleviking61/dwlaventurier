@@ -183,3 +183,17 @@ function bookmarks_shortcode( $atts = array() ) {
     return wp_list_bookmarks( $args );
 }
 add_shortcode( 'links', 'bookmarks_shortcode' );
+
+// bookmark
+function bigmap_shortcode( $atts = array() ) {
+    $allMarker = true;
+    $template = locate_template( 'templates/map.php' );
+    if(file_exists($template)) {
+        ob_start();
+        include($template);
+        $content = ob_get_contents();
+        ob_end_clean();
+    }
+    return $content;
+}
+add_shortcode( 'maps', 'bigmap_shortcode' );

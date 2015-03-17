@@ -18,18 +18,23 @@
 ?>
 
 <?php if ( ! is_404()): ?>
-	<a href="<?= get_home_url() ?>" class="navbar-toggle nav-bar-home">
-		<i class="glyphicon glyphicon-home"></i>
-	</a>
-	<button class="navbar-toggle sidebar-toggle active">
-		<?php if ( $menu_icon == 'no'): ?>
-	  	<?php _e('Sidebar','dw-timeline') ?>
-		<?php else : ?>
-			<span class="icon-bar first"></span>
-		  <span class="icon-bar second"></span>
-		  <span class="icon-bar third"></span>
-	  <?php endif ?>
-	</button>
+	<div class="navbar-toggle">
+		<button class="sidebar-toggle active">
+			<?php if ( $menu_icon == 'no'): ?>
+		  	<?php _e('Sidebar','dw-timeline') ?>
+			<?php else : ?>
+				<span class="icon-bar first"></span>
+			  <span class="icon-bar second"></span>
+			  <span class="icon-bar third"></span>
+		  <?php endif ?>
+		</button>
+		<a href="<?= get_home_url() ?>" title="Retourner sur la home" class="nav-bar-home">
+			<i class="glyphicon glyphicon-home"></i>
+		</a>
+		<a href="<?= get_permalink(2858) ?>" title="Sur les traces d'un viking" class="nav-bar-map">
+			<i class="glyphicon glyphicon-globe"></i>
+		</a>
+	</div>
 
   <aside class="sidebar sidebar-primary" role="complementary">
     <div class="inner">
