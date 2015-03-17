@@ -155,6 +155,8 @@
               <?php echo dw_timeline_title(); ?>
             </h1>
 
+            <h3>Blog sur les aventures d'un viking autour du monde !</h3>
+
             <?php if ( is_front_page() ): ?>
               <?php if ( dw_timeline_get_theme_option('get_start') != '' ): ?>
                 <?php if ( dw_timeline_get_theme_option('get_start_link') == '' ): ?>

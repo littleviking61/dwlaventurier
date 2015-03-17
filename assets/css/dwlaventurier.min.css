@@ -7754,6 +7754,9 @@ body {
   width: 100%;
   padding-top: 30px;
 }
+.banner .header-inner h3 {
+  display: none;
+}
 @media (min-width: 767px) {
   .home .banner hgroup {
     position: relative;
@@ -9999,6 +10002,9 @@ fieldset[disabled] #respond .form-submit input[type=submit].active {
   height: 400px;
   margin: 20px 0;
 }
+.acf-map img {
+  max-width: none;
+}
 .full-content {
   position: fixed;
   height: 100vh;
@@ -10016,9 +10022,6 @@ fieldset[disabled] #respond .form-submit input[type=submit].active {
 }
 .full-content .acf-map .gm-style-iw {
   margin-top: 5px;
-}
-.full-content .acf-map img {
-  max-width: none;
 }
 pre {
   display: none;

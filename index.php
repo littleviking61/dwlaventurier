@@ -1,6 +1,6 @@
 <div class="timeline two-col" data-perpage="<?= get_option('posts_per_page') ?>">
 
-  <div class="timeline-scrubber">
+  <div class="timeline-scrubber" role="navigation">
     <ul>
       <?php
         $cat = get_query_var('cat');
@@ -25,9 +25,9 @@
       ?>
     </ul>
   </div>
-
+  
   <?php
-    $args = is_home() ? ['date_query' => ['year' => date('Y') ] ] : [];
+    $args = is_home() && !is_paged() ? ['date_query' => ['year' => date('Y') ] ] : [];
     $the_query = array_merge($wp_query->query_vars,  $args);
 
     $the_query = new WP_Query($the_query);
@@ -62,7 +62,7 @@
     <?php endwhile; ?>
 
     <?php if ($wp_query->max_num_pages > 1) : ?>
-      <nav class="post-nav">
+      <nav class="post-nav" role="navigation">
         <ul class="pager">
           <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'dw-timeline')); ?></li>
           <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'dw-timeline')); ?></li>
