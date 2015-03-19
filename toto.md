@@ -12,6 +12,7 @@ contenu récent
 quote bloc
 
 share button
+like button
 
 position actu
 itinerary map

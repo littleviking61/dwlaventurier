@@ -98,6 +98,9 @@ jQuery(function($) {
 					  margin: 10,
 			  		thumbmargin: 10
 					});
+				},
+				open: function() {
+    			ga('send', 'event', 'ajax', 'click', 'gallery', this.currItem.el[0].title);
 				}
 			}
 		});
@@ -113,11 +116,22 @@ jQuery(function($) {
       preloader: true,
 
       fixedContentPos: false,
+
+      callbacks: {
+    		open: function() {
+    			ga('send', 'event', 'iframe', 'click', 'popup a', this.currItem.src);
+				}
+			}
     });
 
 	  $('.simple-ajax-popup').magnificPopup({
 	    type: 'ajax',
-	    tError: '<a href="%url%">The content</a> could not be loaded.'
+	    tError: '<a href="%url%">The content</a> could not be loaded.',
+	    callbacks: {
+	    	open: function() {
+	  			ga('send', 'event', 'ajax', 'click', 'simple', this.currItem.el[0].title);
+				}
+			}
 	  });
         
     
@@ -200,7 +214,6 @@ jQuery(function($) {
 		});
 
 		$(document).on('click','.sub-nav-open, .widget .menu a[href^="#"]', function(e){
-				console.log('oui');
 				e.preventDefault();
         $(this).toggleClass('active');
         sidebar_hieght();
@@ -383,7 +396,9 @@ jQuery(function($) {
 				var $t = $('.timeline').data('infinitescroll');
 				var opts = $t.options;
 				var yearsUrl = nextPages[opts.state.currPage];
-				if(yearsUrl !== undefined) $('.timeline-scrubber a[href^="/'+yearsUrl.url.split('/')[1]+'"]').parent().addClass('loading');
+				if(yearsUrl !== undefined) {
+					$('.timeline-scrubber a[href^="/'+yearsUrl.url.split('/')[1]+'"]').parent().addClass('loading');
+				}
 				$(opts.navSelector).hide();
 				if (loadedPage.indexOf(opts.state.currPage + 1) > -1) {
 					contentLoading = false;
@@ -416,11 +431,11 @@ jQuery(function($) {
 			}
 		},
 		path: function(index) { 
-			// console.log(index-1);
 			return nextPages[index-1].url;
 		}
 	}, function(elems) {
 		if (elems.length > 0) {
+			
 			var isNewYear=false;
 			var $t = $('.timeline').data('infinitescroll');
 			var opts = $t.options;
@@ -430,6 +445,7 @@ jQuery(function($) {
 			var pageNum = opts.state.currPage;
 			var pageText = nextPages[opts.state.currPage-1].year;
 			
+			ga('send', 'pageview', nextPages[opts.state.currPage-1].url);
 			isNewYear = pageText !== undefined;
 			
 			if (opts.state.currPage >= max) {

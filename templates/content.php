@@ -25,7 +25,7 @@
       <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </h2>
-      <span class="entry-comments"><a class="simple-ajax-popup" href="/wp-admin/admin-ajax.php?postId=<?= get_the_id() ?>&action=get_comment"><i class="fa fa-comments"></i> <?php comments_number( '0', '1', '%' ); ?></a></span>
+      <span class="entry-comments"><a class="simple-ajax-popup" title="Commentaire : <?php the_title(); ?>" href="/wp-admin/admin-ajax.php?postId=<?= get_the_id() ?>&action=get_comment"><i class="fa fa-comments"></i> <?php comments_number( '0', '1', '%' ); ?></a></span>
 
       <?php if (!is_null($icon)) : ?>
         <i class="glyphicon glyphicon-<?= $icon ?>"></i>
@@ -39,7 +39,7 @@
       $content = strip_shortcodes($content, 'gallery'); 
       echo apply_filters('the_content', do_shortcode($content));
       if (is_array($matches) && $matches[2] == 'gallery' && $type == 'image') : ?>
-        <a href="#view-gallery" class="gallery-link" data-<?= substr($matches[3],1) ?>>Voir la gallerie →</a>
+        <a href="#view-gallery" class="gallery-link" title="Gallerie : <?php the_title(); ?>" data-<?= substr($matches[3],1) ?>>Voir la gallerie →</a>
       <?php endif; ?>
     </div>
     <hr>
