@@ -18,9 +18,18 @@
 
 	}else{
 		$locations = [];
-		$point = get_field('travel_point', $post->ID);
-		if( !empty($point) && !empty($point['lat']) && !empty($point['lng']) ){
-			$locations[] = $point;
+		if( have_rows('locations') ) {
+			while ( have_rows('locations') ) : the_row(); 
+				$point = get_sub_field('travel_point');
+				if( !empty($point) && !empty($point['lat']) && !empty($point['lng']) ){
+					$locations[] = $point;
+				}
+			endwhile;
+		}else{
+			$point = get_field('travel_point', $post->ID);
+			if( !empty($point) && !empty($point['lat']) && !empty($point['lng']) ){
+				$locations[] = $point;
+			}
 		}
 	}
 
@@ -39,6 +48,22 @@ if( count($locations) === 1 ): ?>
 		</div>
 	<?php endforeach ?>
 
+<?php elseif(count($locations) > 1 ): ?>
+	<h3>
+		<?php if (get_field('titre', $post->ID)): ?>
+			<?= get_field('titre', $post->ID) ?>
+		<?php else: ?>
+			Itinéraire
+		<?php endif ?>
+	</h3>
+	<p id="map-result">
+		Loading...
+	</p>
+	<div class="acf-map">
+		<script>
+			locations = <?= json_encode($locations) ?>
+		</script>
+	</div>
 <?php elseif(count($locationsAll) > 0): ?>
 	<div class="full-content">
 		<div class="acf-map">
@@ -71,6 +96,9 @@ if( count($locations) === 1 ): ?>
 *  @param	$el (jQuery element)
 *  @return	n/a
 */
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;     	
 
 function render_map( $el ) {
 
@@ -99,8 +127,10 @@ function render_map( $el ) {
     },
 	};
 
-	// create map	        	
-	var map = new google.maps.Map( $el[0], args);
+	// create map	
+	directionsDisplay = new google.maps.DirectionsRenderer();
+	map = new google.maps.Map( $el[0], args);
+	directionsDisplay.setMap(map);
 
 	// add a markers reference
 	map.markers = [];
@@ -114,6 +144,8 @@ function render_map( $el ) {
 
 	// center map
 	center_map( map );
+
+	if(locations !== undefined) calcRoute();
 }
 
 /*
@@ -216,6 +248,41 @@ function center_map( map ) {
 *  @param	n/a
 *  @return	n/a
 */
+
+function calcRoute() {
+	nbPoint = locations.length-1;
+
+  var waypoints = [];
+ 	$.each(locations, function(index, value){
+ 		waypoints.push( {location:locations[index].address} );
+ 	});
+
+  var start = waypoints.shift().location;
+  var end = waypoints.pop().location;
+  // console.log(start, end, waypoints);
+
+  var request = {
+    origin: start,
+	  destination: end,
+	  waypoints: waypoints,
+    travelMode: google.maps.TravelMode.DRIVING,
+    // waypoints: waypoints
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(result);
+    }
+    var totalDistance = 0;
+		var totalDuration = 0;
+		var legs = result.routes[0].legs;
+		for(var i=0; i<legs.length; ++i) {
+		    totalDistance += legs[i].distance.value;
+		    totalDuration += legs[i].duration.value;
+		}
+
+		$('#map-result').html(Math.round(totalDistance / 1000) + ' km soit ' + Math.round( totalDuration / 60 / 60) + ' heure de route' );
+  });
+}
 
 $(document).ready(function(){
 

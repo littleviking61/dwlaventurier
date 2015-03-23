@@ -9134,7 +9134,7 @@ body {
   margin-right: 15px;
 }
 .hentry .entry-infos .country {
-  max-width: 64%;
+  max-width: 60%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
