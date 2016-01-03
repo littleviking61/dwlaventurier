@@ -38,7 +38,7 @@
         }
 
         .single .banner.cover:before {
-          opacity: .5;
+          opacity: 0.5;
         }
 
         <?php if ($post_background) { ?>
@@ -148,7 +148,7 @@
             <?php endif ?>
             
             <?php if ( is_front_page() ): ?>
-              <h2 class="page-description"><?php bloginfo('description'); ?></h2>
+              <h2 class="page-description"><?= __('Journal de bord'); ?></h2>
             <?php endif ?>
 
             <h1 class="page-title">
@@ -166,6 +166,7 @@
                 <?php endif ?>
               <?php endif ?>
             <?php endif ?>
+
           </div>
         </hgroup>
       <?php elseif( is_search() ) : ?>
@@ -176,5 +177,25 @@
         </div>
       <?php endif; ?>
   </div>
-  
+
+  <nav>
+    <?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav header-nav')); ?>
+  </nav>
+
+  <?php 
+    if ( is_front_page() ):
+      $template = locate_template( 'templates/position.php' );
+      if(file_exists($template)) {
+        /*include($template);*/
+      };
+    endif;
+  ?>  
+  <ul class="share list-inline text-center">
+    <li class="facebook"><a target="other" href="https://www.facebook.com/laventurierviking"><i class="fa fa-facebook"></i></a></li>
+    <li class="twitter"><a target="other" href="http://twitter.com/VikingDiaries"><i class="fa fa-twitter"></i></a></li>
+    <li class="youtube"><a target="other" href="http://youtube.com/laventurierviking"><i class="fa fa-youtube"></i></a></li> 
+    <li class="linkedin"><a target="other" href="http://fr.linkedin.com/in/baptisteregne/"><i class="fa fa-linkedin"></i></a></li>
+  </ul>
+
 </header>
+

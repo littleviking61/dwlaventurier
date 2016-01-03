@@ -38,7 +38,7 @@ jQuery(function($) {
 		});
 	}
 
-	// Nivo lightbox
+	// fotorama lightbox
 	// -------------------------------------
 	function fotoramaLightbox() {
 
@@ -62,7 +62,7 @@ jQuery(function($) {
 			  allowfullscreen: true,
 			  nav: 'thumbs',
 			  thumbborderwidth: 0,
-			  fit: 'scaledown',
+			  fit: 'cover',
 			}).children().addClass('fotorama__wrap--no-controls');
 
 		// $('<style></style>').appendTo($(document.body)).remove();
@@ -101,6 +101,32 @@ jQuery(function($) {
 				},
 				open: function() {
     			ga('send', 'event', 'ajax', 'click', 'gallery', this.currItem.el[0].title);
+				}
+			}
+		});
+
+		$('a[href="#view-position"]').magnificPopup({
+			type: 'ajax',
+			ajax: {
+				settings: {
+					url: '/wp-admin/admin-ajax.php',
+					type: 'post'
+				}
+			},
+			callbacks: {
+				elementParse: function() {
+					this.st.ajax.settings.data = {
+						action: 'get_position',
+					};
+				},
+				ajaxContentAdded: function() {
+					// Ajax content is loaded and appended to DOM
+					$modal = this.content;
+					console.log($modal);
+
+				},
+				open: function() {
+    				ga('send', 'event', 'ajax', 'click', 'position', this.currItem.el[0].title);
 				}
 			}
 		});
@@ -152,7 +178,7 @@ jQuery(function($) {
 			if(initIt)	left_Col = 0, right_Col = 0;
 
 			dwlt_half.each(function(index, el) {
-				if ($(el).hasClass('normal')) {
+				if ($(el).hasClass('normal') && !$(el).hasClass('citation')) {
 					if (left_Col <= right_Col) {
 						$(el).removeClass('dwtl-right').addClass('dwtl-left');
 						left_Col += $(el).outerHeight();
@@ -161,6 +187,15 @@ jQuery(function($) {
 						right_Col += $(el).outerHeight();
 					}
 				} else if ($(el).hasClass('full')) {
+					/*if( !$(el).prev().hasClass('citation') && !$(el).hasClass('timeline-pale')) {
+						heightCitation = left_Col-right_Col;
+						if(heightCitation > 100) {
+							$(el).before('<div class="dwtl hentry normal citation dwtl-right show"><div class="entry-inner" style="height:'+ (heightCitation < 0 ? -heightCitation-30 : heightCitation-30 )+'px">...</div></div>');
+						}else if(heightCitation < -100){
+							$(el).before('<div class="dwtl hentry normal citation dwtl-left show "><div class="entry-inner" style="height:'+ (heightCitation < 0 ? -heightCitation-30 : heightCitation-30 )+'px">...</div></div>');
+						}
+					}*/
+
 					left_Col = 0;
 					right_Col = 0;
 				}
@@ -184,43 +219,43 @@ jQuery(function($) {
 	}
 
 	// 
-	function sidebar_hieght() {
-		var sidebarHieght = $('.sidebar-primary .inner').outerHeight();
-		if (sidebarHieght > viewHeight) {
-			$('.sidebar-primary').css({
-				'overflow-y': 'auto'
-			});
-		}
-	}
+	// function sidebar_hieght() {
+	// 	var sidebarHieght = $('.sidebar-primary .inner').outerHeight();
+	// 	if (sidebarHieght > viewHeight) {
+	// 		$('.sidebar-primary').css({
+	// 			'overflow-y': 'auto'
+	// 		});
+	// 	}
+	// }
 
 	// document ready 
 	// --------------------------------
 	$(document).ready(function() {
 		// Main sidebar
-		$(document).on('click','.sidebar-toggle, .main-sidebar-open .wrap', function() {
-			var $b = $('body');
-			var $h = $('html');
-			$(this).toggleClass('active');
-			sidebar_hieght();
-			if($b.hasClass('main-sidebar-open')) {
-				$b
-					.removeClass('main-sidebar-open')
-					.css({'paddingRight': 0, backgroundColor:'black'});
-			}else{
-				$b
-					.addClass('main-sidebar-open')
-					.css({'paddingRight': 15, backgroundColor:'black'});
-			}
-		});
+		// $(document).on('click','.sidebar-toggle, .main-sidebar-open .wrap', function() {
+		// 	var $b = $('body');
+		// 	var $h = $('html');
+		// 	$(this).toggleClass('active');
+		// 	sidebar_hieght();
+		// 	if($b.hasClass('main-sidebar-open')) {
+		// 		$b
+		// 			.removeClass('main-sidebar-open')
+		// 			.css({'paddingRight': 0, backgroundColor:'black'});
+		// 	}else{
+		// 		$b
+		// 			.addClass('main-sidebar-open')
+		// 			.css({'paddingRight': 15, backgroundColor:'black'});
+		// 	}
+		// });
 
-		$(document).on('click','.sub-nav-open, .widget .menu a[href^="#"]', function(e){
-				e.preventDefault();
-        $(this).toggleClass('active');
-        sidebar_hieght();
-    });
+		// $(document).on('click','.sub-nav-open, .widget .menu a[href^="#"]', function(e){
+		// 		e.preventDefault();
+  //       $(this).toggleClass('active');
+  //       sidebar_hieght();
+  //   });
 
-		sidebar_hieght();
-		wrap_height();
+		// sidebar_hieght();
+		// wrap_height();
 
 		// Timeline 
 		$('body').imagesLoaded( function() {
@@ -235,12 +270,17 @@ jQuery(function($) {
 		prettyPrint();
 
 		// Nivo lightbox
-		fotoramaLightbox();
+		// fotoramaLightbox();
 
 		// magnifying popup
 		popupInit();
 
 		$('.widget .children').before('<i class="fa fa-caret-right sub-nav-open"></i>');
+
+		
+
+		// Create a new instance of Headhesive.js and pass in some options
+		// var header = new Headhesive('header.banner .header-nav');
 
 		// scroll to top button
 		$(window).scroll(function() {
@@ -263,8 +303,8 @@ jQuery(function($) {
 	// window resize
 	// --------------------------------
 	$(window).resize(function() {
-		sidebar_hieght();
-		wrap_height();
+		// sidebar_hieght();
+		// wrap_height();
 
 		// Timeline 
 		dwtl_layout('resize');
@@ -513,17 +553,17 @@ jQuery(function($) {
 		}
 	});
 
-	if (infinitescroll.show_more_button == 'yes') {
-		$(window).unbind('.infscr');
-		$(document).on('click','#infscr-loading',function() {
-			timeline.infinitescroll('retrieve');
-			if ( ! $('#infscr-loading div').hasClass('end')) {
-				$('#infscr-loading div').css({'display':'none'});
-				$('#infscr-loading img').css({'display':'inline-block'});
-			};
-			return false;
-		});
-	};
+	// if (infinitescroll.show_more_button == 'yes') {
+	// 	$(window).unbind('.infscr');
+	// 	$(document).on('click','#infscr-loading',function() {
+	// 		timeline.infinitescroll('retrieve');
+	// 		if ( ! $('#infscr-loading div').hasClass('end')) {
+	// 			$('#infscr-loading div').css({'display':'none'});
+	// 			$('#infscr-loading img').css({'display':'inline-block'});
+	// 		};
+	// 		return false;
+	// 	});
+	// };
 
 	// Window scroll 
 	//------------------------
@@ -546,26 +586,26 @@ jQuery(function($) {
 
 	// Get Started
 	//------------------------
-	$('.touch #get-started').click(function() {
-		$(this).addClass('active');
-		setTimeout(function(){
-			$('#get-started').removeClass('active');
-		},300);        
-	});
+	// $('.touch #get-started').click(function() {
+	// 	$(this).addClass('active');
+	// 	setTimeout(function(){
+	// 		$('#get-started').removeClass('active');
+	// 	},300);        
+	// });
 
-	$('.no-touch #get-started').mouseover(function() {
-		$(this).addClass('active');
-	});
+	// $('.no-touch #get-started').mouseover(function() {
+	// 	$(this).addClass('active');
+	// });
 
-	$('.no-touch #get-started').mouseout(function() {
-		$(this).removeClass('active');
-	});
+	// $('.no-touch #get-started').mouseout(function() {
+	// 	$(this).removeClass('active');
+	// });
 
-	$('#get-started').click(function() {
-		var wrapPos = $('.wrap > .container').offset().top;
-		wpadminbar_height = $('#wpadminbar').outerHeight(),
-		$('html, body').animate({
-			scrollTop: (wrapPos - wpadminbar_height)
-		}, 500);
-	});
+	// $('#get-started').click(function() {
+	// 	var wrapPos = $('.wrap > .container').offset().top;
+	// 	wpadminbar_height = $('#wpadminbar').outerHeight(),
+	// 	$('html, body').animate({
+	// 		scrollTop: (wrapPos - wpadminbar_height)
+	// 	}, 500);
+	// });
 });

@@ -14,7 +14,8 @@ require_once locate_template('/lib/scripts.php');         				// Scripts and sty
 require_once locate_template('/lib/social-share-count.php');      		// Custom functions
 require_once locate_template('/lib/customizer.php');      				// Customizer functions
 require_once locate_template('/lib/custom.php');          				// Custom functions
-require_once locate_template('/lib/ajaxs.php');       					// Ajaxs functions
+require_once locate_template('/lib/ajaxs.php');                         // Ajaxs functions
+require_once locate_template('/lib/post-like.php');       					// Ajaxs functions
 // require_once locate_template('/dw-importer/dw-importer.php');      		// Import sample data
 
 function extend_date_archives_add_rewrite_rules($wp_rewrite) {
@@ -161,6 +162,20 @@ function bimLa_gallery($id) {
 add_action( 'wp_ajax_nopriv_get_gallery', 'bimLa_gallery' );
 add_action( 'wp_ajax_get_gallery', 'bimLa_gallery' );
 
+function bimLa_position($id) {
+
+    $template = locate_template( 'ajax-trace.php' );
+    if(file_exists($template)) {
+        include($template);
+    }
+
+    // get_template_part( 'single', 'gallery' );
+    die();  
+}
+// creating Ajax call for WordPress
+add_action( 'wp_ajax_nopriv_get_position', 'bimLa_position' );
+add_action( 'wp_ajax_get_position', 'bimLa_position' );
+
 
 // bookmark
 function bookmarks_shortcode( $atts = array() ) {
@@ -197,3 +212,28 @@ function bigmap_shortcode( $atts = array() ) {
     return $content;
 }
 add_shortcode( 'maps', 'bigmap_shortcode' );
+
+// bookmark
+function bigtrace_shortcode( $atts = array() ) {
+    $allMarker = true;
+    $template = locate_template( 'templates/trace.php' );
+    if(file_exists($template)) {
+        ob_start();
+        include($template);
+        $content = ob_get_contents();
+        ob_end_clean();
+    }
+    return $content;
+}
+add_shortcode( 'trace', 'bigtrace_shortcode' );
+
+
+add_filter('wp_ulike_format_number','wp_ulike_new_format_number',10,3);
+function wp_ulike_new_format_number($value, $num, $plus){
+    if ($num >= 1000 && get_option('wp_ulike_format_number') == '1'):
+    $value = round($num/1000, 2) . 'K';
+    else:
+    $value = $num;
+    endif;
+    return $value;
+}  

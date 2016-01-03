@@ -45,7 +45,7 @@ add_action('init', 'dw_timeline_head_cleanup');
 /**
  * Remove the WordPress version from RSS feeds
  */
-add_filter('the_generator', '__return_false');
+// add_filter('the_generator', '__return_false');
 
 /**
  * Clean up language_attributes() used in <html> tag

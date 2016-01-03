@@ -12,7 +12,12 @@ contenu récent
 quote bloc
 
 share button
-like button
+<!-- like --> button
 
-position actu
-itinerary map
+<!-- position actu -->
+<!-- itinerary map -->
+
+
+
+citation et bloc full
+image dans l'article (gallerie plus editorial)

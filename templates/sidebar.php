@@ -31,8 +31,8 @@
 		<a href="<?= get_home_url() ?>" title="Retourner sur la home" class="nav-bar-home">
 			<i class="glyphicon glyphicon-home"></i>
 		</a>
-		<a href="<?= get_permalink(2858) ?>" title="Sur les traces d'un viking" class="nav-bar-map">
-			<i class="glyphicon glyphicon-globe"></i>
+		<a href="<?= get_permalink(3118) ?>" title="Sur les traces d'un viking" class="nav-bar-map">
+			<i class="fa fa-motorcycle"></i>
 		</a>
 	</div>
 

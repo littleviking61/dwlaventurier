@@ -24,7 +24,7 @@ class dw_timeline_Nav_Walker extends Walker_Nav_Menu {
       $pattern = '/^fa-\w*/';
       preg_match($pattern, $class, $icon);
       if ($icon) {
-        $item_html = str_replace('<a', '<i class="fa '. $icon[0] .'"></i><a', $item_html);
+        $item_html = preg_replace('/(<a.*?>)/i', '$1<i class="fa '. $icon[0] .'"></i> ', $item_html);
       }
     }
 

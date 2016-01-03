@@ -32,7 +32,9 @@
 			}
 		}
 	}
-
+?><script>
+	locations = undefined;
+</script><?php
 if( count($locations) === 1 ): ?>
 
 	<?php foreach ($locations as $location): ?>
@@ -144,8 +146,8 @@ function render_map( $el ) {
 
 	// center map
 	center_map( map );
-
-	if(locations !== undefined) calcRoute();
+	console.log(locations);
+	// if(locations !== undefined) calcRoute();
 }
 
 /*

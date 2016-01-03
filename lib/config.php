@@ -33,5 +33,5 @@ function dw_timeline_main_class() {
  */
 
 if (!isset($content_width)) {
-  $content_width = 465;
+  $content_width = 750;
 }

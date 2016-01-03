@@ -7920,6 +7920,17 @@ body {
   max-width: 400px;
   width: 30vw;
 }
+.banner .share {
+  margin-top: 10px;
+}
+.banner .share a {
+  width: 24px;
+  height: 24px;
+  display: block;
+  padding: 2px;
+  color: white;
+  font-size: 18px;
+}
 .navbar-toggle {
   position: fixed;
   top: 0;
@@ -8015,6 +8026,7 @@ body {
 }
 .main-sidebar-open {
   overflow: hidden;
+  overflow-y: auto;
 }
 @media all and (min--moz-device-pixel-ratio: 0) {
   .main-sidebar-open {
@@ -8339,6 +8351,42 @@ body {
   .admin-bar .nav-main {
     top: 32px;
   }
+}
+header.banner .page-title {
+  border-bottom: none;
+}
+.header-nav {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  border-top: 1px solid rgba(250, 250, 250, 0.8);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+  margin: 10px 0;
+}
+.header-nav li {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+}
+.header-nav li:before {
+  display: none;
+}
+.header-nav li:first-child a {
+  border-left: 1px solid rgba(250, 250, 250, 0.8);
+}
+.header-nav li a {
+  padding: 8px 10px;
+  border-right: 1px solid rgba(250, 250, 250, 0.8);
+  margin: 0;
+  color: white;
+}
+.header-nav li a i {
+  margin-right: 3px;
+}
+.header-nav .sub-menu,
+.header-nav .fa-caret-right {
+  display: none;
 }
 /* ==========================================================================
 	Content
@@ -9118,14 +9166,76 @@ body {
 .post-nav {
   display: none;
 }
+/*----------------------------------------------------------------------------*\
+  Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+/**
+ * Headhesive element clone
+ * > `clone` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     clone: 'banner--clone';
+ *   }
+ * }
+ */
+.headhesive {
+  /* Required styles */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 30px;
+  left: 0;
+  background-color: black;
+  /* Translate -100% to move off screen */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  /* Animations */
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+/**
+ * Headhesive stick
+ * > `stick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     stick: 'banner--stick';
+ *   }
+ * }
+ */
+.headhesive--stick {
+  /* Translate back to 0%; */
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}
+/**
+ * Headhesive unstick
+ * > `unstick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     unstick: 'banner--unstick';
+ *   }
+ * }
+ */
+.headhesive--unstick {
+  /* Not required to use, but could be useful to have */
+}
 /* ==========================================================================
    Hentry
    ========================================================================== */
-.hentry header * {
+.hentry header > * {
   display: inline-block;
   vertical-align: baseline;
 }
-.hentry header *:first-child {
+.hentry header > *:first-child {
   margin-right: 5px;
 }
 .hentry .entry-infos > * {
@@ -9173,6 +9283,14 @@ body {
   text-transform: uppercase;
   display: inline-block;
   border-bottom: 1px solid #efefef;
+}
+.hentry .tools {
+  margin-bottom: 15px;
+}
+.hentry .tools > * {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 5px;
 }
 .hentry .entry-title {
   margin: 0 0 15px;
@@ -9300,6 +9418,9 @@ body {
 }
 .hentry .entry-tags a:hover:before {
   border-left-color: #111;
+}
+.likeThis:before {
+  content: 'like';
 }
 .addthis_toolbox {
   display: none;
@@ -10028,5 +10149,9 @@ pre {
 }
 .logged-in pre {
   display: block;
+}
+.jm-post-like:hover,
+.jm-post-like:focus {
+  text-decoration: none;
 }
 /*# sourceMappingURL=dwlaventurier.min.css.map */

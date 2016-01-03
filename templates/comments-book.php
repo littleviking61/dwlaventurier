@@ -3,55 +3,21 @@
     return;
   } ?>
 
-<div class="<?= $ajax_class ?: 'comments-single' ?>" id="comments">
-
+<div class="<?= $ajax_class ?: 'comments-single' ?>">
   <?php if (have_comments() || count($comments) > 0) : ?>
     <section class="comments">
-      <h3>
-        <?php 
-          printf( _n('One Response to &ldquo; %2$s &rdquo;', '%1$s Responses to &ldquo; %2$s &rdquo;', 
-            get_comments_number(), 'dw-timeline'), 
-            number_format_i18n(get_comments_number()), 
-            get_the_title()); 
-        ?>
-      </h3>
-
-      <ol class="comment-list">
+      
+      <ul class="comment-list">
         <?php wp_list_comments(array('walker' => new DW_Timeline_Walker_Comment), $comments); ?>
-      </ol>
+      </ul>
 
-      <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
-      <nav>
-        <ul class="pager">
-          <?php if (get_previous_comments_link()) : ?>
-            <li class="previous"><?php previous_comments_link(__('&larr; Older comments', 'dw-timeline')); ?></li>
-          <?php endif; ?>
-          <?php if (get_next_comments_link()) : ?>
-            <li class="next"><?php next_comments_link(__('Newer comments &rarr;', 'dw-timeline')); ?></li>
-          <?php endif; ?>
-        </ul>
-      </nav>
-      <?php endif; ?>
-
-      <?php if (!comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-      <div class="alert alert-warning">
-        <?php _e('Comments are closed.', 'dw-timeline'); ?>
-      </div>
-      <?php endif; ?>
     </section><!-- /#comments -->
   <?php else: ?>
     <section class="comments no-comments">
-      <h3>Aucun commentaire pour le moment</h3>
+      <h3>Soyez le premier à laisser un commantaire</h3>
     </section><!-- /#comments -->
   <?php endif; ?>
 
-  <?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
-    <section class="comments">
-      <div class="alert alert-warning">
-        <?php _e('Comments are closed.', 'dw-timeline'); ?>
-      </div>
-    </section><!-- /#comments -->
-  <?php endif; ?>
   <?php
     $comments_args = array(
       'logged_in_as' => '',
@@ -81,8 +47,6 @@
     comment_form($comments_args); ?>
     
 </div>
-
-<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <script>
   $('document').ready(function(){

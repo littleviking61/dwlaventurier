@@ -15,7 +15,8 @@
       elseif(get_field('video') && $type == "video") :
         echo get_field('video');
       elseif(has_post_thumbnail()) : ?>
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', ['class'=> 'lazy']); ?></a>
+          <?php $sizeThumb = get_post_meta( $post->ID, 'dw-grid', true ) == "full" ? 'full': 'large';?>
+          <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail($sizeThumb, ['class'=> 'lazy']); ?></a>
         <div class="overlay">    
           <span class="entry-date"><a href="<?php the_permalink(); ?>"><time class="published" datetime="<?= get_the_time('c'); ?>"><?= get_the_date('F Y'); ?></time></a></span>
         </div>
@@ -25,11 +26,13 @@
       <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </h2>
-      <span class="entry-comments"><a class="simple-ajax-popup" title="Commentaire : <?php the_title(); ?>" href="/wp-admin/admin-ajax.php?postId=<?= get_the_id() ?>&action=get_comment"><i class="fa fa-comments"></i> <?php comments_number( '0', '1', '%' ); ?></a></span>
-
-      <?php if (!is_null($icon)) : ?>
-        <i class="glyphicon glyphicon-<?= $icon ?>"></i>
-      <?php endif ?>
+      <div class="tools">
+         <span class="entry-comments"><a class="simple-ajax-popup" title="Commentaire : <?php the_title(); ?>" href="/wp-admin/admin-ajax.php?postId=<?= get_the_id() ?>&action=get_comment"><i class="fa fa-comments"></i> <?php comments_number( '0', '1', '%' ); ?></a></span>
+        <?= getPostLikeLink( get_the_ID() ) ?>
+        <?php if (!is_null($icon)) : ?>
+          <i class="glyphicon glyphicon-<?= $icon ?>"></i>
+        <?php endif ?>
+      </div>
     </header>
     <div class="entry-content">
       <?php if ( has_shortcode( $content, 'gallery' ) ) :

@@ -3,12 +3,14 @@
    ========================================================================== */
 
 .hentry {
-   header *{
-      display: inline-block;
-      vertical-align: baseline;
+   header{
+      > *{
+         display: inline-block;
+         vertical-align: baseline;
 
-      &:first-child{
-         margin-right: 5px;
+         &:first-child{
+            margin-right: 5px;
+         }
       }
    }
 
@@ -64,6 +66,15 @@
       text-transform: uppercase;
       display: inline-block;
       border-bottom: 1px solid #efefef;
+   }
+
+   .tools{
+      margin-bottom: 15px;
+      > *{
+         display: inline-block;
+         vertical-align: baseline;
+         margin-left: 5px;
+      }
    }
 
    .entry-title {
@@ -192,6 +203,12 @@
             border-left-color: #111;
          }
       }
+   }
+}
+
+.likeThis{
+   &:before{
+      content: 'like';
    }
 }
 

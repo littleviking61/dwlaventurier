@@ -11,7 +11,6 @@
 	<meta name="author" content="Baptiste Régné" />
 	<meta name="contact" content="baptiste.regne@gmail.com" />
 	<meta name="copyright" content="Copyright (c)2006-<?= date('Y') ?> Laventurierviking. All Rights Reserved." />
-	<meta name="description" content="Blog sur les aventures d'un viking autour du monde !" />
 	<meta name="keywords" content="stories, travel, motorbike, life, adventure, viking, video, photo, voyage, moto, van, vie, aventures, blog" />
 
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">	
@@ -35,4 +34,5 @@
 		</script>
   <?php endif ?>
   <?php wp_head(); ?>
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/css/shame.css" rel="stylesheet">
 </head>
